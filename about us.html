@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>About Us</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+       /* styles.css */
+       body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(211, 112, 112);
+    padding: 0px 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 15px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    margin-right:35px;
+}
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(211, 112, 112);
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 999;
+    padding-top: 60px;
+}
+
+.side-nav .nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.side-nav .nav-links li {
+    margin: 20px 0;
+}
+
+.side-nav .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+}
+
+/* .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.5s;
+    z-index: 998;
+} */
+
+
+
+.about-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+.logo h1{
+    color:white;
+}
+h1, h2, h3 {
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px;
+    max-width: 200px;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background-color: rgb(233, 129, 129);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+.footer  p{
+   color:white;
+}
+/* Responsive Design */
+
+ @media (max-width: 768px) {
+    .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.contact{
+    line-break: 1px;
+}
+
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="logo"><h1>Kishori Madhav</h1></div>
+        <div class="menu-icon" id="menu-icon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <div class="side-nav" id="side-nav">
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <script>
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const sideNav = document.getElementById('side-nav');
+    const overlay = document.getElementById('overlay');
+
+    menuIcon.addEventListener('click', function() {
+        if (sideNav.style.width === '250px') {
+            sideNav.style.width = '0';
+            overlay.style.width = '0';
+        } else {
+            sideNav.style.width = '250px';
+            overlay.style.width = '100%';
+        }
+    });
+
+    overlay.addEventListener('click', function() {
+        sideNav.style.width = '0';
+        overlay.style.width = '0';
+    });
+});
+
+    </script>
+
+    <main class="about-page">
+        <div class="container">
+            <section class="intro">
+                <h1>About Us</h1>
+                <h3 class="heading"><strong></strong>Welcome to [Kishori Madhav Creations]</strong></h3>
+        <p>At [Kishori Madhav Creations], we are passionate about [briefly describe what your
+        store sells or the niche you cater to]. Our mission is to provide our customers 
+        with high-quality products and exceptional customer service.</p>
+            </section>
+            <section class="products">
+                <h2>Our Products</h2>
+                 <p>We offer a wide range of dresses and accessories as well as furniture for Laddo Gopal, Radha Rani. <!--[briefly describe the types of products you sell].</p> -->
+               <p>Whether you’re looking for accessories, we have wide range of products for Laddo gopal. Like we have earrings, pagadi, charanpaduka, jutti, chandrika,kangan, mirror, tilak etc.</p> 
+                <!-- <p>Our products are sourced from [mention any special sourcing or
+                manufacturing practices, if applicable], ensuring that you receive only the best. -->
+            </p>
+            </section>
+                <section class="shop">
+                    <h2 class="heading">Why Shop With Us?</h2>
+                 <p>
+        - Easy Shopping Experience: Our user-friendly website makes it easy to find what 
+        you’re looking for.
+       </p>
+       <p> - Fast Shipping: We offer quick and reliable shipping options to get your order 
+          to you as soon as possible.
+        </p> 
+        <p>- Secure Payments:Shop with confidence knowing that your payment information is
+          safe and secure.
+                 </p>
+                </section>
+            <!-- <section class="mission">
+                <h2>Our Mission</h2>
+                <p>Our mission is to [Your Mission Statement]. We strive to [Goals and Objectives].</p>
+                <p>[Additional paragraphs about the company's mission and goals.]</p>
+            </section> -->
+
+            <section class="contact">
+                <h2 class="heading">Contact Us</h2>
+               <p> Have questions or need assistance? Reach out to us at:</p>
+            
+                <p>Kishori Madhav Creations</p>
+                
+               <p>[kishorimadhavcreations@gmail.com]</p> 
+                 
+                <p>[Phone Number:8968134211]</p>
+              
+            </section>
+            <!-- <section class="team">
+                <h2>Meet the Team</h2>
+                <p>Our team is comprised of dedicated professionals who are passionate about [Industry].</p>
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="team1.jpg" alt="Team Member 1">
+                        <h3>Team Member 1</h3>
+                        <p>Role: [Role]</p>
+                        <p>Bio: [Brief Bio]</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="team2.jpg" alt="Team Member 2">
+                        <h3>Team Member 2</h3>
+                        <p>Role: [Role]</p>
+                        <p>Bio: [Brief Bio]</p>
+                    </div>
+                    Add more team members as needed
+                </div>
+            </section> -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // script.js
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuIcon = document.getElementById('menu-icon');
+            const navLinks = document.getElementById('nav-links');
+            
+            menuIcon.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+        });
+        
+            </script>
+</body>
+</html>
