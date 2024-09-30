@@ -1,0 +1,73 @@
+<nav class="navbar">
+  <div class="dropdown">
+    <button class="dropdown-button">Categories</button>
+    <div class="dropdown-content">
+      <a
+        href="C:\Users\ADMIN\New folder (3)\Kishori madhav creations\simpleposhak.html"
+        >Laddo Gopal Poshak</a
+      >
+      <a href="poshak1.html">Laddo Gopal Fancy Poshak</a>
+      <a href="nightsuit2.html">Night Suit</a>
+      <a href="bister set3.html">Bister Set</a>
+      <a href="Accessories.html">Accessories</a>
+      <a href="bansuri6.html">Bansuri</a>
+      <a href="mala.html">Mala</a>
+      <a href="fancymala.html">Fancy Mala</a>
+      <!-- <a href="jugaljodi.html">Jugal jodi Set</a>
+  <a href="lehnga patka.html">Lehnga Patka set</a> -->
+      <a href="singhasan.html">Singhasan</a>
+
+      <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+          const dropdownButton = document.querySelector(".dropdown-button");
+          const dropdownContent = document.querySelector(".dropdown-content");
+
+          dropdownButton.addEventListener("click", () => {
+            dropdownContent.classList.toggle("show");
+          });
+
+          window.addEventListener("click", (event) => {
+            if (!event.target.matches(".dropdown-button")) {
+              if (dropdownContent.classList.contains("show")) {
+                dropdownContent.classList.remove("show");
+              }
+            }
+          });
+        });
+      </script>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index4.html">Home</a></li>
+      <li>
+        <a href="C:\Users\ADMIN\New folder (3)\product page\about us.html"
+          >About</a
+        >
+      </li>
+      <li>
+        <a href="C:\Users\ADMIN\New folder (3)\product page\privacy.html"
+          >Privacy</a
+        >
+      </li>
+      <li>
+        <a href="C:\Users\ADMIN\New folder (3)\product page\contact.html"
+          >Contact</a
+        >
+      </li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+  </nav>
+</nav>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector(".nav-links");
+    navLinks.classList.toggle("active");
+  }
+</script>

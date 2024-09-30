@@ -1,0 +1,28 @@
+[
+    {
+        "name": "Product 1",
+        "price": 200,
+        "imageSource": "/images/asdasdsada",
+        "id": "1"
+    },
+    {
+        "name": "Product 1",
+        "price": 200,
+        "imageSource": "/images/asdasdsada"
+    },
+    {
+        "name": "Product 1",
+        "price": 200,
+        "imageSource": "/images/asdasdsada"
+    },
+    {
+        "name": "Product 1",
+        "price": 200,
+        "imageSource": "/images/asdasdsada"
+    },
+    {
+        "name": "Product 1",
+        "price": 200,
+        "imageSource": "/images/asdasdsada"
+    }
+]

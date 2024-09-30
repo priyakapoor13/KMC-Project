@@ -1,0 +1,42 @@
+{
+    "Poshak": [
+        {
+            "id": "1",
+            "name": "Fancy Poshak",
+            "price": 180,
+            "imageSource": "......"
+        },
+        {
+            "id": "2",
+            "name": "Fancy Poshak 2",
+            "price": 180,
+            "imageSource": "......"
+        },
+        {
+            "id": "3",
+            "name": "Fancy Poshak 3",
+            "price": 180,
+            "imageSource": "......"
+        }
+    ],
+    "Earrings": [
+        {
+            "id": "4",
+            "name": "Earning 1",
+            "price": 180,
+            "imageSource": "......"
+        },
+        {
+            "id": "5",
+            "name": "Earning 2",
+            "price": 180,
+            "imageSource": "......"
+        },
+        {
+            "id": "6",
+            "name": "Earning 3",
+            "price": 180,
+            "imageSource": "......"
+        }
+    ]
+}
