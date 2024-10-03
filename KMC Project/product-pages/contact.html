@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Us</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(211, 112, 112);
+    padding: 0px 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo h1{
+    color:white;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    margin-right:35px;
+}
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(211, 112, 112);
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 999;
+    padding-top: 60px;
+}
+
+.side-nav .nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.side-nav .nav-links li {
+    margin: 20px 0;
+}
+
+.side-nav .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+}
+
+/* .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.5s;
+    z-index: 998;
+} */
+
+
+
+.contact-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    padding: 15px 30px;
+    background-color: indianred;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: rgb(218, 105, 105);
+}
+
+.form-response {
+    margin-top: 10px;
+    color: indianred;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><h1>Kishori Madhav</h1></div>
+        <div class="menu-icon" id="menu-icon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <div class="side-nav" id="side-nav">
+        <ul class="nav-links">
+            <li><a href="C:\Users\ADMIN\New folder (3)\Kishori madhav creations\index3.html">Home</a></li>
+            <li><a href="about us.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <script>
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const sideNav = document.getElementById('side-nav');
+    const overlay = document.getElementById('overlay');
+
+    menuIcon.addEventListener('click', function() {
+        if (sideNav.style.width === '250px') {
+            sideNav.style.width = '0';
+            overlay.style.width = '0';
+        } else {
+            sideNav.style.width = '250px';
+            overlay.style.width = '100%';
+        }
+    });
+
+    overlay.addEventListener('click', function() {
+        sideNav.style.width = '0';
+        overlay.style.width = '0';
+    });
+});
+
+    </script>
+
+    <main class="contact-page">
+        <div class="container">
+            <section class="contact-info">
+                <h1>Contact Us</h1>
+                <p>If you have any questions, feel free to reach out to us. We're here to help!</p>
+                <p>Email: Kishorimadhavcreations@gmail.com</p>
+                <p>Phone: +8968134211</p>
+            </section>
+            <section class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send</button>
+                    <p id="formResponse" class="form-response"></p>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    const formResponse = document.getElementById('formResponse');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const name = form.name.value.trim();
+        const email = form.email.value.trim();
+        const message = form.message.value.trim();
+
+        if (name && email && message) {
+            formResponse.textContent = "Thank you for your message. We'll get back to you soon!";
+            formResponse.style.color = "green";
+            form.reset();
+        } else {
+            formResponse.textContent = "Please fill out all fields.";
+            formResponse.style.color = "red";
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

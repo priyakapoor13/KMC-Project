@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Night Suit-Kishori Madhav Creations</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    background-color:rgb(233, 129, 129);
+    color: #fff;
+    padding: 8px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.product-page {
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-gallery {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+}
+
+.main-image img {
+    width: 400px;
+    max-width: 500px;
+}
+/*
+.thumbnail-images {
+     display: flex;
+    margin-top: 10px; }
+    */
+
+
+.thumbnail-images img {
+    width: 80px;
+    height: 80px;
+    /* margin-right: 10px; */
+    cursor: pointer;
+    /* border: 2px solid transparent; */
+    transition: border 0.3s;
+}
+
+
+.product-details {
+    flex: 1;
+    min-width: 300px;
+}
+
+
+.size-selector {
+    display: flex;
+    gap: 10px;
+}
+
+.size-button {
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.size-button:hover {
+    background-color: #f0f0f0;
+}
+
+.size-button.active {
+    border-color:indianred;
+    background-color:rgb(218, 113, 113);
+    color: #ffffff;
+}
+
+
+.price {
+    padding-top:20px;
+    font-size: 24px;
+    color:black;
+    margin: 10px 0;
+}
+
+.btn {
+    margin-top:20px;
+    padding: 10px 20px;
+    background-color: rgb(218, 104, 104);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: rgb(218, 104, 104);
+}
+
+footer {
+    background-color: indianred;
+    color: #fff;
+    text-align: center;
+    padding: 4px 0;
+    width: 100%;
+    position: relative;
+    top:50px;   
+}
+/* Responsive Design */
+
+@media (max-width: 827px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-gallery,
+    .product-details {
+        margin-right: 0;
+        text-align: center;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo"><h1>Kishori Madhav</h1></div>
+            <ul class="nav-links">
+                <li><a href="C:\Users\ADMIN\New folder (3)\KMC Project\landing-page\index.html">Home</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="C:\Users\ADMIN\New folder (3)\KMC Project\landing-page\contact.html">Contact</a></li>
+                <li><a href="C:\Users\ADMIN\New folder (3)\KMC Project\landing-page\about us.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product-page">
+        <div class="container">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="C:\Users\ADMIN\New folder (3)\madhav photos\nightsuit79.jpeg" alt="Product Image" id="current-image">
+                </div>
+            </div>
+            <div class="product-details">
+                <h1>Night Suit For Laddo Gopal</h1>
+                <p>Night Suit suitable for 0 to 6 number Laddo Gopal</p>
+                <p>Random Color Will Be Given</p>
+                <p>Size</p>
+                <div class="size-selector">
+                    <button class="size-button" data-size="0">0</button>
+                    <button class="size-button" data-size="1">1</button>
+                    <button class="size-button" data-size="2">2</button>
+                    <button class="size-button" data-size="3">3</button>
+                    <button class="size-button" data-size="4">4</button>
+                    <button class="size-button" data-size="5">5</button>
+                    <button class="size-button" data-size="6">6</button>
+                </div>
+            
+                <script>
+            // script.js
+            
+            document.addEventListener('DOMContentLoaded', () => {
+                const sizeButtons = document.querySelectorAll('.size-button');
+            
+                sizeButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        sizeButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                    });
+                });
+            });
+            
+                </script>
+                <span class="price">Rs.20</span>
+                <button class="btn">Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const currentImage = document.getElementById('current-image');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener('click', () => {
+            currentImage.src = thumbnail.src;
+        });
+    });
+});
+
+    </script> -->
+
+    <footer>
+        <p>&copy; 2024 My E-Commerce Store. All rights reserved.</p>
+    </footer>
+</body>
+</html>

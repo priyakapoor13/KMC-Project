@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Product Page */
+.product-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.product-gallery {
+    flex: 1;
+    padding: 20px;
+}
+
+.product-main-img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-main-img img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.product-thumbnails img {
+    width: 60px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.product-thumbnails img:hover {
+    border-color: #e91e63;
+}
+
+.product-details {
+    flex: 1;
+    padding: 20px;
+}
+
+.product-details h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.price {
+    font-size: 20px;
+    color: #e91e63;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.product-options {
+    margin-bottom: 20px;
+}
+
+.product-options label {
+    font-size: 16px;
+    color: #333;
+}
+
+.product-options select {
+    padding: 8px;
+    margin-left: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.product-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.product-actions button {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart {
+    background-color: #e91e63;
+    color: #fff;
+}
+
+.add-to-cart:hover {
+    background-color: #d81b60;
+}
+
+.buy-now {
+    background-color: #333;
+    color: #fff;
+}
+
+.buy-now:hover {
+    background-color: #555;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-container a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-container a:hover {
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+    }
+
+    .product-thumbnails img {
+        width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <div class="product-gallery">
+            <div class="product-main-img">
+                <img id="mainImage" src="img/product1.jpg" alt="Product Image">
+            </div>
+            <div class="product-thumbnails">
+                <img src="img/product1.jpg" alt="Thumbnail 1" onclick="changeImage('img/product1.jpg')">
+                <img src="img/product2.jpg" alt="Thumbnail 2" onclick="changeImage('img/product2.jpg')">
+                <img src="img/product3.jpg" alt="Thumbnail 3" onclick="changeImage('img/product3.jpg')">
+                <img src="img/product4.jpg" alt="Thumbnail 4" onclick="changeImage('img/product4.jpg')">
+            </div>
+        </div>
+        <div class="product-details">
+            <h2>Modern Product Title</h2>
+            <p class="price">$99.99</p>
+            <p class="description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula odio sit amet turpis vehicula, a varius mauris aliquam.
+            </p>
+            <div class="product-options">
+                <label for="size">Size:</label>
+                <select id="size">
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                </select>
+            </div>
+            <div class="product-actions">
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <span>&copy; 2024 Your Company</span>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
+
+    <script>
+        function changeImage(imageSrc) {
+    document.getElementById("mainImage").src = imageSrc;
+}
+
+    </script>
+</body>
+</html>

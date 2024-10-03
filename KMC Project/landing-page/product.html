@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="C:\Users\ADMIN\New folder (3)\KMC Project\landing-page\products.json">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.product-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.product-description, .product-price {
+    color: #333;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.notification {
+    margin-top: 10px;
+    color: green;
+}
+
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <div class="product-card">
+            <img src="images/chandrika94.jpeg" alt="Product Image" class="product-image">
+            <h2 class="product-title">Radha Rani Chandrika</h2>
+            <p class="product-description">Radha Rani Chandrika Suitable for 2 number Radha Rani</p>
+            <p class="product-price">Rs.80</p>
+            <a href="product-pages/24chandrika.html">
+                <button class="view-detail-btn">View Details</button>
+            </a>
+            <button class="add-to-cart-btn" onclick="addToCart('Radha Rani Chandrika', 80)">Add to Cart</button>
+            <div id="notification" class="notification"></div>
+        </div>
+    </div>
+
+    <script>
+        function addToCart(productName, productPrice) {
+    // Add product to the cart (this can be extended to store in local storage or a database)
+    // For now, we will just show a notification
+
+    const notification = document.getElementById('notification');
+    notification.textContent = `${productName} has been added to your cart!`;
+    
+    // Clear the notification after 3 seconds
+    setTimeout(() => {
+        notification.textContent = '';
+    }, 3000);
+}
+
+// The viewDetails function is not needed as it was not doing anything.
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetch('products.json')
+        .then(response => response.json())
+        .then(data => {
+            const productContainer = document.getElementById('product-container');
+            data.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.classList.add('product-card');
+                
+                productCard.innerHTML = `
+                    <img src="${product.image}" alt="${product.title}" class="product-image">
+                    <h2 class="product-title">${product.title}</h2>
+                    <p class="product-description">${product.description}</p>
+                    <p class="product-price">Rs.${product.price}</p>
+                    <a href="${product.link}">
+                        <button class="view-detail-btn">View Details</button>
+                    </a>
+                    <button class="add-to-cart-btn" onclick="addToCart('${product.title}', ${product.price})">Add to Cart</button>
+                `;
+                
+                productContainer.appendChild(productCard);
+            });
+        })
+        .catch(error => console.error('Error fetching the products:', error));
+});
+
+function addToCart(productName, productPrice) {
+    const notification = document.getElementById('notification');
+    notification.textContent = `${productName} has been added to your cart!`;
+
+    // Clear the notification after 3 seconds
+    setTimeout(() => {
+        notification.textContent = '';
+    }, 3000);
+}
+
+    </script>
+</body>
+</html>
