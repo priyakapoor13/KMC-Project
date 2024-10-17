@@ -1,0 +1,76 @@
+{
+    "accessories" :[
+{
+    "id": "42",
+    "title": "Earrings",
+    "description":  "Earrings For Laddo Gopal. Red, Green, Orange, Yellow, Blue Color Choices Are Available",
+    "price": 10,
+    "url": "../../product-pages/productpage42.html",
+    "imageSource": "../../src/earrings88.jpeg"
+},
+
+{
+    "id": "43",
+    "title": "Earrings",
+    "description":  "Red And White, blue,sky-blue, green, pink Stone Earrings with beautiful design For Laddo Gopal and Radha Rani",
+    "price": 40,
+    "url": "../../product-pages/productpage43.html",
+    "imageSource": "../../src/earrings89.jpeg"
+},
+
+{
+    "id": "44",
+    "title": "Earrings",
+    "description":  "White, Sky-Blue,Red, Light-green  Colors Available",
+    "price": 35,
+    "url": "../../product-pages/productpage44.html",
+    "imageSource": "../../src/earrings90.jpeg"
+},
+
+{
+    "id": "45",
+    "title": "Earrings",
+    "description":  "Dark Green Color Earrings For Laddo Gopal And Radha Rani",
+    "price": 45 ,
+    "url": "../../product-pages/productpage45.html",
+    "imageSource": "../../src/earrings91.jpeg"
+},
+
+{
+    "id": "46",
+    "title": "Pagadi ",
+    "description":  "Pagadi Suitable For 2 To 6 Number Laddo Gopal",
+    "price": 20,
+    "url": "../../product-pages/productpage46.html",
+    "imageSource": "../../src/pagadi106.jpeg"
+},
+
+{
+    "id": "47",
+    "title": "Jutti for laddo gopal",
+    "description":  "Jutti for laddo gopal",
+    "price": 40,
+    "url": "../../product-pages/productpage47.html",
+    "imageSource": "../../src/shoes99.jpeg"
+},
+
+
+{
+    "id": "48",
+    "title": "MomWax",
+    "description":  "Momwax for laddo gopal",
+    "price": 10,
+    "url": "../../product-pages/productpage48.html",
+    "imageSource": "../../src/vex83.jpeg"
+},
+
+{
+    "id": "49",
+    "title": "Tilak ",
+    "description":  "Tilak for laado gopal",
+    "price": 10,
+    "url": "../../product-pages/productpage49.html",
+    "imageSource": "../../src/tilak84.jpeg"
+}
+    ]
+}

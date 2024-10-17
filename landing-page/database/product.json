@@ -1,0 +1,79 @@
+{
+    "Poshak": [
+        {
+            "id": "1",
+            "name": "Simple Poshak 1",
+            "title":"Lorem ipsum dolor sit amet.",
+            "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.",
+            "price": 80,
+            "url" : "../../product-pages/productpage1.html",
+            "imageSource": "https://fakeimg.pl/300/"
+        },
+        {
+            "id": "2",
+            "name": "simple poshak 2",
+            "title":"Lorem ipsum dolor sit amet.",
+            "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.",
+            "price": 80,
+            "url" : "../../product-pages/productpage2.html",
+            "imageSource": "https://fakeimg.pl/300/"
+        },
+        {
+            "id": "3",
+            "name": "simple Poshak 3 ",
+            "title":"Lorem ipsum dolor sit amet.",
+            "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.",
+            "price": 80,
+             "url" : "../../product-pages/productpage3.html",
+            "imageSource": "https://fakeimg.pl/300/"
+        },
+        {
+            "id": "4",
+            "name": "simple Poshak 4",
+            "title":"Lorem ipsum dolor sit amet.",
+            "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.",
+            "price": 80,
+            "url" : "../../product-pages/productpage4.html",
+            "imageSource": "https://fakeimg.pl/300/"
+        },
+        {
+            "id": "5",
+            "name": "simple Poshak 5",
+            "title":"Lorem ipsum dolor sit amet.",
+            "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.",
+            "price": 80,
+             "url" : "../../product-pages/productpage5.html",
+            "imageSource": "https://fakeimg.pl/300/"
+        },
+        {
+            "id": "6",
+            "name": "simple Poshak 6 ",
+            "title":"Lorem ipsum dolor sit amet.",
+            "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.",
+            "price": 80,
+             "link" : "../../product-pages/productpage6.html",
+            "imageSource": "https://fakeimg.pl/300/"
+        },
+        {
+            "id": "7",
+            "name": "simple Poshak 7",
+            "title":"Lorem ipsum dolor sit amet.",
+            "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.",
+            "price": 80,
+             "url" :  "../../product-pages/productpage7.html",
+            "imageSource": "https://fakeimg.pl/300/"
+        },
+        {
+            "id": "8",
+            "name": "simple Poshak 8",
+             "title":"Lorem ipsum dolor sit amet.",
+            "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.",
+            "price": 80,
+            "url" : "../../product-pages/productpage8.html",
+            "imageSource": "https://fakeimg.pl/300/"
+        }
+    ]
+    
+    
+
+}

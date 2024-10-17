@@ -1,0 +1,30 @@
+{
+    "bister set" : [
+       {
+          "id": "27",
+            "title": " cotton bister set ",
+            "description":  "Cotton Bister Set For laddo gopal. Size Available 1,2,3.",
+            "price": 30,
+            "url": "../../product-pages/productpage27.html",
+            "imageSource": "https://fakeimg.pl/300/"
+       },
+       {
+        "id": "28",
+          "title": "Pocket bister set",
+          "description":  "Pocket Bister Set For Laddo gopal. All Size Are Available ",
+          "price": 50,
+          "url": "../../product-pages/productpage28.html",
+          "imageSource": "https://fakeimg.pl/300/"
+     },
+     {
+        "id": "29",
+          "title": "Reversible bister set ",
+          "description":  "Reversible Bister Set For laddo gopal. Size Available 1,2,3.",
+          "price": 80,
+          "url": "../../product-pages/productpage29.html",
+          "imageSource": "https://fakeimg.pl/300/"
+     }
+
+
+    ]
+}
