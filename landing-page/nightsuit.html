@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightsuit-Kishori Madhav Creations</title>
+    <link
+      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+        *{
+  font-family: poppins,sans-serif;
+    margin:0;
+    padding:0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(221, 97, 97);
+    padding: 15px 10px;
+    position: fixed; 
+    width: 100%;
+    z-index: 1000;
+   
+}
+
+.logo {
+    color: white;
+    font-size: 15px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    margin-right:35px;
+}
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(211, 112, 112);
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 999;
+    padding-top: 60px;
+}
+
+.side-nav .nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.side-nav .nav-links li {
+    margin: 20px 0;
+}
+
+.side-nav .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+}
+/* .side-nav .nav-links a:hover{
+    background-color: indianred;
+    padding:5px;
+} */
+/* .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.5s;
+    z-index: 998;
+} */
+/* second nav bar end */
+
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    position: relative;
+    top: 80px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.2s;
+   
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+}
+
+.product-title {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.product-description {
+    font-size: 1em;
+    margin: 10px 15px;
+}
+
+.product-price {
+    font-size: 1.2em;
+    color: indianred;
+    margin: 10px 0;
+}
+
+.view-detail-btn, .add-to-cart-btn {
+    background-color: indianred;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.view-detail-btn:hover, .add-to-cart-btn:hover {
+    background-color: indianred;
+}
+
+.notification {
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: indianred;
+}
+
+  /*products*/
+
+ /* Footer */
+.text-primary2 {
+  color:indianred;
+  border-style: groove;
+  outline:none;
+  border-color:#fff;
+  padding:10px;
+  padding-bottom: 3px;
+  padding-top: 3px; 
+  text-shadow: 0px 0px 2px black;
+}
+
+#footer-heading{
+  background-color: #EDF1FF;
+    margin-top:80px; 
+  position:relative;
+   height:500px;
+   overflow: hidden;
+  
+}
+
+#footer-heading h2{
+  position:relative;
+ top:15px;
+ font-size: 37.79px;
+ padding-left: 40px;
+}
+#footer-heading p{
+  bottom:1px;
+  position:relative;
+  display:inline-block;
+  margin-left:40px;
+  margin-right:40px;
+  /* width: 350px;
+  height: 150px; */
+  text-align: justify;
+ 
+}
+ #address{
+  top:150px;
+  position:relative;
+  display: inline-block;
+  /* margin-right:200px; */
+ }
+ #address .address1{
+  margin-left:70px;
+  position:relative;
+  bottom:160px;
+
+}
+/* .mail{
+  position:relative;
+   bottom:2px;
+} */
+.number{
+  position:relative;
+  top:10px;
+}
+.bi-geo-alt-fill{
+  font-size: 20px;
+  position:relative;
+  bottom:143px;
+  /* margin-right:800px; */
+  margin-left:40px;
+  color:indianred;
+}
+.bi-envelope-at-fill{
+  margin-left:40px;
+  color:indianred;
+  font-size: 20px;
+}
+.bi-telephone-inbound-fill{
+  margin-left:40px;
+  color:indianred;
+  font-size: 20px;
+  position:relative;
+  top:10px;
+
+}
+  .mb-4{
+     font-size:27px;
+     padding-left:40px;
+    padding-top:30px;
+   
+  }
+  .mb-2{
+    padding-left:40px;
+    color:black;
+    line-height: 2em;
+  }
+
+#footer-image{
+  float:right;
+  position:relative;
+  padding-right: 40px;
+bottom:330px;
+
+}
+
+    </style>
+</head>
+<body>
+    <header>
+      <nav class="navbar">
+        <div class="logo"><h1>Laddo Gopal Night-Suit Collection</h1></div>
+        <div class="menu-icon" id="menu-icon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <div class="side-nav" id="side-nav">
+        <ul class="nav-links">
+            <li><a href="simple-poshak.html">Poshak</a></li>
+            <li><a href="fancy-poshak.html">Fancy Poshak</a></li>
+            <li><a href="nightsuit.html">Night-Suit</a></li>
+            <li><a href="bister-set.html">Bister-Set</a></li>
+            <li><a href="Accessories1.html">Accessories</a></li>
+            <li><a href="bansuri1.html">Bansuri</a></li>
+            <li><a href="simple-mala.html">Mala</a></li>
+            <li><a href="fancymala.html">Fancy-Mala</a></li>
+            <li><a href="furniture.html">Furniture</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <script>
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const sideNav = document.getElementById('side-nav');
+    const overlay = document.getElementById('overlay');
+
+    menuIcon.addEventListener('click', function() {
+        if (sideNav.style.width === '250px') {
+            sideNav.style.width = '0';
+            overlay.style.width = '0';
+        } else {
+            sideNav.style.width = '250px';
+            overlay.style.width = '100%';
+        }
+    });
+
+    overlay.addEventListener('click', function() {
+        sideNav.style.width = '0';
+        overlay.style.width = '0';
+    });
+});
+
+    </script>
+      </header>
+  <!-- second nav bar end  -->
+   <main>
+    
+    <div class="product-container">
+      <div class="product-card">
+          <img src="../src/nightsuit79.jpeg" class="product-image">
+          <h2 class="product-title">Night Suit</h2>
+          <p class="product-description">Night Suit For 0 To 6 Number Laddo Gopal.Random Color Will Be Given</p>
+          <p class="product-price">Rs.20</p>
+          <a href="../product-pages/productpage21.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('21')">Add to Cart</button>
+          <div class="notification" id="21"></div>
+      </div>
+
+      <div class="product-card">
+          <img src="../src/nightsuit80.jpeg" alt="img" class="product-image">
+          <h2 class="product-title">Night Suit</h2>
+          <p class="product-description">Night Suit For 0 To 6 Number Laddo Gopal.Random Color Will Be Given</p>
+          <p class="product-price">Rs.20</p>
+          <a href="../product-pages/productpage22.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('22')">Add to Cart</button>
+          <div class="notification" id="22"></div>
+      </div>
+
+      <div class="product-card">
+          <img src="../src/nightsuit81.jpeg" alt="img" class="product-image">
+          <h2 class="product-title">NightSuit</h2>
+          <p class="product-description">Night Suit For 0 To 6 Number Laddo Gopal.Random Color Will Be Given</p>
+          <p class="product-price">Rs.20</p>
+          <a href="../product-pages/productpage23.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('23')">Add to Cart</button>
+          <div class="notification" id="23"></div>
+      </div>
+      <div class="product-card">
+          <img src="../src/nightsuit82.jpeg" alt="img" class="product-image">
+          <h2 class="product-title">Night Suit</h2>
+          <p class="product-description">Night Suit For 0 To 6 Number Laddo Gopal.Random Color Will Be Given</p>
+          <p class="product-price">Rs.20</p>
+          <a href="../product-pages/productpage24.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('24')">Add to Cart</button>
+          <div class="notification" id="24"></div>
+      </div>
+     
+     
+      <div class="product-card">
+          <img src="../src/daiper83.jpeg" alt="img" class="product-image">
+          <h2 class="product-title">Daiper</h2>
+          <p class="product-description"> 0 To 6 Number Laddo Gopal.Random Color Will Be Given</p>
+          <p class="product-price">Rs.20</p>
+          <a href="../product-pages/productpage25.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('25')">Add to Cart</button>
+          <div class="notification" id="25"></div>
+      </div>
+
+      <div class="product-card">
+          <img src="../src/daiper84.jpeg" alt="img" class="product-image">
+          <h2 class="product-title">Daiper</h2>
+          <p class="product-description"> 0 To 6 Number Laddo Gopal.Random Color Will Be Given</p>
+          <p class="product-price">Rs.20</p>
+          <a href="../product-pages/productpage26.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('26')">Add to Cart</button>
+          <div class="notification" id="26"></div>
+      </div>
+
+  
+   </main>
+   
+      <script>
+   function addToCart(productId) {
+  document.getElementById(productId).innerText = "Added to cart!";
+}
+</script>
+
+<script>
+  fetch("./database/product.json").then((response) => response.json())
+    .then((json) => console.log(json)
+);
+</script>
+   <footer>
+    <!--footer-->
+  <div id="footer-heading">
+    <h2 class="m-0 display-5 font-weight-semi-bold heading2"><span class="text-primary2 font-weight-bold border px-3 mr-1">K</span class="heading2">ishori Madhav</h2>
+    <br>
+    <br>
+    <p>Kishori Madhav Creations is a dedicated retail store that offers a diverse range of exquisite products related to Laddo Gopal, catering to the spiritual and cultural needs of devotees and enthusiasts. Our extensive collection includes beautifully crafted accessories, elegant poshak (traditional attire) for Laddo Gopal idols, intricately designed jutti (traditional footwear), and stunning pagadi (turban) options, ensuring every aspect of your worship is adorned with grace and beauty. In addition to these devotional items, we also feature an exclusive selection of handcrafted furniture, perfect for creating a serene and sacred space in your home. Each piece is thoughtfully designed to complement the spiritual ambiance, making our store a one-stop destination for all your Laddo Gopal-related needs.</p>
+    <div id="address">
+      <i class="bi bi-geo-alt-fill"></i>
+    <address class="address1">13/7 Jawahar Nagar near Middha Chownk, Ludhiana</address>
+    </div>
+    
+    <div>
+      <i class="bi bi-envelope-at-fill"></i>
+      <span class="mail">&nbsp;&nbsp;Kishorimadhavcreations@gmail.com</span>
+    </div>
+    
+    <div>
+      <i class="bi bi-telephone-inbound-fill"></i>
+      <span class="number">&nbsp;&nbsp;+012 345 67890</span>
+    </div>
+    <div class="col-md-4 mb-5">
+       <h5 class="font-weight-bold text-dark mb-4 quick">Quick Links</h5> 
+      <div class="d-flex flex-column justify-content-start">
+          <a class="text-dark mb-2 text" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a><br>
+          <a class="text-dark mb-2 text" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our Shop</a><br>
+          <a class="text-dark mb-2 text" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a><br>
+          <a class="text-dark mb-2 text" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a><br>
+          <a class="text-dark mb-2 text" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Checkout</a><br>
+          <a class="text-dark mb-2 text" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+      </div>
+    
+      <div id="footer-image">
+        <img src="krishna-8882651_1920.png" alt="" width="200px;">
+      </div>
+    </div>
+    </div>
+  <!--footer-end-->
+   </footer>
+</body>
+</html>

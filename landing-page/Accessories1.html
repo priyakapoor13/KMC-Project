@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories-Kishori Madhav Creations</title>
+    <link
+      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+        *{
+  font-family: poppins,sans-serif;
+    margin:0;
+    padding:0;
+   
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(240, 131, 131);
+    padding: 15px 10px;
+    position: fixed; 
+    width: 100%;
+    z-index: 1000;
+   
+}
+
+.logo {
+    color: white;
+    font-size: 15px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    margin-right:35px;
+}
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(211, 112, 112);
+    overflow-x: hidden;
+    transition: 0.5s;
+    z-index: 999;
+    padding-top: 60px;
+}
+
+.side-nav .nav-links {
+    list-style: none;
+    padding: 0;
+}
+
+.side-nav .nav-links li {
+    margin: 20px 0;
+}
+
+.side-nav .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+}
+/* .side-nav .nav-links a:hover{
+    background-color: indianred;
+    padding:5px;
+} */
+/* .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.5s;
+    z-index: 998;
+} */
+
+
+
+ /*product2*/
+ .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    position: relative;
+    top: 80px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.2s;
+   
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+}
+
+.product-title {
+    font-size: 1.5em;
+    margin: 15px 0;
+}
+
+.product-description {
+    font-size: 1em;
+    margin: 10px 15px;
+}
+
+.product-price {
+    font-size: 1.2em;
+    color: indianred;
+    margin: 10px 0;
+}
+
+.view-detail-btn, .add-to-cart-btn {
+    background-color: indianred;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.view-detail-btn:hover, .add-to-cart-btn:hover {
+    background-color: indianred;
+}
+
+.notification {
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: indianred;
+}
+
+  
+  /*products*/
+
+ /* Footer */
+.text-primary2 {
+  color:indianred;
+  border-style: groove;
+  outline:none;
+  border-color:#fff;
+  padding:10px;
+  padding-bottom: 3px;
+  padding-top: 3px; 
+  text-shadow: 0px 0px 2px black;
+}
+
+#footer-heading{
+  background-color: #EDF1FF;
+    margin-top:80px; 
+  position:relative;
+   height:500px;
+   overflow: hidden;
+  
+}
+
+#footer-heading h2{
+  position:relative;
+ top:15px;
+ font-size: 37.79px;
+ padding-left: 40px;
+}
+#footer-heading p{
+  bottom:1px;
+  position:relative;
+  display:inline-block;
+  margin-left:40px;
+  margin-right:40px;
+  /* width: 350px;
+  height: 150px; */
+  text-align: justify;
+ 
+}
+ #address{
+  top:150px;
+  position:relative;
+  display: inline-block;
+  /* margin-right:200px; */
+ }
+ #address .address1{
+  margin-left:70px;
+  position:relative;
+  bottom:160px;
+
+}
+/* .mail{
+  position:relative;
+   bottom:2px;
+} */
+.number{
+  position:relative;
+  top:10px;
+}
+.bi-geo-alt-fill{
+  font-size: 20px;
+  position:relative;
+  bottom:143px;
+  /* margin-right:800px; */
+  margin-left:40px;
+  color:indianred;
+}
+.bi-envelope-at-fill{
+  margin-left:40px;
+  color:indianred;
+  font-size: 20px;
+}
+.bi-telephone-inbound-fill{
+  margin-left:40px;
+  color:indianred;
+  font-size: 20px;
+  position:relative;
+  top:10px;
+
+}
+  .mb-4{
+     font-size:27px;
+     padding-left:40px;
+    padding-top:30px;
+   
+  }
+  .mb-2{
+    padding-left:40px;
+    color:black;
+    line-height: 2em;
+  }
+
+#footer-image{
+  float:right;
+  position:relative;
+  padding-right: 40px;
+bottom:330px;
+
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 90px 0;
+}
+
+.pagination a {
+  margin: 0 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: rgb(216, 107, 107);
+  color: white;
+}
+
+.pagination a.active {
+  background-color: indianred;
+  color: white;
+}
+
+#content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  .pagination a {
+    width: 35px;
+    height: 35px;
+    font-size: 12px;
+  }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+      <nav class="navbar">
+        <div class="logo"><h1>Laddo Gopal Accessories Collection</h1></div>
+        <div class="menu-icon" id="menu-icon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+    <div class="side-nav" id="side-nav">
+        <ul class="nav-links">
+            <li><a href="simple-poshak.html">Poshak</a></li>
+            <li><a href="fancy-poshak.html">fancy Poshak</a></li>
+            <li><a href="nightsuit.html">Night-Suit</a></li>
+            <li><a href="bister-set.html">Bister-Set</a></li>
+            <li><a href="Accessories1.html">Accessories</a></li>
+            <li><a href="bansuri1.html">Bansuri</a></li>
+            <li><a href="simple-mala.html">Mala</a></li>
+            <li><a href="fancymala.html">Fancy-Mala</a></li>
+            <li><a href="furniture.html">Furniture</a></li>
+        </ul>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <script>
+// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const sideNav = document.getElementById('side-nav');
+    const overlay = document.getElementById('overlay');
+
+    menuIcon.addEventListener('click', function() {
+        if (sideNav.style.width === '250px') {
+            sideNav.style.width = '0';
+            overlay.style.width = '0';
+        } else {
+            sideNav.style.width = '250px';
+            overlay.style.width = '100%';
+        }
+    });
+
+    overlay.addEventListener('click', function() {
+        sideNav.style.width = '0';
+        overlay.style.width = '0';
+    });
+});
+
+    </script>
+    </header>
+  <!-- second nav bar end  -->
+   <main>
+    <br>
+    <br>
+    <br>
+    <br>
+
+              
+    <div class="product-container">
+      <div class="product-card">
+          <img src="../src/chandrika88.jpeg" class="product-image">
+          <h2 class="product-title">Radha Rani Chandrika</h2>
+          <p class="product-description">Radha Rani Chandrika Suitable For 2 Number Radha Rani</p>
+          <p class="product-price">Rs.99</p>
+          <a href="../product-pages/productpage30.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('30')">Add to Cart</button>
+          <div class="notification" id="30"></div>
+      </div>
+     
+
+      <div class="product-card">
+          <img src="../src/chandrika90.jpeg" alt="Radha Rani Chandrika" class="product-image">
+          <h2 class="product-title">Radha Rani Chandrika</h2>
+          <p class="product-description">Radha Rani Chandrika Suitable for 4 number Radha Rani</p>
+          <p class="product-price">Rs.120</p>
+          <a href="../product-pages/productpage31.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('31')">Add to Cart</button>
+          <div class="notification" id="31"></div>
+      </div>
+
+      <div class="product-card">
+          <img src="../src/chandrika93.jpeg" alt="Radha Rani Chandrika" class="product-image">
+          <h2 class="product-title">Radha Rani Chandrika</h2>
+          <p class="product-description">Pom Pom Multi-Color Radha Rani Chandrika Suitable For 4 Number Radha Rani</p>
+          <p class="product-price">Rs.120</p>
+          <a href="../product-pages/productpage32.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('32')">Add to Cart</button>
+          <div class="notification" id="32"></div>
+      </div>
+      <div class="product-card">
+          <img src="../src/chandrika94.jpeg" alt="Radha Rani Chandrika" class="product-image">
+          <h2 class="product-title">Radha Rani Chandrika</h2>
+          <p class="product-description">Radha Rani Chandrika Suitable for 2 number Radha Rani</p>
+          <p class="product-price">Rs.80</p>
+          <a href="../product-pages/productpage33.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('33')">Add to Cart</button>
+          <div class="notification" id="33"></div>
+      </div>
+     
+     
+      <div class="product-card">
+          <img src="../src/chandrika95.jpeg" alt="Radha Rani Chandrika" class="product-image">
+          <h2 class="product-title">Radha Rani Chandrika</h2>
+          <p class="product-description">Radha Rani Chandrika Suitable for 2 number Radha Rani</p>
+          <p class="product-price">Rs.60</p>
+          <a href="../product-pages/productpage34.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('34')">Add to Cart</button>
+          <div class="notification" id="34"></div>
+      </div>
+
+      <div class="product-card">
+          <img src="../src/chandrika99.jpeg" alt="Radha Rani Chandrika" class="product-image">
+          <h2 class="product-title">Radha Rani Chandrika</h2>
+          <p class="product-description">Radha Rani Chandrika Suitable For 4 and 6 Number Radha Rani</p>
+          <p class="product-price">Rs.70</p>
+          <a href="../product-pages/productpage35.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('35')">Add to Cart</button>
+          <div class="notification" id="35"></div>
+      </div>
+
+      <div class="product-card">
+          <img src="../src/kangan.jpeg" alt="img" class="product-image">
+          <h2 class="product-title">Kangan</h2>
+          <p class="product-description">kangan Suitable For 0 To 4 Number Laddo Gopal</p>
+          <p class="product-price">Rs.35 For Each Pair</p>
+          <a href="../product-pages/productpage36.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('36')">Add to Cart</button>
+          <div class="notification" id="36"></div>
+      </div>
+
+
+      <div class="product-card">
+          <img src="../src/kangan1.jpeg" alt="img" class="product-image">
+          <h2 class="product-title">Kangan</h2>
+          <p class="product-description">kangan Suitable For 0 To 4 Number Laddo Gopal</p>
+          <p class="product-price">Rs.10 For Each Pair</p>
+          <a href="../product-pages/productpage37.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('37')">Add to Cart</button>
+          <div class="notification" id="37"></div>
+      </div>
+
+
+      <div class="product-card">
+        <img src="../src/kangan2.jpeg" alt="img" class="product-image">
+        <h2 class="product-title">Kangan</h2>
+        <p class="product-description">kangan Suitable For 0 To 4 Number Laddo Gopal</p>
+        <p class="product-price">Rs.10</p>
+        <a href="../product-pages/productpage38.html">
+            <button class="view-detail-btn">View Details</button>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('38')">Add to Cart</button>
+        <div class="notification" id="38"></div>
+    </div>
+
+
+    <div class="product-card">
+      <img src="../src/mirror01.jpeg" alt="img" class="product-image">
+      <h2 class="product-title">Mirror</h2>
+      <p class="product-description">Laddo Gopal Mirror with multi-color border and modern design</p>
+      <p class="product-price">Rs.40 For Each</p>
+      <a href="../product-pages/productpage39.html">
+          <button class="view-detail-btn">View Details</button>
+      </a>
+      <button class="add-to-cart-btn" onclick="addToCart('39')">Add to Cart</button>
+      <div class="notification" id="39"></div>
+  </div>
+
+
+  <div class="product-card">
+    <img src="../src/chandan100.jpeg" alt="img" class="product-image">
+    <h2 class="product-title">Chandan</h2>
+    <p class="product-description">Chandan made from gopi chandan specially For Laddo Gopal</p>
+    <p class="product-price">Rs.20</p>
+    <a href="../product-pages/productpage40.html">
+        <button class="view-detail-btn">View Details</button>
+    </a>
+    <button class="add-to-cart-btn" onclick="addToCart('40')">Add to Cart</button>
+    <div class="notification" id="40"></div>
+</div>
+
+
+    
+  <div class="product-card">
+    <img src="../src/itter101.jpeg" alt="img" class="product-image">
+    <h2 class="product-title">Itter</h2>
+    <p class="product-description">Gulab, Chandan, Mogra, Bela, Heena Itter For laddo Gopal</p>
+    <p class="product-price">Rs.20 for each pair</p>
+    <a href="../product-pages/productpage41.html">
+        <button class="view-detail-btn">View Details</button>
+    </a>
+    <button class="add-to-cart-btn" onclick="addToCart('41')">Add to Cart</button>
+    <div class="notification" id="41"></div>
+</div>
+
+
+    <script>
+       function addToCart(productId) {
+  document.getElementById(productId).innerText = "Added to cart!";
+}
+    
+    </script>
+
+    <div class="pagination">
+      <a href="#" class="prev" onclick="changePage(-1)">&#10094;</a>
+      <!-- <span id="page-numbers"></span> -->
+      <a href="./accessories2.html" class="next" onclick="changePage(1)">&#10095;</a>
+    </div>
+    
+    <!-- <div id="content"></div> -->
+
+    <script>
+      let currentPage = 1;
+const itemsPerPage = 12;
+const totalItems = 20; // 2 pages of content
+
+function displayContent() {
+  const contentDiv = document.getElementById('content');
+  contentDiv.innerHTML = '';
+
+  const startItem = (currentPage - 1) * itemsPerPage + 1;
+  const endItem = Math.min(startItem + itemsPerPage - 1, totalItems);
+
+  contentDiv.innerHTML = `Showing items ${startItem} to ${endItem} of ${totalItems}`;
+}
+
+function updatePagination() {
+  const pageNumbers = document.getElementById('page-numbers');
+  pageNumbers.innerHTML = '';
+
+  const totalPages = 2; // Fixed to 2 pages
+  for (let i = 1; i <= totalPages; i++) {
+    const pageLink = document.createElement('a');
+    pageLink.href = '#';
+    pageLink.innerText = i;
+    pageLink.onclick = () => goToPage(i);
+
+    if (i === currentPage) {
+      pageLink.classList.add('active');
+    }
+
+    pageNumbers.appendChild(pageLink);
+  }
+}
+
+function changePage(delta) {
+  const totalPages = 2;
+  currentPage = Math.max(1, Math.min(totalPages, currentPage + delta));
+  updatePagination();
+  displayContent();
+}
+
+function goToPage(pageNumber) {
+  currentPage = pageNumber;
+  updatePagination();
+  displayContent();
+}
+
+// Initialize
+updatePagination();
+displayContent();
+
+    </script>
+
+<script>
+  fetch("./database/product.json").then((response) => response.json())
+    .then((json) => console.log(json)
+);
+</script>
+
+   </main>
+
+   <footer>
+    <!--footer-->
+  <div id="footer-heading">
+    <h2 class="m-0 display-5 font-weight-semi-bold heading2"><span class="text-primary2 font-weight-bold border px-3 mr-1">K</span class="heading2">ishori Madhav</h2>
+    <br>
+    <br>
+    <p>Kishori Madhav Creations is a dedicated retail store that offers a diverse range of exquisite products related to Laddo Gopal, catering to the spiritual and cultural needs of devotees and enthusiasts. Our extensive collection includes beautifully crafted accessories, elegant poshak (traditional attire) for Laddo Gopal idols, intricately designed jutti (traditional footwear), and stunning pagadi (turban) options, ensuring every aspect of your worship is adorned with grace and beauty. In addition to these devotional items, we also feature an exclusive selection of handcrafted furniture, perfect for creating a serene and sacred space in your home. Each piece is thoughtfully designed to complement the spiritual ambiance, making our store a one-stop destination for all your Laddo Gopal-related needs.</p>
+    <div id="address">
+      <i class="bi bi-geo-alt-fill"></i>
+    <address class="address1">13/7 Jawahar Nagar near Middha Chownk, Ludhiana</address>
+    </div>
+    
+    <div>
+      <i class="bi bi-envelope-at-fill"></i>
+      <span class="mail">&nbsp;&nbsp;Kishorimadhavcreations@gmail.com</span>
+    </div>
+    
+    <div>
+      <i class="bi bi-telephone-inbound-fill"></i>
+      <span class="number">&nbsp;&nbsp;+012 345 67890</span>
+    </div>
+    <div class="col-md-4 mb-5">
+       <h5 class="font-weight-bold text-dark mb-4 quick">Quick Links</h5> 
+      <div class="d-flex flex-column justify-content-start">
+          <a class="text-dark mb-2 text" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a><br>
+          <a class="text-dark mb-2 text" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our Shop</a><br>
+          <a class="text-dark mb-2 text" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a><br>
+          <a class="text-dark mb-2 text" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a><br>
+          <a class="text-dark mb-2 text" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Checkout</a><br>
+          <a class="text-dark mb-2 text" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+      </div>
+    
+      <div id="footer-image">
+        <img src="krishna-8882651_1920.png" alt="" width="200px;">
+      </div>
+    </div>
+    </div>
+  <!--footer-end-->
+   </footer>
+</body>
+</html>
