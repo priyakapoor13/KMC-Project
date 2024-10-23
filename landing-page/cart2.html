@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <style>
+    .btn-danger {
+        margin-left: 10px; /* Add some space between the quantity and remove button */
+      }
+    </style>
+  </head>
+  <body>
+    <section class="h-100 h-custom">
+      <div class="container h-100 py-5">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col">
+            <div class="table-responsive">
+              <table class="table">
+                <thead>
+                    <tr>
+                      <th scope="col" class="h5">Shopping Bag</th>
+                      <th scope="col">Format</th>
+                      <th scope="col">Quantity</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Total</th>
+                      <th scope="col">Action</th>
+                    </tr>
+                    <script>
+                        function updateTotal() {
+  const quantities = document.querySelectorAll('input[name="quantity"]');
+  const prices = document.querySelectorAll('.price');
+  const totalPrices = document.querySelectorAll('.total-price');
+
+  let subtotal = 0;
+
+  quantities.forEach((input, index) => {
+    const quantity = parseInt(input.value);
+    const price = parseFloat(prices[index].dataset.price);
+    const totalPrice = quantity * price;
+
+    totalPrices[index].textContent = `$${totalPrice.toFixed(2)}`; // Update total price display
+    subtotal += totalPrice;
+  });
+
+  const shipping = 2.99; // Set shipping cost
+  const total = subtotal + shipping;
+
+  // Update subtotal and total in the UI
+  document.querySelector('.subtotal').textContent = `$${subtotal.toFixed(2)}`;
+  document.querySelector('.total').textContent = `$${total.toFixed(2)}`;
+}
+
+                    </script>
+                    <!-- Modal -->
+<div class="modal fade" id="itemModal" tabindex="-1" aria-labelledby="itemModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="itemModalLabel">Item Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modal-body-content">
+          <!-- Item details will be injected here -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="mb-2" onclick="showItemDetails('Thinking, Fast and Slow', 'Daniel Kahneman', 'This book explores the dual systems of thought: the fast, intuitive system and the slow, deliberate one.')">Thinking, Fast and Slow</p>
+<script>
+    function showItemDetails(title, author, description) {
+  const modalContent = `
+    <h5>${title}</h5>
+    <p><strong>Author:</strong> ${author}</p>
+    <p>${description}</p>
+  `;
+  document.getElementById('modal-body-content').innerHTML = modalContent;
+  const modal = new bootstrap.Modal(document.getElementById('itemModal'));
+  modal.show();
+}
+function updateQuantityFeedback(quantity) {
+  const feedback = document.createElement('div');
+  feedback.className = 'alert alert-success';
+  feedback.textContent = `Quantity updated to ${quantity}.`;
+  document.body.appendChild(feedback);
+
+  // Automatically remove the feedback after 2 seconds
+  setTimeout(() => {
+    feedback.remove();
+  }, 2000);
+}
+
+// Modify the onChange event for quantity input
+<input id="quantity1" min="0" name="quantity" value="2" type="number" class="form-control form-control-sm" style="width: 50px" onchange="updateTotal(); updateQuantityFeedback(this.value)" />
+
+</script>  
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <!-- Existing cells -->
+                      <td class="align-middle">
+                        <p class="mb-0 price" data-price="9.99" style="font-weight: 500">$9.99</p>
+                      </td>
+                      <td class="align-middle">
+                        <p class="mb-0 total-price" style="font-weight: 500">$19.98</p> <!-- Total Price -->
+                      </td>
+                      <td class="align-middle">
+                        <button class="btn btn-danger btn-sm" onclick="removeItem(this)">Remove</button>
+                      </td>
+                    </tr>
+                    <!-- Other rows here -->
+                  </tbody>
+                  
+                
+                <tbody>
+                    <tr>
+                      <th scope="row">
+                        <div class="d-flex align-items-center">
+                          <img src="https://i.imgur.com/2DsA49b.webp" class="img-fluid rounded-3" style="width: 120px" alt="Book" />
+                          <div class="flex-column ms-4">
+                            <p class="mb-2">Thinking, Fast and Slow</p>
+                            <p class="mb-0">Daniel Kahneman</p>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="align-middle">
+                        <p class="mb-0" style="font-weight: 500">Digital</p>
+                      </td>
+                      <td class="align-middle">
+                        <div class="d-flex flex-row">
+                          <button class="btn btn-link px-2" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus"></i>
+                          </button>
+                          <input id="quantity1" min="0" name="quantity" value="2" type="number" class="form-control form-control-sm" style="width: 50px" onchange="updateTotal()" />
+                          <button class="btn btn-link px-2" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="align-middle">
+                        <p class="mb-0 price" data-price="9.99" style="font-weight: 500">$9.99</p>
+                      </td>
+                      <td class="align-middle">
+                        <button class="btn btn-danger btn-sm" onclick="removeItem(this)">Remove</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="border-bottom-0">
+                        <div class="d-flex align-items-center">
+                          <img src="https://i.imgur.com/Oj1iQUX.webp" class="img-fluid rounded-3" style="width: 120px" alt="Book" />
+                          <div class="flex-column ms-4">
+                            <p class="mb-2">Homo Deus: A Brief History of Tomorrow</p>
+                            <p class="mb-0">Yuval Noah Harari</p>
+                          </div>
+                        </div>
+                      </th>
+                      <td class="align-middle border-bottom-0">
+                        <p class="mb-0" style="font-weight: 500">Paperback</p>
+                      </td>
+                      <td class="align-middle border-bottom-0">
+                        <div class="d-flex flex-row">
+                          <button class="btn btn-link px-2" onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus"></i>
+                          </button>
+                          <input id="quantity2" min="0" name="quantity" value="1" type="number" class="form-control form-control-sm" style="width: 50px" onchange="updateTotal()" />
+                          <button class="btn btn-link px-2" onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus"></i>
+                          </button>
+                        </div>
+                      </td>
+                      <td class="align-middle border-bottom-0">
+                        <p class="mb-0 price" data-price="13.50" style="font-weight: 500">$13.50</p>
+                      </td>
+                      <td class="align-middle border-bottom-0">
+                        <button class="btn btn-danger btn-sm" onclick="removeItem(this)">Remove</button>
+                      </td>
+                    </tr>
+                  </tbody>
+<script>
+    function updateTotal() {
+  // Get all items in the cart
+  const quantities = document.querySelectorAll('input[name="quantity"]');
+  const prices = document.querySelectorAll('.price');
+
+  let subtotal = 0;
+  
+  quantities.forEach((input, index) => {
+    const quantity = parseInt(input.value);
+    const price = parseFloat(prices[index].dataset.price);
+    subtotal += quantity * price;
+  });
+
+  const shipping = 2.99; // Set shipping cost
+  const total = subtotal + shipping;
+
+  // Update subtotal and total in the UI
+  document.querySelector('.subtotal').textContent = `$${subtotal.toFixed(2)}`;
+  document.querySelector('.total').textContent = `$${total.toFixed(2)}`;
+}
+
+function removeItem(button) {
+  // Remove the row from the table
+  const row = button.closest('tr');
+  row.remove();
+  
+  // Update total after removing item
+  updateTotal();
+}
+
+// Call updateTotal on page load to initialize values
+document.addEventListener('DOMContentLoaded', updateTotal);
+
+// Checkout button functionality
+document.querySelector('.btn-primary').addEventListener('click', () => {
+  alert('Thank you for your purchase! Your order has been placed.');
+});
+
+</script>                  
+              </table>
+            </div>
+
+            <div
+              class="card shadow-2-strong mb-5 mb-lg-0"
+              style="border-radius: 16px"
+            >
+              <div class="card-body p-4">
+                <div class="row">
+                  <div class="col-md-6 col-lg-4 col-xl-3 mb-4 mb-md-0">
+                    <form>
+                      <div class="d-flex flex-row pb-3">
+                        <div class="d-flex align-items-center pe-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="radioNoLabel"
+                            id="radioNoLabel1v"
+                            value=""
+                            aria-label="..."
+                            checked
+                          />
+                        </div>
+                        <div class="rounded border w-100 p-3">
+                          <p class="d-flex align-items-center mb-0">
+                            <i
+                              class="fab fa-cc-mastercard fa-2x text-body pe-2"
+                            ></i
+                            >Credit Card
+                          </p>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-row pb-3">
+                        <div class="d-flex align-items-center pe-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="radioNoLabel"
+                            id="radioNoLabel2v"
+                            value=""
+                            aria-label="..."
+                          />
+                        </div>
+                        <div class="rounded border w-100 p-3">
+                          <p class="d-flex align-items-center mb-0">
+                            <i
+                              class="fab fa-cc-visa fa-2x fa-lg text-body pe-2"
+                            ></i
+                            >Debit Card
+                          </p>
+                        </div>
+                      </div>
+                      <div class="d-flex flex-row">
+                        <div class="d-flex align-items-center pe-2">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="radioNoLabel"
+                            id="radioNoLabel3v"
+                            value=""
+                            aria-label="..."
+                          />
+                        </div>
+                        <div class="rounded border w-100 p-3">
+                          <p class="d-flex align-items-center mb-0">
+                            <i
+                              class="fab fa-cc-paypal fa-2x fa-lg text-body pe-2"
+                            ></i
+                            >PayPal
+                          </p>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-6 col-lg-4 col-xl-6">
+                    <div class="row">
+                      <div class="col-12 col-xl-6">
+                        <div
+                          data-mdb-input-init
+                          class="form-outline mb-4 mb-xl-5"
+                        >
+                          <input
+                            type="text"
+                            id="typeName"
+                            class="form-control form-control-lg"
+                            siez="17"
+                            placeholder="John Smith"
+                          />
+                          <label class="form-label" for="typeName"
+                            >Name on card</label
+                          >
+                        </div>
+
+                        <div
+                          data-mdb-input-init
+                          class="form-outline mb-4 mb-xl-5"
+                        >
+                          <input
+                            type="text"
+                            id="typeExp"
+                            class="form-control form-control-lg"
+                            placeholder="MM/YY"
+                            size="7"
+                            id="exp"
+                            minlength="7"
+                            maxlength="7"
+                          />
+                          <label class="form-label" for="typeExp"
+                            >Expiration</label
+                          >
+                        </div>
+                      </div>
+                      <div class="col-12 col-xl-6">
+                        <div
+                          data-mdb-input-init
+                          class="form-outline mb-4 mb-xl-5"
+                        >
+                          <input
+                            type="text"
+                            id="typeText"
+                            class="form-control form-control-lg"
+                            siez="17"
+                            placeholder="1111 2222 3333 4444"
+                            minlength="19"
+                            maxlength="19"
+                          />
+                          <label class="form-label" for="typeText"
+                            >Card Number</label
+                          >
+                        </div>
+
+                        <div
+                          data-mdb-input-init
+                          class="form-outline mb-4 mb-xl-5"
+                        >
+                          <input
+                            type="password"
+                            id="typeText"
+                            class="form-control form-control-lg"
+                            placeholder="&#9679;&#9679;&#9679;"
+                            size="1"
+                            minlength="3"
+                            maxlength="3"
+                          />
+                          <label class="form-label" for="typeText">Cvv</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-xl-3">
+                    <div
+                      class="d-flex justify-content-between"
+                      style="font-weight: 500"
+                    >
+                      <p class="mb-2">Subtotal</p>
+                      <p class="mb-2">$23.49</p>
+                    </div>
+
+                    <div
+                      class="d-flex justify-content-between"
+                      style="font-weight: 500"
+                    >
+                      <p class="mb-0">Shipping</p>
+                      <p class="mb-0">$2.99</p>
+                    </div>
+
+                    <hr class="my-4" />
+
+                    <div
+                      class="d-flex justify-content-between mb-4"
+                      style="font-weight: 500"
+                    >
+                      <p class="mb-2">Total (tax included)</p>
+                      <p class="mb-2">$26.48</p>
+                    </div>
+
+                    <button
+                      type="button"
+                      data-mdb-button-init
+                      data-mdb-ripple-init
+                      class="btn btn-primary btn-block btn-lg"
+                    >
+                      <div class="d-flex justify-content-between">
+                        <span>Checkout</span>
+                        <span>$26.48</span>
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript" src="/database/cart.json"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

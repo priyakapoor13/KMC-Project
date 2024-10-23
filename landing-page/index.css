@@ -148,7 +148,7 @@
   }
   .dropdown-button{
     position:relative;
-    bottom:11px;
+    bottom:7px;
   
   }
   .dropdown-button:hover {
@@ -186,7 +186,7 @@
   }
   
   
-.navbar {
+  .navbar {
     margin-top:5px;
     position: relative;
      right: 20px; 
@@ -229,7 +229,7 @@
     transition: 0.3s;
 }
 
-/* Responsive */
+/*Responsive */
 @media (max-width: 768px) {
     .nav-links {
          display: none;
@@ -251,12 +251,15 @@
     }
 } 
 
+
 .carousel-container {
-  padding-top:30px;
-  float: right;
   position: relative;
-  width: 500px;
-  overflow: hidden;
+   width: 50%;
+
+
+ /* max-width: 1000px; Adjust based on your preference */
+  margin: auto;
+  overflow: hidden; /* Hide overflowing items */
 }
 
 .carousel {
@@ -265,14 +268,14 @@
 }
 
 .carousel-item {
-  min-width: 100%;
+  min-width: 100%; /* Each item takes full width */
   box-sizing: border-box;
 }
 
 .carousel-item img {
-  width: 100%;
-  height: auto;
-  display: block;
+  width: 100%; /* Images are responsive */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any gap below the image */
 }
 
 .carousel-controls {
@@ -290,11 +293,13 @@
   color: white;
   padding: 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .carousel-controls button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
 
 
   /* second nav bar end */

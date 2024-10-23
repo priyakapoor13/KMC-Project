@@ -3,115 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Carousel</title>
-    <style>
-        * {
+    <title>Responsive Automatic Image Slider</title>
+   <style>
+    * {
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
 }
 
-.carousel-container {
-    position: relative;
-    width: 500px;
+.slider {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
     overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.carousel {
+.slides {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 1s ease;
+    width: 400%;
 }
 
-.carousel-item {
+.slide {
     min-width: 100%;
-    box-sizing: border-box;
+    transition: opacity 1s ease;
+    position: relative;
 }
 
-.carousel-item img {
+.slide img {
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 10px;
 }
 
-.carousel-controls {
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    20% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
+}
+
+.slides {
+    animation: slide 20s infinite;
+}
+
+.slider:hover .slides {
+    animation-play-state: paused;
+}
+
+.navigation {
     position: absolute;
-    top: 50%;
+    bottom: 20px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
+    justify-content: center;
+    align-items: center;
 }
 
-.carousel-controls button {
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    padding: 10px;
+.nav-btn {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    margin: 0 5px;
+    border-radius: 50%;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-.carousel-controls button:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.nav-btn.active {
+    background-color: #fff;
 }
 
-    </style>
+   </style>
 </head>
 <body>
-    <div class="carousel-container">
-        <div class="carousel">
-            <div class="carousel-item"><img src="../src/bansuri1.jpeg" alt="Image 1"></div>
-            <div class="carousel-item"><img src="../src/bansuri11.jpeg" alt="Image 2"></div>
-            <div class="carousel-item"><img src="../src/bansuri13.jpeg" alt="Image 3"></div>
-            <div class="carousel-item"><img src="../src/bansuri19.jpeg" alt="Image 4"></div>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="../src/bansuri1.jpeg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="../src/bansuri2.jpeg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="../src/bansuri16.jpeg" alt ="Image 3">
+            </div>
+            <div class="slide">
+                <img src="../src/bansuri4.jpeg" alt="Image 4">
+            </div>
         </div>
-        <div class="carousel-controls">
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
+        <!-- Navigation -->
+        <div class="navigation">
+            <div class="nav-btn" data-slide="0"></div>
+            <div class="nav-btn" data-slide="1"></div>
+            <div class="nav-btn" data-slide="2"></div>
+            <div class="nav-btn" data-slide="3"></div>
         </div>
     </div>
     <script>
-const carousel = document.querySelector('.carousel');
-const carouselItems = document.querySelectorAll('.carousel-item');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelector('.slides');
+    const navBtns = document.querySelectorAll('.nav-btn');
+    let currentIndex = 0;
 
-let currentIndex = 0;
-
-function showSlide(index) {
-    if (index >= carouselItems.length) {
-        currentIndex = 0;
-    } else if (index < 0) {
-        currentIndex = carouselItems.length - 1;
-    } else {
-        currentIndex = index;
+    function showSlide(index) {
+        slides.style.transform = `translateX(${-index * 100}%)`;
+        navBtns.forEach((btn, i) => {
+            btn.classList.toggle('active', i === index);
+        });
     }
-    carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
 
-nextButton.addEventListener('click', () => {
-    showSlide(currentIndex + 1);
-});
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % navBtns.length;
+        showSlide(currentIndex);
+    }
 
-prevButton.addEventListener('click', () => {
-    showSlide(currentIndex - 1);
-});
+    navBtns.forEach((btn, i) => {
+        btn.addEventListener('click', () => {
+            currentIndex = i;
+            showSlide(currentIndex);
+        });
+    });
 
-// Auto-slide
-setInterval(() => {
-    showSlide(currentIndex + 1);
-}, 3000); // Change slide every 3 seconds
-
-// Make carousel responsive
-window.addEventListener('resize', () => {
-    carousel.style.transition = 'none';
-    showSlide(currentIndex);
-    setTimeout(() => {
-        carousel.style.transition = 'transform 0.5s ease-in-out';
-    }, 0);
+    setInterval(nextSlide, 5000);
 });
 
     </script>

@@ -39,7 +39,7 @@
       <!--main-heading  end-->
 
       <!-- search bar start -->
-      <div class="search-container">
+      <!-- <div class="search-container">
         <input type="text" id="search-bar" class="search-bar" placeholder="Search...">
         <button id="search-button" class="search-button">🔍</button>
       </div>
@@ -49,6 +49,68 @@
   alert('You searched for: ' + searchBar.value);
 });
 
+      </script> -->
+      
+      <div class="search-container">
+        <input list="pages" id="search-bar" class="search-bar" placeholder="Search...">
+        <datalist id="pages">
+          <option value="Laddo Gopal Poshak"></option>
+          <option value="Fancy Poshak"></option>
+          <option value="night-suit"></option>
+          <option value="bister-Set"></option>
+          <option value="Accessories"></option>
+          <option value="Bansuri"></option>
+          <option value="Simple-Mala"></option>
+          <option value="Fancy-Mala"></option>
+          <option value="Furniture"></option>
+        </datalist>
+        <button id="search-button" class="search-button">🔍</button>
+      </div>
+      <script>
+        document.getElementById('search-button').addEventListener('click', function() {
+          const searchBar = document.getElementById('search-bar');
+          const query = searchBar.value.toLowerCase();
+          
+          let pageUrl;
+          switch (query) {
+            case 'laddo gopal poshak':
+              pageUrl = 'simple-poshak.html';
+              break;
+            case 'fancy poshak':
+              pageUrl = 'fancy-poshak.html';
+              break;
+              case 'night-suit':
+              pageUrl = 'nightsuit.html';
+              break;
+            
+            case 'bister-set':
+              pageUrl = 'bister-set.html';
+              break;
+            case 'accessories':
+              pageUrl = 'accessories1.html';
+              break;
+              case 'accessories':
+              pageUrl = 'accessories1.html';
+              break;
+              case 'bansuri':
+              pageUrl = 'bansuri1.html';
+              break;
+              case 'simple-mala':
+              pageUrl = 'simple-mala.html';
+              break;
+              case 'fancy-mala':
+              pageUrl = 'fancymala.html';
+              break;
+              case 'furniture':
+              pageUrl = 'furniture.html';
+              break;
+            default:
+              alert('Page not found');
+              return;
+          }
+          
+          window.location.href = pageUrl;
+        });
       </script>
       <!-- search bar end -->
        <hr>
@@ -451,11 +513,7 @@ alert('Viewing details for this product!');
 }
 
 </script>
-<script>
-  fetch("./database/product.json").then((response) => response.json())
-    .then((json) => console.log(json)
-);
-</script>
+<script src="server.js"></script>
 
 
 

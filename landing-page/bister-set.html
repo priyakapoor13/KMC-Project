@@ -320,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <div class="product-container">
       <div class="product-card">
-          <img src="https://fakeimg.pl/300/" class="product-image">
+          <img src="../src/img.jpg" class="product-image">
           <h2 class="product-title">Cotton Bister Set</h2>
           <p class="product-description">Cotton Bister Set For Laddo Gopal 
             Size Available 1,2,3.
@@ -334,7 +334,7 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
 
       <div class="product-card">
-          <img src="https://fakeimg.pl/300/" class="product-image">
+          <img src="../src/img.jpg" class="product-image">
           <h2 class="product-title">Pocket bister set</h2>
           <p class="product-description">Pocket Bister Set For Laddo Gopal 
             All Size Are Available 
@@ -348,7 +348,21 @@ document.addEventListener('DOMContentLoaded', function() {
       </div>
 
       <div class="product-card">
-          <img src="https://fakeimg.pl/300/" class="product-image">
+        <img src="../src/img.jpg" class="product-image">
+        <h2 class="product-title">Pocket bister set</h2>
+        <p class="product-description">Pocket Bister Set For Laddo Gopal 
+          All Size Are Available 
+           For more Information Click On view Detail Button</p>
+        <p class="product-price">Rs.50</p>
+        <a href="../product-pages/productpage28.html">
+            <button class="view-detail-btn">View Details</button>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('28')">Add to Cart</button>
+        <div class="notification" id="28"></div>
+    </div>
+
+      <div class="product-card">
+          <img src="../src/img.jpg" class="product-image">
           <h2 class="product-title">Reversible Bister Se</h2>
           <p class="product-description">Reversible Bister Set For Laddo Gopal 
             All Size Are Available 
@@ -371,11 +385,11 @@ document.addEventListener('DOMContentLoaded', function() {
 }
   
   </script>
-  <script>
-    fetch("./database/product3.json").then((response) => response.json())
-      .then((json) => console.log(json)
-  );
-  </script>
+ <script>
+  fetch("./database/product.json").then((response) => response.json())
+    .then((json) => console.log(json)
+);
+</script>
    <footer>
     <!--footer-->
   <div id="footer-heading">
