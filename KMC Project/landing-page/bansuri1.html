@@ -8,183 +8,226 @@
       rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
     <style>
-        *{
-  font-family: poppins,sans-serif;
-    margin:0;
-    padding:0;
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(240, 131, 131);
-    padding: 15px 10px;
-    position: fixed; 
-    width: 100%;
-    z-index: 1000;
-   
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
 
-.logo {
-    color: white;
-    font-size: 15px;
+nav {
+    background-color:  rgb(245, 133, 133);
+  padding: 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  z-index: 1;
+}
+nav .logo {
+  display: flex;
+  align-items: center;
+}
+nav .logo img {
+  height: 25px;
+  width: auto;
+  margin-right: 10px;
+}
+nav .logo h1 {
+  font-size: 1.1rem;
+  background: linear-gradient(to right, #2b1e1e 0%, rgba(95, 38, 92, 0.822) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.menu-icon {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin-left: 1.5rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 95%;
+  font-weight: 400;
+  padding: 4px 8px;
+  border-radius: 5px;
 }
 
-.menu-icon .line {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px;
-    margin-right:35px;
+nav ul li a:hover {
+  background-color: #f5f5f5;
 }
 
-.side-nav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgb(211, 112, 112);
-    overflow-x: hidden;
-    transition: 0.5s;
-    z-index: 999;
-    padding-top: 60px;
+.hamburger {
+  display: none;
+  cursor: pointer;
 }
 
-.side-nav .nav-links {
-    list-style: none;
-    padding: 0;
+.hamburger .line {
+  width: 25px;
+  height: 1px;
+  background-color: #1f1f1f;
+  display: block;
+  margin: 7px auto;
+  transition: all 0.3s ease-in-out;
+}
+.hamburger-active {
+  transition: all 0.3s ease-in-out;
+  transition-delay: 0.6s;
+  transform: rotate(45deg);
 }
 
-.side-nav .nav-links li {
-    margin: 20px 0;
+.hamburger-active .line:nth-child(2) {
+  width: 0px;
 }
 
-.side-nav .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
+.hamburger-active .line:nth-child(1),
+.hamburger-active .line:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.hamburger-active .line:nth-child(1) {
+  transform: translateY(12px);
+}
+
+.hamburger-active .line:nth-child(3) {
+  transform: translateY(-5px) rotate(90deg);
+}
+
+.menubar {
+  position: absolute;
+  top: 0;
+  left: -60%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+  height: 200vh;
+  padding: 20% 0;
+  background: rgba(255, 255, 255);
+  transition: all 0.5s ease-in;
+  z-index: 2;
+}
+.active {
+  left: 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.menubar ul {
+  padding: 0;
+  list-style: none;
+}
+.menubar ul li {
+  margin-bottom: 32px;
+}
+
+.menubar ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 95%;
+  font-weight: 400;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.menubar ul li a:hover {
+  background-color: #f5f5f5;
+}
+ @media screen and (max-width: 20000px) {
+   .hamburger {
     display: block;
-    text-align: center;
+  } 
+  nav ul {
+    display: none;
+  }
 }
-/* .side-nav .nav-links a:hover{
-    background-color: indianred;
-    padding:5px;
-} */
-/* .overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: 0.5s;
-    z-index: 998;
-} */
 
 
 
 .product-container {
-     /* display: flex;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;  */
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
     position: relative;
-    top:80px;
-     vertical-align: top; 
-   display:inline-block;
-   padding:20px;
-   float: none; 
-
+    top: 80px;
 }
+
 .product-card {
-   background-color: #fff;
-   border: 1px solid #ddd;
-   border-radius: 10px;
-   padding: 20px;
-   text-align: center;
-   max-width: 300px; 
-   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.2s;
+    position: relative;
+    bottom: 65px;
+   
+}
+
+.product-card:hover {
+    transform: scale(1.05);
 }
 
 .product-image {
-   width:300px; 
-   max-width: 100%;
-   border-radius: 10px;
+    width: 100%;
+    height: auto;
 }
 
 .product-title {
-   font-size: 20px;
-   margin: 10px 0;
+    font-size: 1.5em;
+    margin: 15px 0;
 }
 
 .product-description {
-   font-size: 14px;
-   color: #555;
+    font-size: 1em;
+    margin: 10px 15px;
 }
 
 .product-price {
-   font-size: 18px;
-   margin: 10px 0;
-   color: #333;
+    font-size: 1.2em;
+    color: indianred;
+    margin: 10px 0;
 }
 
-button {
-   padding: 10px 20px;
-   font-size: 16px;
-   color: #fff;
-   border: none;
-   border-radius: 5px;
-   cursor: pointer;
-   transition: background-color 0.3s ease, transform 0.3s ease;
-   margin: 5px;
+.view-detail-btn, .add-to-cart-btn {
+    background-color: indianred;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-.add-to-cart-btn {
-   background-color: indianred;
-}
-
-.add-to-cart-btn:hover {
-   background-color: rgb(224, 131, 131);
-   transform: scale(1.05);
-}
-
-.add-to-cart-btn:active {
-   background-color:  indianred;
-   transform: scale(0.95);
-}
-
-.view-detail-btn {
-   background-color: indianred;
-}
-
-.view-detail-btn:hover {
-   background-color:  rgb(224, 131, 131);
-   transform: scale(1.05);
-}
-
-.view-detail-btn:active {
-   background-color: indianred;
-   transform: scale(0.95);
+.view-detail-btn:hover, .add-to-cart-btn:hover {
+    background-color: indianred;
 }
 
 .notification {
-   margin-top: 20px;
-   padding: 10px 20px;
-   font-size: 14px;
-   color: #fff;
-   background-color:indianred;
-   border-radius: 5px;
-   display: none;
+    margin-top: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: indianred;
 }
+
+
+  /*products*/
 
 
 .pagination {
@@ -262,320 +305,324 @@ button {
   /*products*/
 
  /* Footer */
-.text-primary2 {
-  color:indianred;
-  border-style: groove;
-  outline:none;
-  border-color:#fff;
-  padding:10px;
-  padding-bottom: 3px;
-  padding-top: 3px; 
-  text-shadow: 0px 0px 2px black;
-}
 
-#footer-heading{
+ footer{
   background-color: #EDF1FF;
-    /* margin-top:40px;  */
-  position:relative;
-   height:500px;
-   overflow: hidden;
+  padding-left: 10px;
+}
+@media (max-width: 768px) {
+    footer {
+    background-color: #EDF1FF;
+    color: black;
+    padding: 40px 20px;
+}
   
-}
-
-#footer-heading h2{
-  position:relative;
- top:15px;
- font-size: 37.79px;
- padding-left: 40px;
-}
-#footer-heading p{
-  bottom:1px;
-  position:relative;
-  display:inline-block;
-  margin-left:40px;
-  margin-right:40px;
-  /* width: 350px;
-  height: 150px; */
-  text-align: justify;
- 
-}
- #address{
-  top:150px;
-  position:relative;
-  display: inline-block;
-  /* margin-right:200px; */
- }
- #address .address1{
-  margin-left:70px;
-  position:relative;
-  bottom:160px;
-
-}
-/* .mail{
-  position:relative;
-   bottom:2px;
-} */
-.number{
-  position:relative;
-  top:10px;
-}
-.bi-geo-alt-fill{
-  font-size: 20px;
-  position:relative;
-  bottom:143px;
-  /* margin-right:800px; */
-  margin-left:40px;
-  color:indianred;
-}
-.bi-envelope-at-fill{
-  margin-left:40px;
-  color:indianred;
-  font-size: 20px;
-}
-.bi-telephone-inbound-fill{
-  margin-left:40px;
-  color:indianred;
-  font-size: 20px;
-  position:relative;
-  top:10px;
-
-}
-  .mb-4{
-     font-size:27px;
-     padding-left:40px;
-    padding-top:30px;
+ .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #EDF1FF;
    
-  }
-  .mb-2{
-    padding-left:40px;
-    color:black;
-    line-height: 2em;
-  }
-
-#footer-image{
-  float:right;
-  position:relative;
-  padding-right: 40px;
-bottom:330px;
-
 }
+
+.footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+   
+
+.footer-section h2 {
+    margin-top: 0;
+}
+
+.footer-section p {
+    margin: 10px 0;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #ddd;
+}
+
+.social-links {
+    display: flex;
+    padding: 0;
+}
+
+.social-links li {
+    margin-right: 15px;
+}
+
+.social-links li a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.social-links li a:hover {
+    color: #ddd;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+}
+  }
+
+@media (max-width: 768px) {
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+    }
+}
+  }
 
     </style>
 </head>
 <body>
     <header>
-      <nav class="navbar">
-        <div class="logo"><h1>Laddo Gopal Bansuri Collection</h1></div>
-        <div class="menu-icon" id="menu-icon">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
+      <nav>
+        <div class="logo">
+          <img src="assets/Logo64x64.png" alt="logo" >
+          <h1>Bansuri Collection</h1>
         </div>
-    </nav>
-    <div class="side-nav" id="side-nav">
-        <ul class="nav-links">
-            <li><a href="simple-poshak.html">Poshak</a></li>
-            <li><a href="fancy-poshak.html">Fancy Poshak</a></li>
-            <li><a href="nightsuit.html">Night-Suit</a></li>
-            <li><a href="bister-set.html">Bister-Set</a></li>
-            <li><a href="Accessories1.html">Accessories</a></li>
-            <li><a href="bansuri1.html">Bansuri</a></li>
-            <li><a href="simple-mala.html">Mala</a></li>
-            <li><a href="fancymala.html">Fancy-Mala</a></li>
-            <li><a href="furniture.html">Furniture</a></li>
+      
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </nav>
+      <div class="menubar">
+        <ul>
+          <li>
+            <a href="./simple-poshak.html">Laddo Gopal Poshak</a>
+          </li>
+          <li>
+            <a href="./fancy-poshak.html">Fancy Poshak</a>
+          </li>
+          <li>
+            <a href="./nightsuit.html">Night suit</a>
+          </li>
+          <li>
+            <a href="./Accessories1.html">Accessories</a>
+          </li>
+          <li>
+            <a href="./bansuri1.html">Bansuri</a>
+          </li>
+          <li>
+            <a href="./simple-mala.html">Simple Mala</a>
+          </li>
+          <li>
+            <a href="./fancymala.html">Fancy Mala</a>
+          </li>
+          <li>
+            <a href="./furniture.html">Furniture</a>
+          </li>
         </ul>
-    </div>
-    <div class="overlay" id="overlay"></div>
-    <script>
-// script.js
-document.addEventListener('DOMContentLoaded', function() {
-    const menuIcon = document.getElementById('menu-icon');
-    const sideNav = document.getElementById('side-nav');
-    const overlay = document.getElementById('overlay');
-
-    menuIcon.addEventListener('click', function() {
-        if (sideNav.style.width === '250px') {
-            sideNav.style.width = '0';
-            overlay.style.width = '0';
-        } else {
-            sideNav.style.width = '250px';
-            overlay.style.width = '100%';
-        }
-    });
-
-    overlay.addEventListener('click', function() {
-        sideNav.style.width = '0';
-        overlay.style.width = '0';
-    });
-});
-
-    </script>
-      </header>
-  <!-- second nav bar end  -->
-   <main>
+      </div>
   
+      <script>
+          const mobileNav = document.querySelector(".hamburger");
+  const navbar = document.querySelector(".menubar");
+  
+  const toggleNav = () => {
+    navbar.classList.toggle("active");
+    mobileNav.classList.toggle("hamburger-active");
+  };
+  mobileNav.addEventListener("click", () => toggleNav());
+  </script>
+   </header>
+   <main>
+            
     <div class="product-container">
       <div class="product-card">
-          <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\bansuri1.jpeg" alt="Product Image" class="product-image">
-          <h2 class="product-title">Bansuri</h2>
-          <p class="product-description">Stone Bansuri for krishna</p>
+          <img src="../src/bansuri1.jpeg" class="product-image">
+          <h2 class="product-title">Stone Unique design Bansuri</h2>
+          <p class="product-description">Stone unique design Bansuri for krishna</p>
           <p class="product-price">Rs.70</p>
-          <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\bansuri1.html">
-          <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-          <div id="notification" class="notification"></div>
+          <a href="../product-pages/productpage50.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('50')">Add to Cart</button>
+          <div class="notification" id="50"></div>
       </div>
-    </div>
+     
 
-    <div class="product-container">
       <div class="product-card">
-          <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\bansuri2.jpeg" alt="Product Image" class="product-image">
-          <h2 class="product-title">Bansuri</h2>
-          <p class="product-description">Laddo gopal bansuri</p>
+          <img src="../src/bansuri2.jpeg" alt="img" class="product-image">
+          <h2 class="product-title">Stylish light weight Bansuri</h2>
+          <p class="product-description">Stylish light weight Bansuri for Laddo Gopal</p>
           <p class="product-price">Rs.15</p>
-          <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\bansuri2.html">
-          <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-          <div id="notification" class="notification"></div>
+          <a href="../product-pages/productpage51.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('51')">Add to Cart</button>
+          <div class="notification" id="51"></div>
       </div>
-    </div>
 
-
-    <div class="product-container">
       <div class="product-card">
-          <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\bansuri3.jpeg" alt="Product Image" class="product-image">
-          <h2 class="product-title">Bansuri</h2>
-          <p class="product-description">Bansuri for laddo gopal</p>
+          <img src="../src/bansuri3.jpeg" alt="img" class="product-image">
+          <h2 class="product-title">Bansuri with red and green color combination</h2>
+          <p class="product-description"> red and green color combination Bansuri for laddo gopal</p>
           <p class="product-price">Rs.10</p>
-          <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\bansuri3.html">
-          <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-          <div id="notification" class="notification"></div>
+          <a href="../product-pages/productpage53.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('52')">Add to Cart</button>
+          <div class="notification" id="52"></div>
       </div>
-    </div>
-
-    <div class="product-container">
       <div class="product-card">
-          <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\bansuri4.jpeg" alt="Product Image" class="product-image">
-          <h2 class="product-title">Stone multi-coloured bansuri</h2>
+          <img src="../src/bansuri4.jpeg" alt="Bansuri" class="product-image">
+          <h2 class="product-title">Stone multi-coloured Bansuri</h2>
           <p class="product-description">Stone multi-coloured bansuri for laddo gopal</p>
           <p class="product-price">Rs.70</p>
-          <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\bansuri4.html">
-          <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-          <div id="notification" class="notification"></div>
+          <a href="../product-pages/productpage53.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('53')">Add to Cart</button>
+          <div class="notification" id="53"></div>
       </div>
-    </div>
-
-    <div class="product-container">
+     
+     
       <div class="product-card">
-          <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\bansuri5.jpeg" alt="Product Image" class="product-image">
-          <h2 class="product-title">Bansuri</h2>
-          <p class="product-description">Baby pink bansuri for laddo gopal</p>
+          <img src="../src/bansuri5.jpeg" alt="img" class="product-image">
+          <h2 class="product-title">bansuri</h2>
+          <p class="product-description">Baby pink and golden color bansuri for laddo gopal</p>
           <p class="product-price">Rs.20</p>
-          <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\bansuri5.html">
-          <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-          <div id="notification" class="notification"></div>
+          <a href="../product-pages/productpage54.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('54')">Add to Cart</button>
+          <div class="notification" id="54"></div>
       </div>
-    </div>
 
-    <div class="product-container">
       <div class="product-card">
-          <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\bansuri6.jpeg" alt="Product Image" class="product-image">
+          <img src="../src/bansuri6.jpeg" alt="img" class="product-image">
           <h2 class="product-title">Bansuri</h2>
-          <p class="product-description">Stone bansuri for laddo gopal</p>
-          <p class="product-price">Rs.40</p>
-          <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\bansuri6.html">
-          <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-          <div id="notification" class="notification"></div>
+          <p class="product-description">Red and white Stone bansuri for laddo gopal</p>
+          <p class="product-price">Rs.99</p>
+          <a href="../product-pages/productpage55.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('55')">Add to Cart</button>
+          <div class="notification" id="55"></div>
       </div>
-    </div>
 
-    <div class="product-container">
       <div class="product-card">
-          <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\bansuri7.jpeg" alt="Product Image" class="product-image">
-          <h2 class="product-title">Bansuri</h2>
-          <p class="product-description">Stone bansuri for laddo gopal</p>
+          <img src="../src/bansuri7.jpeg" alt="bansuri" class="product-image">
+          <h2 class="product-title">bansuri</h2>
+          <p class="product-description">Red and white stone bansuri for laddo gopal</p>
           <p class="product-price">Rs.30</p>
-          <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\bansuri7.html">
-          <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-          <div id="notification" class="notification"></div>
+          <a href="../product-pages/productpage56.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('56')">Add to Cart</button>
+          <div class="notification" id="56"></div>
       </div>
-    </div>
 
-    <div class="product-container">
+
       <div class="product-card">
-          <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\bansuri8.jpeg" alt="Product Image" class="product-image">
-          <h2 class="product-title">Bansuri</h2>
-          <p class="product-description">Mor design bansuri</p>
+          <img src="../src/bansuri8.jpeg" alt="img" class="product-image">
+          <h2 class="product-title">Mor design bansuri</h2>
+          <p class="product-description">Mor design with stone bansuri for laddo gopal</p>
           <p class="product-price">Rs.40</p>
-          <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\bansuri8.html">
-          <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-          <div id="notification" class="notification"></div>
+          <a href="../product-pages/productpage57.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('57')">Add to Cart</button>
+          <div class="notification" id="57"></div>
       </div>
-    </div>
 
-    <div class="product-container">
+
+      
+
       <div class="product-card">
-          <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\bansuri9.jpeg" alt="Product Image" class="product-image">
-          <h2 class="product-title">Bansuri</h2>
-          <p class="product-description">Radha name bansuri</p>
-          <p class="product-price">Rs.25</p>
-          <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\bansuri9.html">
-          <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-          <div id="notification" class="notification"></div>
-      </div>
+        <img src="../src/bansuri10.jpeg" alt="img" class="product-image">
+        <h2 class="product-title">bansuri</h2>
+        <p class="product-description">White and blue color light weight bansuri for laddo gopal</p>
+        <p class="product-price">Rs.15</p>
+        <a href="../product-pages/productpage58.html">
+            <button class="view-detail-btn">View Details</button>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('58')">Add to Cart</button>
+        <div class="notification" id="58"></div>
     </div>
 
-    <div class="product-container">
-      <div class="product-card">
-          <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\bansuri10.jpeg" alt="Product Image" class="product-image">
-          <h2 class="product-title">Bansuri</h2>
-          <p class="product-description">Stone bansuri</p>
-          <p class="product-price">Rs.15</p>
-          <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\bansuri10.html">
-          <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-          <div id="notification" class="notification"></div>
-      </div>
-    </div>
+    <div class="product-card">
+      <img src="../src/bansuri11.jpeg" alt="img" class="product-image">
+      <h2 class="product-title">Kalangi design bansuri</h2>
+      <p class="product-description">Kalangi design with stone bansuri for laddo gopal</p>
+      <p class="product-price">Rs.50</p>
+      <a href="../product-pages/productpage59.html">
+          <button class="view-detail-btn">View Details</button>
+      </a>
+      <button class="add-to-cart-btn" onclick="addToCart('59')">Add to Cart</button>
+      <div class="notification" id="59"></div>
+  </div>
+
+  <div class="product-card">
+    <img src="../src/bansuri12.jpeg" alt="img" class="product-image">
+    <h2 class="product-title"> bansuri</h2>
+    <p class="product-description">Beautiful design with red, white, black stone bansuri for laddo gopal</p>
+    <p class="product-price">Rs.90</p>
+    <a href="../product-pages/productpage60.html">
+        <button class="view-detail-btn">View Details</button>
+    </a>
+    <button class="add-to-cart-btn" onclick="addToCart('60')">Add to Cart</button>
+    <div class="notification" id="60"></div>
+</div>
+
+<div class="product-card">
+  <img src="../src/bansuri13.jpeg" alt="img" class="product-image">
+  <h2 class="product-title"> bansuri</h2>
+  <p class="product-description">Red color stone bansuri for laddo gopal</p>
+  <p class="product-price">Rs.25</p>
+  <a href="../product-pages/productpage61.html">
+      <button class="view-detail-btn">View Details</button>
+  </a>
+  <button class="add-to-cart-btn" onclick="addToCart('61')">Add to Cart</button>
+  <div class="notification" id="61"></div>
+</div>
 
 
-    <div class="product-container">
-      <div class="product-card">
-          <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\bansuri11.jpeg" alt="Product Image" class="product-image">
-          <h2 class="product-title">Bansuri</h2>
-          <p class="product-description">Kalangi bansuri for laddo gopal</p>
-          <p class="product-price">Rs.50</p>
-          <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\bansuri11.html">
-          <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-          <div id="notification" class="notification"></div>
-      </div>
-    </div>
-
-    <div class="product-container">
-      <div class="product-card">
-          <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\bansuri12.jpeg" alt="Product Image" class="product-image">
-          <h2 class="product-title">Bansuri</h2>
-          <p class="product-description">Stone bansuri for laddo gopal</p>
-          <p class="product-price">Rs.90</p>
-          <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\bansuri12.html">
-          <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-          <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-          <div id="notification" class="notification"></div>
-      </div>
-    </div>
-
+   
+    <script>
+       function addToCart(productId) {
+  document.getElementById(productId).innerText = "Added to cart!";
+}
+    
+    </script>
     <div class="pagination">
       <a href="#" class="prev" onclick="changePage(-1)">&#10094;</a>
       <!-- <span id="page-numbers"></span> -->
-      <a href="C:\Users\ADMIN\New folder (3)\KMC Project\landing-page\bansuri2.html" class="next" onclick="changePage(1)">&#10095;</a>
+      <a href="bansuri2.html" class="next" onclick="changePage(1)">&#10095;</a>
     </div>
     
     <!-- <div id="content"></div> -->
@@ -632,47 +679,34 @@ updatePagination();
 displayContent();
 
     </script>
-   
+   <script>
+    fetch("./database/product.json").then((response) => response.json())
+      .then((json) => console.log(json)
+  );
+  </script>
    </main>
 
    <footer>
-    <!--footer-->
-  <div id="footer-heading">
-    <h2 class="m-0 display-5 font-weight-semi-bold heading2"><span class="text-primary2 font-weight-bold border px-3 mr-1">K</span class="heading2">ishori Madhav</h2>
-    <br>
-    <br>
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod exercitationem quas voluptas blanditiis quisquam. Quaerat aperiam numquam, perferendis autem distinctio molestias porro voluptate ex, repellendus minima ea, magni consectetur eius!</p>
-    <div id="address">
-      <i class="bi bi-geo-alt-fill"></i>
-    <address class="address1">13/7 Jawahar Nagar near Middha Chownk, Ludhiana</address>
-    </div>
-    
-    <div>
-      <i class="bi bi-envelope-at-fill"></i>
-      <span class="mail">&nbsp;&nbsp;Kishorimadhavcreations@gmail.com</span>
-    </div>
-    
-    <div>
-      <i class="bi bi-telephone-inbound-fill"></i>
-      <span class="number">&nbsp;&nbsp;+012 345 67890</span>
-    </div>
-    <div class="col-md-4 mb-5">
-       <h5 class="font-weight-bold text-dark mb-4 quick">Quick Links</h5> 
-      <div class="d-flex flex-column justify-content-start">
-          <a class="text-dark mb-2 text" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a><br>
-          <a class="text-dark mb-2 text" href="shop.html"><i class="fa fa-angle-right mr-2"></i>Our Shop</a><br>
-          <a class="text-dark mb-2 text" href="detail.html"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a><br>
-          <a class="text-dark mb-2 text" href="cart.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a><br>
-          <a class="text-dark mb-2 text" href="checkout.html"><i class="fa fa-angle-right mr-2"></i>Checkout</a><br>
-          <a class="text-dark mb-2 text" href="contact.html"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+    <div class="footer-container">
+      <div class="footer-section">
+          <h2>About Us</h2>
+          <p>Kishori Madhav Creations is a dedicated retail store that offers a diverse range of exquisite products related to Laddo Gopal, catering to the spiritual and cultural needs of devotees and enthusiasts. Our extensive collection includes beautifully crafted accessories, elegant poshak (traditional attire) for Laddo Gopal idols, intricately designed jutti (traditional footwear), and stunning pagadi (turban) options, ensuring every aspect of your worship is adorned with grace and beauty.
+
+              In addition to these devotional items, we also feature an exclusive selection of handcrafted furniture, perfect for creating a serene and sacred space in your home. Each piece is thoughtfully designed to complement the spiritual ambiance, making our store a one-stop destination for all your Laddo Gopal-related needs.</p>
+  
       </div>
-    
-      <div id="footer-image">
-        <img src="krishna-8882651_1920.png" alt="" width="200px;">
+      <div class="footer-section">
+          <h2>Customer Service</h2>
+          <ul>
+              <li><a href="../landing-page/contact.html">Contact Us</a></li>
+              <li><a href="../landing-page/about us.html">About Us</a></li>
+              <li><a href="../landing-page/privacy.html">Privacy Policy </a></li>
+          </ul>
       </div>
-    </div>
-    </div>
-  <!--footer-end-->
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2024 Laddo Gopal Emporium. All rights reserved.</p>
+  </div>
    </footer>
 </body>
 </html>

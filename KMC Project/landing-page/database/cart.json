@@ -1,0 +1,1074 @@
+
+ {   "Poshak": [
+    {
+    "id": "a1b2c3d4-e5f6-7890-ab12-cdef34567890",
+     "name": "Simple Poshak 1",
+     "title":"Lorem ipsum dolor sit amet.",
+     "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.",
+     "price": 80,
+     "url" : "../../product-pages/productpage1.html",
+     "imageSource": "../../src/img.jpg"
+},
+
+{
+   "id": "4c8aec84-45cc-4d71-bad0-384464fc8ab2",
+   "name": "simple poshak 2",
+   "title":"Lorem ipsum dolor sit amet.",
+   "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.",
+   "price": 80,
+   "url" : "../../product-pages/productpage2.html",
+  "imageSource": "../../src/img.jpg"
+},
+
+{
+  "id": "17850cc7-55eb-49b5-baeb-fe53c4e13b86",
+  "name": "simple Poshak 3 ",
+  "title":"Lorem ipsum dolor sit amet.",
+  "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit.  Eos, laudantium.",
+  "price": 80,
+  "url" : "../../product-pages/productpage3.html",
+  "imageSource": "../../src/img.jpg"
+},
+{
+    "id": "d4268f89-0dd0-4fbb-a03c-9da7cdc75da3",
+    "name": "simple Poshak 4",
+    "title":"Lorem ipsum dolor sit amet.",
+    "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.",
+    "price": 80,
+    "url" : "../../product-pages/productpage4.html",
+    "imageSource": "../../src/img.jpg"
+
+},
+
+{
+    "id": "679bd0e6-d024-46e2-a984-8cf59afca877",
+    "name": "simple Poshak 5",
+    "title":"Lorem ipsum dolor sit amet.",
+    "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.",
+    "price": 80,
+     "url" : "../../product-pages/productpage5.html",
+     "imageSource": "../../src/img.jpg"
+},
+
+{
+    "id": "9a82f522-3da1-4e59-87f6-b56e8c3e0a39",
+    "name": "simple Poshak 6 ",
+            "title":"Lorem ipsum dolor sit amet.",
+            "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.",
+            "price": 80,
+             "link" : "../../product-pages/productpage6.html",
+            "imageSource": "../../src/img.jpg"
+},
+
+ {
+     "id" : "6ce11e90-54ff-4046-9be7-31fd3959405d",
+     "name": "simple Poshak 7",
+     "title":"Lorem ipsum dolor sit amet.",
+     "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.",
+     "price": 80,
+      "url" :  "../../product-pages/productpage7.html",
+     "imageSource": "../../src/img.jpg"
+ },
+
+ {
+  "id": "7f2b904a-db18-40c4-a044-c8eb94d2a828",
+  "name": "simple Poshak 8",
+   "title":"Lorem ipsum dolor sit amet.",
+  "description":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.",
+  "price": 80,
+  "url" : "../../product-pages/productpage8.html",
+  "imageSource": "../../src/img.jpg"
+}
+],
+
+
+"fancy poshak": [
+  {
+      "id": "3f7f404b-3c99-444d-a10b-2f73d13cb609",
+      "name": "fancy poshak 1",
+      "title": "Fancy Poshak With Pagadi",
+      "description":  "Fancy Poshak Suitable For 5 Number Laddo Gopal.Available Size 5",
+      "price": 250,
+      "url": "../../product-pages/productpage9.html",
+      "imageSource": "../../src/fancyposhak1.jpeg"
+  },
+  {
+      "id": "0bd78cc4-1614-4876-81eb-991969b563c6",
+      "name": "fancy poshak 2",
+      "title": "Fancy Poshak Without Pagdi",
+      "description":  "Fancy Poshak with white color mala For Laddo Gopal.Available Size 5,6",
+      "price": 320,
+      "url": "../../product-pages/productpage10.html",
+      "imageSource": "../../src/fancyposhak2.jpeg"
+  },
+  {
+      "id": "8d7f70a6-e82b-49e9-ac2c-0629a56ba744",
+      "name": "fancy poshak 3",
+      "title": "Fancy Poshak With Pagdi",
+      "description":  "Fancy Poshak with pagadi and mala for laddo gopal.Available Size 2,6",
+      "price": 250,
+      "url": "../../product-pages/productpage11.html",
+      "imageSource": "../../src/fancyposhak3.jpeg"
+  },
+  {
+      "id": "b44b4ab4-8c47-4004-bf43-25de690e1bff",
+      "name": "fancy poshak 4",
+      "title": "fancy poshak",
+      "description":  "Fancy poshak With heavy pagdi and designer Mala, heavy sleeves.Available Size 2,4,5,6",
+      "price": 200,
+      "url": "../../product-pages/productpage12.html",
+      "imageSource": "../../src/fancyposhak4.jpeg"
+  },
+  {
+      "id": "da65752e-bf04-49a7-9c10-b0d74993ec0c",
+      "name": "fancy poshak 5",
+      "title": "fancy poshak",
+      "description":  "Fancy poshak with pagadi and mala for laddo gopal.Available size 4,5,6",
+      "price": 350,
+      "url": "../../product-pages/productpage13.html",
+      "imageSource": "../../src/fancyposhak5.jpeg"
+  },
+  {
+      "id": "29df9afd-e743-476d-bbb3-9584fbdfeafa",
+      "name": "fancy poshak 6",
+      "title": "fancy poshak",
+      "description":  "Fancy poshak with pagadi and mala for laddo gopal.Available size 4,5,6",
+      "price": 200,
+      "url": "../../product-pages/productpage14.html",
+      "imageSource": "../../src/fancyposhak6.jpeg"
+  },
+  {
+      "id": "08e9d90a-bf4e-4c5e-88e7-9e0148020a84",
+      "name": "fancy poshak 7",
+      "title": "fancy poshak",
+      "description":  "Fancy poshak with heavy pagadi and mala for laddo gopal.Available size 4,5,6",
+      "price": 240,
+      "url": "../../product-pages/productpage15.html",
+      "imageSource": "../../src/fancyposhak7.jpeg"
+  },
+  {
+      "id": "bd23f2c9-474b-42aa-bfca-67f14d865024",
+      "name": "fancy poshak 8",
+      "title": "fancy poshak",
+       "description": "Fancy poshak with heavy pagadi and mala for laddo gopal.Available size 4,5,6",
+      "price": 220,
+      "url" : "../../product-pages/productpage16.html",
+      "imageSource": "../../src/fancyposhak8.jpeg"
+  },
+  {
+      "id": "e06ad69f-7c09-4386-8b21-40c9f1a5ca15",
+      "name": "fancy poshak 9",
+      "title": "fancy poshak",
+      "description":  "Fancy poshak with pagadi and mala for laddo gopal.Available size 2,5,6",
+      "price": 280,
+       "url" : "../../product-pages/productpage17.html",
+      "imageSource": "../../src/fancyposhak9.jpeg"
+  },
+  {
+      "id": "4355ba2c-d6cd-4e99-ba04-16b4e65f0a79",
+      "name": "fancy poshak 10",
+      "title": "fancy poshak",
+      "description":  "Fancy poshak with pagadi and mala for laddo gopal.Available size 2,4,5,6",
+      "price": 180,
+      "url": "../../product-pages/productpage18.html",
+      "imageSource": "../../src/fancyposhak10.jpeg"
+  },
+  {
+      "id": "be9a78d5-b750-4017-880d-f7f160a0e5a4",
+      "name": "fancy poshak 11",
+      "title": "fancy poshak",
+      "description":  "Fancy poshak with pagadi and mala for laddo gopal.Available size 2,4,6",
+      "price": 230,
+       "url" : "../../product-pages/productpage19.html",
+      "imageSource": "../../src/fancyposhak11.jpeg"
+  },
+  {
+      "id": "f1e2907b-294e-4103-87d3-f91c53a516b8",
+     "name": "fancy poshak 11",
+      "title": "fancy poshak",
+      "description":  "Fancy poshak with pagadi and mala for laddo gopal.Available size 2,4,6",
+      "price": 230,
+       "url" : "../../product-pages/productpage19.html",
+      "imageSource": "../../src/fancyposhak11.jpeg"
+  }
+
+
+],
+
+"nightsuit" : [
+    {
+      "id": "0fcb17bb-cd63-48cb-8a61-329e9e266a52",
+      "name": "night suit 1",
+      "title": " night suit",
+      "description":  "Night Suit For 0 To 6 Number Laddo Gopal.Random Color Will Be Given",
+      "price": 20,
+      "url": "../../product-pages/productpage21.html",
+      "imageSource": "../../src/nightsuit79.jpeg"
+    },
+
+    {
+      "id": "cee820b5-65f7-4cfa-a9ad-a3fcb17bfe32",
+      "name": "night suit 2",
+      "title": " night suit",
+      "description":  "Night Suit For 0 To 6 Number Laddo Gopal.Random Color Will Be Given",
+      "price": 20,
+      "url": "../../product-pages/productpage22.html",
+      "imageSource": "../../src/nightsuit80.jpeg"
+    },
+
+    {
+      "id": "cc8c1b4c-c54e-4df2-8d3a-cc49b8720078",
+      "name": "night suit 3",
+      "title": " night suit",
+      "description":  "Night Suit For 0 To 6 Number Laddo Gopal.Random Color Will Be Given",
+      "price": 20,
+      "url": "../../product-pages/productpage23.html",
+      "imageSource": "../../src/nightsuit81.jpeg"
+    },
+
+    {
+      "id": "21166401-d473-4527-b65e-18765fff8c72",
+      "name": "night suit 4",
+      "title": " night suit",
+      "description":  "Night Suit For 0 To 6 Number Laddo Gopal.Random Color Will Be Given",
+      "price": 20,
+      "url": "../../product-pages/productpage24.html",
+      "imageSource": "../../src/nightsuit82.jpeg"
+    },
+
+    {
+      "id": "3fb834f1-92ca-4f99-a97c-fd21f04341bc",
+      "name": " daiper ",
+      "title": " daiper",
+      "description":  " 0 To 6 Number Laddo Gopal.Random Color Will Be Given",
+      "price": 20,
+      "url": "../../product-pages/productpage25.html",
+      "imageSource": "../../src/daiper83.jpeg"
+    },
+
+    {
+      "id": "c977f3c5-0c1a-4b97-b0f0-759dd587be83",
+      "name": " daiper ",
+      "title": " daiper",
+      "description":  " 0 To 6 Number Laddo Gopal.Random Color Will Be Given",
+      "price": 20,
+      "url": "../../product-pages/productpage26.html",
+      "imageSource": "../../src/daiper84.jpeg"
+    }
+],
+
+
+
+"bister set" : [
+    {
+       "id": "b6aad767-6616-4b93-ab2b-f93cfa07c5fb",
+         "title": " cotton bister set ",
+         "description":  "Cotton Bister Set For laddo gopal. Size Available 1,2,3.",
+         "price": 30,
+         "url": "../../product-pages/productpage27.html",
+         "imageSource": "../../src/img.jpg"
+    },
+    {
+     "id": "cc4df4c5-4794-4ac0-a401-441876f000b0",
+       "title": "Pocket bister set",
+       "description":  "Pocket Bister Set For Laddo gopal. All Size Are Available ",
+       "price": 50,
+       "url": "../../product-pages/productpage28.html",
+       "imageSource": "../../src/img.jpg"
+  },
+  {
+     "id": "7c833aeb-e44c-4bf9-87a4-3d3b762c91ab",
+       "title": "Reversible bister set ",
+       "description":  "Reversible Bister Set For laddo gopal. Size Available 1,2,3.",
+       "price": 80,
+       "url": "../../product-pages/productpage29.html",
+       "imageSource": "../../src/img.jpg"
+  }
+],
+
+"accessories1" : [
+    {
+        "id": "0f0ad94e-d639-4111-9894-b778ce3b83f5",
+        "title": "Radha Rani Chandrika ",
+        "description":  "Radha Rani Chandrika Suitable For 2 Number Radha Rani",
+        "price": 99,
+        "url": "../../product-pages/productpage30.html",
+        "imageSource": "../../src/chandrika88.jpeg"
+    },
+
+    {
+        "id": "e04258cb-e85f-45c7-aa48-62eaf1a06db2",
+        "title": "Radha Rani Chandrika ",
+        "description":  "Radha Rani Chandrika Suitable for 4 number Radha Rani",
+        "price": 120,
+        "url": "../../product-pages/productpage31.html",
+        "imageSource": "../../src/chandrika90.jpeg"
+    },
+
+    {
+        "id": "4873dc66-2483-48dd-acdb-b54ab47fbf46",
+        "title": "Radha Rani Chandrika ",
+        "description":  "Pom Pom Multi-Color Radha Rani Chandrika Suitable For 4 Number Radha Rani",
+        "price": 120,
+        "url": "../../product-pages/productpage32.html",
+        "imageSource": "../../src/chandrika93.jpeg"
+    },
+
+    {
+        "id": "2ec26fc0-96a2-44b3-a30c-99c9c80636b8",
+        "title": "Radha Rani Chandrika",
+        "description":  "Radha Rani Chandrika Suitable for 2 number Radha Rani",
+        "price": 80,
+        "url": "../../product-pages/productpage33.html",
+        "imageSource": "../../src/chandrika94.jpeg"
+    },
+
+    {
+        "id": "c26f4a69-032a-48a8-9e58-5ff02f845eb6",
+        "title": "Radha Rani Chandrika ",
+        "description":  "Radha Rani Chandrika Suitable for 2 number Radha Rani",
+        "price": 60,
+        "url": "../../product-pages/productpage34.html",
+        "imageSource": "../../src/chandrika95.jpeg"
+    },
+
+    {
+        "id": "235a363b-9ee4-4c84-944c-400342293358",
+        "title": "Radha Rani Chandrika ",
+        "description":  "Radha Rani Chandrika Suitable For 4 and 6 Number Radha Rani",
+        "price": 70,
+        "url": "../../product-pages/productpage35.html",
+        "imageSource": "../../src/chandrika99.jpeg"
+    },
+
+    {
+        "id": "5986a831-69a2-4cfe-b329-8b717c1229e4",
+        "title": "kangan",
+        "description":  "kangan Suitable For 0 To 4 Number Laddo Gopal",
+        "price": 35,
+        "url": "../../product-pages/productpage36.html",
+        "imageSource": "../../src/kangan.jpeg"
+    },
+
+    {
+        "id": "9eb0fb20-d603-4314-8304-1287d88f2283",
+        "title": " kangan",
+        "description":  "kangan Suitable For 0 To 4 Number Laddo Gopal",
+        "price": 10,
+        "url": "../../product-pages/productpage37.html",
+        "imageSource": "../../src/kangan1.jpeg"
+    },
+
+
+    {
+        "id": "30c632ca-7f61-4236-b383-89f419443939",
+        "title": " kangan ",
+        "description":  "kangan Suitable For 0 To 4 Number Laddo Gopal",
+        "price": 10,
+        "url": "../../product-pages/productpage38.html",
+        "imageSource": "../../src/kangan2.jpeg"
+    },
+
+    {
+        "id": "0362ddba-6986-440a-a483-667b802b2cca",
+        "title": " Mirror",
+        "description":  "Laddo Gopal Mirror with multi-color border and modern design",
+        "price": 40,
+        "url": "../../product-pages/productpage39.html",
+        "imageSource": "../../src/mirror01.jpeg"
+    },
+
+    {
+        "id": "171a6e8b-2a5e-4a17-bab9-0a0c3ae88d8a",
+        "title": "Chandan  ",
+        "description":  "Chandan made from gopi chandan specially For Laddo Gopal",
+        "price": 20,
+        "url": "../../product-pages/productpage40.html",
+        "imageSource": "../../src/chandan100.jpeg"
+    },
+
+    {
+        "id": "d7ecd83e-8d59-4dff-9407-7db0996a0006",
+        "title": " Itter",
+        "description":  " Gulab, Chandan, Mogra, Bela, Heena Itter For laddo Gopal",
+        "price": 20,
+        "url": "../../product-pages/productpage41.html",
+        "imageSource": "../../src/itter101.jpeg"
+    }
+],
+
+"accessories" :[
+{
+    "id": "d46461fb-b144-433c-89d1-f148e0a0935e",
+    "title": "Earrings",
+    "description":  "Earrings For Laddo Gopal. Red, Green, Orange, Yellow, Blue Color Choices Are Available",
+    "price": 10,
+    "url": "../../product-pages/productpage42.html",
+    "imageSource": "../../src/earrings88.jpeg"
+},
+
+{
+    "id": "de1824bd-35ec-475b-8f10-ebdc58d66194",
+    "title": "Earrings",
+    "description":  "Red And White, blue,sky-blue, green, pink Stone Earrings with beautiful design For Laddo Gopal and Radha Rani",
+    "price": 40,
+    "url": "../../product-pages/productpage43.html",
+    "imageSource": "../../src/earrings89.jpeg"
+},
+
+{
+    "id": "a510d666-fdd5-4f0b-9ad5-5a2c6e63ee69",
+    "title": "Earrings",
+    "description":  "White, Sky-Blue,Red, Light-green  Colors Available",
+    "price": 35,
+    "url": "../../product-pages/productpage44.html",
+    "imageSource": "../../src/earrings90.jpeg"
+},
+
+{
+    "id": "9646e995-76b7-434f-8bac-eeb19dcc3685",
+    "title": "Earrings",
+    "description":  "Dark Green Color Earrings For Laddo Gopal And Radha Rani",
+    "price": 45 ,
+    "url": "../../product-pages/productpage45.html",
+    "imageSource": "../../src/earrings91.jpeg"
+},
+
+{
+    "id": "069ce312-571a-4861-bfe5-749b038d8155",
+    "title": "Pagadi ",
+    "description":  "Pagadi Suitable For 2 To 6 Number Laddo Gopal",
+    "price": 20,
+    "url": "../../product-pages/productpage46.html",
+    "imageSource": "../../src/pagadi106.jpeg"
+},
+
+{
+    "id": "1dfcdbc2-a30a-49de-8e2a-eb4488f6f608",
+    "title": "Jutti for laddo gopal",
+    "description":  "Jutti for laddo gopal",
+    "price": 40,
+    "url": "../../product-pages/productpage47.html",
+    "imageSource": "../../src/shoes99.jpeg"
+},
+
+
+{
+    "id": "3172ffbb-42af-4aa1-bcca-8ee64751dc33",
+    "title": "MomWax",
+    "description":  "Momwax for laddo gopal",
+    "price": 10,
+    "url": "../../product-pages/productpage48.html",
+    "imageSource": "../../src/vex83.jpeg"
+},
+
+{
+    "id": "14fe90a6-62a0-4821-877c-9cc17fee52cf",
+    "title": "Tilak ",
+    "description":  "Tilak for laado gopal",
+    "price": 10,
+    "url": "../../product-pages/productpage49.html",
+    "imageSource": "../../src/tilak84.jpeg"
+}
+    ],
+
+    
+    "bansuri" : [
+        {
+            "id": "af84992f-9889-43e4-adf5-b4005fa9571b",
+    "title": "Stone Unique design Bansuri",
+    "description":  "Stone unique design Bansuri for krishna",
+    "price": 70,
+    "url": "../../product-pages/productpage50.html",
+    "imageSource": "../../src/bansuri1.jpeg"
+        
+},
+
+        {
+            "id": "4426c9d3-703e-46d7-920e-294ba9904a66",
+    "title": "Stylish light weight Bansuri",
+    "description":  "Stylish light weight Bansuri for Laddo Gopal",
+    "price":  15,
+    "url": "../../product-pages/productpage51.html",
+    "imageSource": "../../src/bansuri2.jpeg"
+
+},
+        
+        {
+            "id": "fcf14a47-740f-47cb-bc12-232c4d3df052",
+    "title": "Bansuri with red and green color combination",
+    "description":  " red and green color combination Bansuri for laddo gopal",
+    "price": 10 ,
+    "url": "../../product-pages/productpage52.html",
+    "imageSource": "../../src/bansuri3.jpeg"
+       
+},
+        
+
+        {
+            "id": "3e7896e9-9907-4c60-b38b-83bde9996383",
+    "title": "Stone multi-coloured Bansuri",
+    "description":  "Stone multi-coloured bansuri for laddo gopal",
+    "price":  70,
+    "url": "../../product-pages/productpage53.html",
+    "imageSource": "../../src/bansuri4.jpeg"
+
+},
+        
+
+        {
+            "id": "7deea5a0-7276-41b8-8039-f9c87340580c",
+    "title": "bansuri",
+    "description":  "Baby pink and golden color bansuri for laddo gopal",
+    "price": 20,
+    "url": "../../product-pages/productpage54.html",
+    "imageSource": "../../src/bansuri5.jpeg"
+       
+},
+        
+
+        {
+            "id": "03ce6af5-a51f-4a7f-b668-ca9f8f891217",
+    "title": "bansuri",
+    "description":  "Red and white Stone bansuri for laddo gopal",
+    "price": 99,
+    "url": "../../product-pages/productpage55.html",
+    "imageSource": "../../src/bansuri6.jpeg"
+       
+},
+        
+
+        {
+            "id": "1973fd61-9d40-4ad1-bec3-f055e9ca2f96",
+    "title": "bansuri",
+    "description":  "Red and white stone bansuri for laddo gopal",
+    "price": 30,
+    "url": "../../product-pages/productpage56.html",
+    "imageSource": "../../src/bansuri7.jpeg"
+       
+},
+        
+
+        {
+            "id": "10480969-04f8-4096-81f6-d8456362ab80",
+    "title": "Mor design bansuri",
+    "description":  "Mor design with stone bansuri for laddo gopal",
+    "price": 40,
+    "url": "../../product-pages/productpage57.html",
+    "imageSource": "../../src/bansuri8.jpeg"
+       
+},
+        
+
+        {
+            "id": "8ba0fe2c-dd62-48e3-893e-a39ea0352023",
+    "title": "bansuri",
+    "description":  "White and blue color light weight bansuri for laddo gopal",
+    "price": 15,
+    "url": "../../product-pages/productpage58.html",
+    "imageSource": "../../src/bansuri10.jpeg"
+       
+},
+
+{
+    "id": "bb915bdf-a923-4ef0-b862-b7974ec186e9",
+"title": "Kalangi design bansuri",
+"description":  "Kalangi design with stone bansuri for laddo gopal",
+"price": 50,
+"url": "../../product-pages/productpage59.html",
+"imageSource": "../../src/bansuri11.jpeg"
+
+},
+
+
+{
+    "id": "4d3e7316-e2ff-4f28-ac35-7ad18975bda0",
+"title": "bansuri",
+"description":  "Beautiful design with red, white, black stone bansuri for laddo gopal",
+"price": 90,
+"url": "../../product-pages/productpage60.html",
+"imageSource": "../../src/bansuri12.jpeg"
+
+},
+
+{
+    "id": "09c53bc2-5869-46db-9e7b-71555f748fa9",
+"title": "bansuri",
+"description":  "Red color stone bansuri for laddo gopal",
+"price": 25,
+"url": "../../product-pages/productpage61.html",
+"imageSource": "../../src/bansuri13.jpeg"
+
+}
+
+      
+],
+
+    "bansuri1":[
+        {
+            "id": "12a101cc-f6a9-42f0-acc5-9cfd6866d800",
+    "title": "bansuri",
+    "description":  "White and green stone bansuri for laddo gopal",
+    "price":  25,
+    "url": "../../product-pages/productpage62.html",
+    "imageSource": "../../src/bansuri14.jpeg"
+        
+},
+
+{
+    "id": "97df537e-b010-4609-9abb-1d1440048d14",
+"title": "bansuri",
+"description":  "Ghungroo with red and green color bansuri for laddo gopal",
+"price":  20,
+"url": "../../product-pages/productpage63.html",
+"imageSource": "../../src/bansuri15.jpeg"
+
+},
+
+{
+    "id": "0d43e356-bbb2-4bb2-aa21-09f3c45527d0",
+"title": "bansuri",
+"description":  "Mor design with stone bansuri for laddo gopal",
+"price":  70,
+"url": "../../product-pages/productpage64.html",
+"imageSource": "../../src/bansuri16.jpeg"
+
+},
+
+{
+    "id": "954e8b26-8fa7-49d8-89cb-346cb812f41a",
+"title": "bansuri",
+"description":  "Red and white stone bansuri for laddo gopal",
+"price":  80,
+"url": "../../product-pages/productpage65.html",
+"imageSource": "../../src/bansuri17.jpeg"
+
+},
+
+
+{
+    "id": "630aa08c-8b16-4860-bb31-cde2feefaf4c",
+"title": "bansuri",
+"description":  "Multi-color bansuri with flower design for laddo gopal",
+"price":  60,
+"url": "../../product-pages/productpage66.html",
+"imageSource": "../../src/bansuri18.jpeg"
+
+},
+
+{
+    "id": "f9e3e83f-602f-4182-a921-089cee7bdfb0",
+"title": "bansuri",
+"description":  "Multi-color bansuri with flower design for laddo gopal",
+"price":  30,
+"url": "../../product-pages/productpage67.html",
+"imageSource": "../../src/bansuri19.jpeg"
+
+},
+
+{
+    "id": "c9ea224e-127e-470b-9824-7012191ab6aa",
+"title": "bansuri",
+"description":  "Multi-color stone bansuri for laddo gopal",
+"price":  40,
+"url": "../../product-pages/productpage68.html",
+"imageSource": "../../src/bansuri20.jpeg"
+
+},
+
+{
+    "id": "c9b726e3-2348-4c47-bcae-439c17341571",
+"title": "bansuri",
+"description":  "Multi-color stone bansuri for laddo gopal",
+"price":  40,
+"url": "../../product-pages/productpage69.html",
+"imageSource": "../../src/bansuri20.jpeg"
+
+}
+
+],
+
+    "mala": [
+
+        {
+            "id": "949c659e-0838-4ce9-8fb0-532f879b363f",
+            "title": "Multi-color mala for laddo gopal",
+            "description":  "Multi Color Mala Suitable For 2 To 4 Number Laddo Gopal and radha rani.For more information click on view detail button",
+            "price":  10,
+            "url": "../../product-pages/productpage70.html",
+            "imageSource": "../../src/mala1.jpeg"
+         
+},
+
+
+{
+    "id": "d10e9830-4910-49e3-a9a1-0925f9e3b878",
+    "title": "White And Red Color Mala for laddo gopal",
+    "description":  "White And Red Color Mala Suitable For 2 To 4 Number Laddo Gopal and radha rani.For more information click on view detail button",
+    "price":  10,
+    "url": "../../product-pages/productpage71.html",
+    "imageSource": "../../src/mala2.jpeg"
+ 
+},
+
+
+{
+    "id": "428316c5-0b48-4304-90e7-1267e43c72d0",
+    "title": "White And Golden Color Mala",
+    "description":  "White And Golden Color Mala Suitable For 2 To 4 Number Laddo Gopal.For more information click on view detail button",
+    "price":  10,
+    "url": "../../product-pages/productpage72.html",
+    "imageSource": "../../src/mala3.jpeg"
+ 
+},
+
+
+{
+    "id": "a64261f5-b820-4f2d-ba47-583960f362df",
+    "title": "golden and pink mala for laddo gopal",
+    "description":  "Golden And Pink Color Mala Suitable For 2 To 4 Number Laddo Gopal.For more information click on view detail button",
+    "price":  10,
+    "url": "../../product-pages/productpage73.html",
+    "imageSource": "../../src/mala4.jpeg"
+ 
+},
+
+
+{
+    "id": "2080c252-148b-43de-9274-a77b6b6a35fa",
+    "title": "Ginni Mala for laddo gopal and radha rani",
+    "description":  "Beautiful ginni mala for laddo gopal and radha rani with very affordable price",
+    "price":  10,
+    "url": "../../product-pages/productpage74.html",
+    "imageSource": "../../src/mala5.jpeg"
+ 
+},
+
+
+{
+    "id": "fca91f4a-b8a8-44c1-bd08-1ee18d7b1e28",
+    "title": "Swastik sign mala in red color",
+    "description":  "Swastik sign mala in red color suitable for 2 to 4 number laddo gopal and radha rani",
+    "price":  10,
+    "url": "../../product-pages/productpage75.html",
+    "imageSource": "../../src/mala7.jpeg"
+ 
+},
+
+
+{
+    "id": "03fee3b9-5a1b-46fc-8225-843bf66a9415",
+    "title": "Red color pom-pom mala for laddo gopal and radha rani",
+    "description":  "White Moti With Red Small Pompom Mala Suitable For 2 To 4 Number Laddo Gopal and radha rani",
+    "price":  10,
+    "url": "../../product-pages/productpage76.html",
+    "imageSource": "../../src/mala13.jpeg"
+ 
+},
+
+
+{
+    "id": "79743960-9905-4fe0-8d3b-6b01b3609e26",
+    "title": "Swastik and rudraksh sign mala for laddo gopal and radha rani",
+    "description":  "Swastik and Rudrakash Mala Suitable For 2 To 4 Number Laddo Gopal",
+    "price":  10,
+    "url": "../../product-pages/productpage77.html",
+    "imageSource": "../../src/mala14.jpeg"
+ 
+}
+
+ ],
+    
+    "fancy mala" : [
+
+        {
+            "id": "35829d27-189d-4fa3-b969-fac2c5fce928",
+            "title": "Light Orange Color Mala",
+            "description":  "Mala with kada suitable for 6 and 7 number Laddo Gopal",
+            "price":  35,
+            "url": "../../product-pages/productpage78.html",
+            "imageSource": "../../src/mala23.jpeg"
+        
+},
+
+{
+    "id": "610a0b36-61a8-448d-a7b5-3059134a3da8",
+    "title": "Ferozi Color Mala",
+    "description":  "Big size mala suitable for 10 number Laddoo Gopal or Mata Rani",
+    "price":  90,
+    "url": "../../product-pages/productpage79.html",
+    "imageSource": "../../src/mala32.jpeg"
+
+},
+
+{
+    "id": "1e5c01d6-3af9-4153-b2f8-c35bd211d1d7",
+    "title": "Dark Pink Color Mala",
+    "description":  "Suitable for Mata Rani and 10 number Laddo gopal",
+    "price":  70,
+    "url": "../../product-pages/productpage80.html",
+    "imageSource": "../../src/mala30.jpeg"
+
+},
+
+{
+    "id": "d4695dab-cb21-4de7-977d-45698d6e4236",
+    "title": "Full Set Of Mala",
+    "description":  "Full set with Mukut, Mala, Bansuri, Earrings For laddo gopal",
+    "price":  180,
+    "url": "../../product-pages/productpage81.html",
+    "imageSource": "../../src/mala40.jpeg"
+
+},
+
+{
+    "id": "e622f2a8-1e78-4af0-8a63-d3d0e3bf449e",
+    "title": "Stone Multi-Color Mala",
+    "description":  "Suitable for 2Number Laddo Gopal And Radha Rani",
+    "price":  30,
+    "url": "../../product-pages/productpage82.html",
+    "imageSource": "../../src/mala43.jpeg"
+
+},
+
+{
+    "id": "24c38f6e-a28e-49ba-a70e-ef40f736d458",
+    "title": "Stone Mala",
+    "description":  "Red With White Stone Mala Suitable for 2Number Laddo Gopal",
+    "price":  30,
+    "url": "../../product-pages/productpage83.html",
+    "imageSource": "../../src/mala45.jpeg"
+
+},
+
+{
+    "id": "c8d7c0c2-89ed-4863-a58e-98753d4e2af4",
+    "title": "Multi-color mala",
+    "description":  "Multi-Color Mala Suitable For 2 Number Laddo Gopal and radha rani",
+    "price":  35,
+    "url": "../../product-pages/productpage85.html",
+    "imageSource": "../../src/mala48.jpeg"
+
+},
+
+{
+    "id": "f14bd87a-5dc9-4916-9f54-a211fe77e73a",
+    "title": "Multi-Color Mala",
+    "description":  "Multi-Color Mala Suitable For 4 Number Laddo Gopal",
+    "price":  40,
+    "url": "../../product-pages/productpage85.html",
+    "imageSource": "../../src/mala49.jpeg"
+
+},
+
+{
+    "id": "ccb56d14-d0a6-454c-abf7-04d9ab45f866",
+    "title": "Yellow And Green Moti Mala",
+    "description":  "Yellow And Green Moti Mala Suitable For 4-6 Number Laddo Gopal",
+    "price":  40,
+    "url": "../../product-pages/productpage86.html",
+    "imageSource": "../../src/mala53.jpeg"
+
+},
+
+{
+    "id": "efce93c9-d7fe-4116-b0a5-8d643b3d382e",
+    "title": "White Moti With Mor Design",
+    "description":  "White Moti With Mor Design Suitable For 4Number Laddo-Gopal",
+    "price":  40,
+    "url": "../../product-pages/productpage87.html",
+    "imageSource": "../../src/mala55.jpeg"
+
+},
+
+
+
+{
+    "id": "b468ae1b-3553-43d9-b5d9-db96ffb26d80",
+    "title": "Orange Color With White Moti Mala",
+    "description":  "Orange Color With White Moti Mala Suitable For 4Number Laddo Gopal and radha rani",
+    "price":  25,
+    "url": "../../product-pages/productpage88.html",
+    "imageSource": "../../src/mala50.jpeg"
+
+},
+
+{
+    "id": "a1b12fc4-1464-4658-9fec-cb6685c999fa",
+    "title": "Golden And Red Color Mala",
+    "description":  "Golden And Red Color Mala Suitable For 0-2 Number Laddo Gopal",
+    "price":  30,
+    "url": "../../product-pages/productpage89.html",
+    "imageSource": "../../src/maal47.jpeg"
+
+},
+
+{
+    "id": "97390295-9d0f-4dd1-a92d-be7d1db1d004",
+    "title": "Green Moti Mala for laddo gopal",
+    "description":  "Traditional Green Moti Mala Suitable For 4-6 Number Laddo Gopal and radha rani",
+    "price":  55,
+    "url": "../../product-pages/productpage90.html",
+    "imageSource": "../../src/mala57.jpeg"
+
+},
+
+{
+    "id": "12aa6c68-9437-4f02-b9ef-e576624b8b3e",
+    "title": "Yellow Mala With White Stone",
+    "description":  "Yellow Mala With White Stone Suitable For 4-6 Number Laddo Gopal",
+    "price":  55,
+    "url": "../../product-pages/productpage91.html",
+    "imageSource": "../../src/mala60.jpeg"
+
+},
+
+{
+    "id": "87230467-bdc2-4280-a1ad-81ea9d9f7531",
+    "title": "Red Color And Stone Mala",
+    "description":  "Red Color And Stone Mala  Suitable for 4-6 Number Laddo Gopal and radha rani",
+    "price":  60,
+    "url": "../../product-pages/productpage92.html",
+    "imageSource": "../../src/mala75.jpeg"
+
+},
+
+{
+    "id": "acc10a69-f848-40b4-bade-4de8f145c0f6",
+    "title": "Light Orange Color Moti Mala",
+    "description":  "Light Orange Color Moti Mala  Suitable for 4 Number Laddo Gopal and radha rani",
+    "price":  35,
+    "url": "../../product-pages/productpage93.html",
+    "imageSource": "../../src/mala69.jpeg"
+
+}
+
+ ],
+
+    "furniture" : [
+
+        {
+       "id": "088f2f09-9ed1-4b40-bd37-c278d19b764b",
+            "title": "Fool Bangla Cum shahi Asan",
+            "description":  "Fool bangla cum shahi asan for laddo gopal and radha rani",
+            "price":  250,
+            "url": "../../product-pages/productpage94.html",
+            "imageSource": "../../src/furniture1.jpeg"
+        
+},
+
+{
+    "id": "78f0b227-3ec3-4b71-be65-2487b6950154",
+         "title": "comfortable Jhula for laddo gopal",
+         "description":  "Jhula for 0 to 2 number laddo gopal and radha rani",
+         "price":  370,
+         "url": "../../product-pages/productpage95.html",
+         "imageSource": "../../src/furniture2.jpeg"
+     
+},
+
+
+{
+    "id": "01624d74-ac9d-4678-89bd-19e8964d4a3a",
+         "title": "comfortable Jhula for laddo gopal",
+         "description":  "Jhula for 0 to 4 number laddo gopal and radha rani",
+         "price":  420,
+         "url": "../../product-pages/productpage96.html",
+         "imageSource": "../../src/furniture3.jpeg"
+     
+},
+
+{
+    "id": "0e9ee4ef-6b4b-4875-9126-baa9d929a7e6",
+         "title": "comfortable Jhula for laddo gopal",
+         "description":  "Jhula for 0 to 2 number laddo gopal and radha rani",
+         "price":  370,
+         "url": "../../product-pages/productpage97.html",
+         "imageSource": "../../src/furniture4.jpeg"
+     
+},
+
+
+{
+    "id": "66031810-d771-4d00-97ea-bc0da58f4878",
+         "title": "jhula for laddo gopal",
+         "description":  "Purple color jhula with soft asan for 0 to 2 number laddo gopal and radha rani",
+         "price":  370,
+         "url": "../../product-pages/productpage98.html",
+         "imageSource": "../../src/furniture6.jpeg"
+     
+},
+
+
+{
+    "id": "c8a986a2-3d0f-456e-9098-2542ff9eb549",
+         "title": "Jhula for laddo gopal",
+         "description":  "Garden jhula with flowers and soft red color asan for0 to 2 number laddo gopal",
+         "price":  300,
+         "url": "../../product-pages/productpage99.html",
+         "imageSource": "../../src/furniture7.jpeg"
+     
+},
+
+{
+    "id": "58ea6301-4a93-49f5-b11a-1ca1c6dc5ba8",
+         "title": "Jhula for laddo gopal",
+         "description":  "Mor design meenakshi jhula for 0 to 2 number laddo gopal and radha rani",
+         "price":  250,
+         "url": "../../product-pages/productpage100.html",
+         "imageSource": "../../src/furniture8.jpeg"
+     
+},
+
+{
+    "id": "8c84bd48-a7f5-4650-a32e-73b09cb77f09",
+         "title": "Radha Krishan Jhula",
+         "description":  "jhula with unique flower design and asan for 0 to 2 no laddo gopal and radha rani",
+         "price":  350,
+         "url": "../../product-pages/productpage101.html",
+         "imageSource": "../../src/furniture9.jpeg"
+     
+},
+
+{
+    "id": "adbd7f5b-e0ff-4af8-9016-657af0da16b2",
+         "title": "Traditional Jhula for laddo gopal",
+         "description":  "Traditional design jhula for 0 to 2 number laddo gopal and radha rani",
+         "price":  450,
+         "url": "../../product-pages/productpage102.html",
+         "imageSource": "../../src/furniture10.jpeg"
+     
+},
+
+{
+    "id": "e45d9437-787b-4ace-9e5e-137dc61fffc6",
+         "title": "Furniture",
+         "description":  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, architecto?",
+         "price":  99,
+         "url": "../../product-pages/productpage103.html",
+         "imageSource": "https://fakeimg.pl/300/"
+     
+},
+
+{
+   "id": "00f681b3-c50b-4efa-8d80-f3b8cc7b92b5",
+         "title": "Furniture",
+         "description":  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, architecto?",
+         "price":  99,
+         "url": "../../product-pages/productpage104.html",
+         "imageSource": "https://fakeimg.pl/300/"
+     
+},
+
+{
+    "id": "8e660493-ff17-40f2-822b-14cae5a00cda",
+          "title": "Furniture",
+          "description":  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, architecto?",
+          "price":  99,
+          "url": "../../product-pages/productpage105.html",
+          "imageSource": "https://fakeimg.pl/300/"
+      
+ }
+
+ ]
+}

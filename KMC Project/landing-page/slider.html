@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Automatic Image Slider</title>
+   <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.slider {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease;
+    width: 400%;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 1s ease;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0%); }
+    20% { transform: translateX(0%); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0%); }
+}
+
+.slides {
+    animation: slide 20s infinite;
+}
+
+.slider:hover .slides {
+    animation-play-state: paused;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-btn {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #fff;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-btn.active {
+    background-color: #fff;
+}
+
+   </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="../src/bansuri1.jpeg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="../src/bansuri2.jpeg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="../src/bansuri16.jpeg" alt ="Image 3">
+            </div>
+            <div class="slide">
+                <img src="../src/bansuri4.jpeg" alt="Image 4">
+            </div>
+        </div>
+        <!-- Navigation -->
+        <div class="navigation">
+            <div class="nav-btn" data-slide="0"></div>
+            <div class="nav-btn" data-slide="1"></div>
+            <div class="nav-btn" data-slide="2"></div>
+            <div class="nav-btn" data-slide="3"></div>
+        </div>
+    </div>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelector('.slides');
+    const navBtns = document.querySelectorAll('.nav-btn');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.style.transform = `translateX(${-index * 100}%)`;
+        navBtns.forEach((btn, i) => {
+            btn.classList.toggle('active', i === index);
+        });
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % navBtns.length;
+        showSlide(currentIndex);
+    }
+
+    navBtns.forEach((btn, i) => {
+        btn.addEventListener('click', () => {
+            currentIndex = i;
+            showSlide(currentIndex);
+        });
+    });
+
+    setInterval(nextSlide, 5000);
+});
+
+    </script>
+</body>
+</html>

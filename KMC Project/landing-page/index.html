@@ -7,6 +7,7 @@
     <link
       rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
 
@@ -37,22 +38,73 @@
      <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">K</span>ishori Madhav</h1>
       <!--main-heading  end-->
 
-      <!-- search bar start -->
+     
+      
       <div class="search-container">
-        <input type="text" id="search-bar" class="search-bar" placeholder="Search...">
+        <input list="pages" id="search-bar" class="search-bar" placeholder="Search...">
+        <datalist id="pages">
+          <option value="Laddo Gopal Poshak"></option>
+          <option value="Fancy Poshak"></option>
+          <option value="night-suit"></option>
+          <option value="bister-Set"></option>
+          <option value="Accessories"></option>
+          <option value="Bansuri"></option>
+          <option value="Simple-Mala"></option>
+          <option value="Fancy-Mala"></option>
+          <option value="Furniture"></option>
+        </datalist>
         <button id="search-button" class="search-button">🔍</button>
       </div>
       <script>
         document.getElementById('search-button').addEventListener('click', function() {
-  const searchBar = document.getElementById('search-bar');
-  alert('You searched for: ' + searchBar.value);
-});
-
+          const searchBar = document.getElementById('search-bar');
+          const query = searchBar.value.toLowerCase();
+          
+          let pageUrl;
+          switch (query) {
+            case 'laddo gopal poshak':
+              pageUrl = 'simple-poshak.html';
+              break;
+            case 'fancy poshak':
+              pageUrl = 'fancy-poshak.html';
+              break;
+              case 'night-suit':
+              pageUrl = 'nightsuit.html';
+              break;
+            
+            case 'bister-set':
+              pageUrl = 'bister-set.html';
+              break;
+            case 'accessories':
+              pageUrl = 'accessories1.html';
+              break;
+              case 'accessories':
+              pageUrl = 'accessories1.html';
+              break;
+              case 'bansuri':
+              pageUrl = 'bansuri1.html';
+              break;
+              case 'simple-mala':
+              pageUrl = 'simple-mala.html';
+              break;
+              case 'fancy-mala':
+              pageUrl = 'fancymala.html';
+              break;
+              case 'furniture':
+              pageUrl = 'furniture.html';
+              break;
+            default:
+              alert('Page not found');
+              return;
+          }
+          
+          window.location.href = pageUrl;
+        });
       </script>
       <!-- search bar end -->
        <hr>
 
-       <!-- second nav bar  -->
+       <!-- second nav bar  -
        <nav class="navbar">
         <div class="dropdown">
             <button class="dropdown-button">Categories</button>
@@ -66,7 +118,7 @@
       <a href="simple-mala.html">Mala</a>
       <a href="fancymala.html">Fancy Mala</a>
       <!-- <a href="jugaljodi.html">Jugal jodi Set</a>
-      <a href="lehnga patka.html">Lehnga Patka set</a> -->
+      <a href="lehnga patka.html">Lehnga Patka set</a> 
       <a href="furniture.html">Singhasan</a>
 
       <script>
@@ -93,10 +145,11 @@
      
          <nav class="navbar">
           <ul class="nav-links">
-              <li><a href="C:\Users\ADMIN\New folder (3)\KMC Project\landing-page\index.html">Home</a></li>
-              <li><a href="C:\Users\ADMIN\New folder (3)\KMC Project\landing-page\about us.html">About</a></li>
-              <li><a href="C:\Users\ADMIN\New folder (3)\KMC Project\landing-page\privacy.html">Privacy</a></li>
-              <li><a href="C:\Users\ADMIN\New folder (3)\KMC Project\landing-page\contact.html">Contact</a></li>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about us.html">About</a></li>
+              <li><a href="./privacy.html">Privacy</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+              <li><a href="/src/cart/index.html"><i class="bi bi-cart"></i><span>20</span></a></li>
           </ul>
           <div class="hamburger" onclick="toggleMenu()">
               <span class="bar"></span>
@@ -112,57 +165,120 @@
   }
   
       </script>
-      
-<!-- slider start -->
-<div class="slider">
-  <div class="slides">
-    <div class="slide">
-      <img src="C:\Users\ADMIN\New folder (3)\madhav photos\fancyposhak10.jpeg" alt="Image 1">
+    -->
+
+    <nav>
+      <div class="logo">
+        <img src="../src/images (3).jpg" alt="logo"  >
+        <h1>LOGO</h1>
+      </div>
+      <ul>
+        <li>
+          <a href="./index.html">Home</a>
+        </li>
+        <li>
+          <a href="./about us.html">About Us</a>
+        </li>
+        <li>
+          <a href="./privacy.html">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="./contact.html">Contact Us</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+    <div class="menubar">
+      <ul>
+        <li>
+          <a href="./index.html">Home</a>
+        </li>
+        <li>
+          <a href="./about us.html">About Us</a>
+        </li>
+        <li>
+          <a href="./privacy.html">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="./contact.html">Contact Us</a>
+        </li>
+      </ul>
     </div>
-    <div class="slide">
-      <img src="image2.jpg" alt="Image 2">  <!--image2.jpg-->
-    </div>
-    <div class="slide">
-      <img src="image3.jpg" alt="Image 3">
-    </div>
-    <div class="slide">
-      <img src="image4.jpg" alt="Image 4">
-    </div>
+
+    <script>
+        const mobileNav = document.querySelector(".hamburger");
+const navbar = document.querySelector(".menubar");
+
+const toggleNav = () => {
+  navbar.classList.toggle("active");
+  mobileNav.classList.toggle("hamburger-active");
+};
+mobileNav.addEventListener("click", () => toggleNav());
+
+    </script>
+
+
+
+<div class="carousel-container">
+  <div class="carousel">
+      <div class="carousel-item"><img src="../src/photo.jpg" alt="Image 1"></div>
+      <div class="carousel-item"><img src="../src/photo.jpg" alt="Image 2"></div>
+      <div class="carousel-item"><img src="../src/photo.jpg" alt="Image 3"></div>
+      <div class="carousel-item"><img src="../src/photo.jpg" alt="Image 4"></div>
   </div>
-  <div class="navigation">
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
+  <div class="carousel-controls">
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
   </div>
 </div>
 <script>
-  let currentIndex = 0;
-const slides = document.querySelectorAll('.slide');
-const totalSlides = slides.length;
+const carousel = document.querySelector('.carousel');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
 
-const updateSlidePosition = () => {
-document.querySelector('.slides').style.transform = `translateX(-${currentIndex * 100}%)`;
-};
+let currentIndex = 0;
 
-const moveSlide = (step) => {
-currentIndex = (currentIndex + step + totalSlides) % totalSlides;
-updateSlidePosition();
-};
+function showSlide(index) {
+if (index >= carouselItems.length) {
+  currentIndex = 0;
+} else if (index < 0) {
+  currentIndex = carouselItems.length - 1;
+} else {
+  currentIndex = index;
+}
+carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
 
-document.querySelector('.prev').addEventListener('click', () => {
-moveSlide(-1);
+nextButton.addEventListener('click', () => {
+showSlide(currentIndex + 1);
 });
 
-document.querySelector('.next').addEventListener('click', () => {
-moveSlide(1);
+prevButton.addEventListener('click', () => {
+showSlide(currentIndex - 1);
 });
 
-// Automatic sliding every 5 seconds
+// Auto-slide
 setInterval(() => {
-moveSlide(1);
-}, 5000);
+showSlide(currentIndex + 1);
+}, 3000); // Change slide every 3 seconds
+
+// Make carousel responsive
+window.addEventListener('resize', () => {
+carousel.style.transition = 'none';
+showSlide(currentIndex);
+setTimeout(() => {
+  carousel.style.transition = 'transform 0.5s ease-in-out';
+}, 0);
+});
 
 </script>
-<!-- slider end -->
+      
+
 
 <!-- feature -->
 <div class="feature-container">
@@ -264,170 +380,122 @@ moveSlide(1);
 
 
  <div>
-  <h1 id="center"><b>&#9473;&#9473;Trandy products&#9473;&#9473;</b></h1>
+ <h1 id="center"><b>&#9473;&#9473;Trandy products&#9473;&#9473;</b></h1> 
+
+
   <div class="product-container">
+
     <div class="product-card">
-        <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\chandrika94.jpeg" alt="Product Image" class="product-image">
-        <h2 class="product-title">Radha Rani Chandrika</h2>
-        <p class="product-description">Radha Rani Chandrika Suitable for 2 number Radha Rani</p>
+        <img src="https://fakeimg.pl/300/" class="product-image">
+        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+        <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.</p>
         <p class="product-price">Rs.80</p>
-        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\24chandrika.html">
-        <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-        <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-        <div id="notification" class="notification"></div>
+        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage1.html">
+            <button class="view-detail-btn">View Details</button>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('1')">Add to Cart</button>
+        <div class="notification" id="1"></div>
     </div>
-  </div>
 
-<div class="product-container">
-  <div class="product-card">
-      <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\chandrika88.jpeg" alt="Product Image" class="product-image" height="270px">
-      <h2 class="product-title">Radha Rani Chandrika</h2>
-      <p class="product-description">Radha Rani Chandrika Suitable for 2 number Radha Rani</p>
-      <p class="product-price">Rs.99</p>
-      <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\21chandrika.html">
-      <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-      <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-      <div id="notification" class="notification"></div>
-  </div>
+    <div class="product-card">
+        <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
+        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+        <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minus!</p>
+        <p class="product-price">Rs.99</p>
+        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage2.html">
+            <button class="view-detail-btn">View Details</button>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('2')">Add to Cart</button>
+        <div class="notification" id="2"></div>
+    </div>
+
+    <div class="product-card">
+        <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
+        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+        <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, consequatur.</p>
+        <p class="product-price">Rs.99</p>
+        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage3.html">
+            <button class="view-detail-btn">View Details</button>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('3')">Add to Cart</button>
+        <div class="notification" id="3"></div>
+    </div>
+    <div class="product-card">
+        <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
+        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+        <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, neque.</p>
+        <p class="product-price">Rs.99</p>
+        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage4.html">
+            <button class="view-detail-btn">View Details</button>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('4')">Add to Cart</button>
+        <div class="notification" id="4"></div>
+    </div>
+   
+    <!-- Add more product cards as needed -->
 </div>
-
-<div class="product-container">
-  <div class="product-card">
-      <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\kangan.jpeg" alt="Product Image" class="product-image">
-      <h2 class="product-title">Kangan For Laddo Gopal</h2>
-      <p class="product-description">Available Color: Sky-blue, Yellow, Green, Baby Pink etc.</p>
-      <p class="product-price">Rs.35 For Pair</p>
-    <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\27kangan.html">
-      <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-      <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-      <div id="notification" class="notification"></div>
-  </div>
-</div>
-
-<div class="product-container">
-  <div class="product-card">
-      <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\mala7.jpeg" alt="Product Image" class="product-image">
-      <h2 class="product-title">Red Color Mala</h2>
-      <p class="product-description">Red Color Mala Suitable For 2 To 4 Number Laddo Gopal</p>
-      <p class="product-price">Rs.10</p>
-      <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\s6mala.html">
-      <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-      <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-      <div id="notification" class="notification"></div>
-  </div>
-</div>
-
-<div class="product-container">
-  <div class="product-card">
-      <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\mala30.jpeg" alt="Product Image" class="product-image" height="270px">
-      <h2 class="product-title">2 Layer Dark Pink Color Mala</h2>
-      <p class="product-description">Mala Suitable for Mata Rani and 10 number Laddo gopal</p>
-      <p class="product-price">Rs.70</p>
-      <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\5fancyPink.html">
-      <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-      <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-      <div id="notification" class="notification"></div>
-  </div>
-</div>
-
-<div class="product-container">
-  <div class="product-card">
-      <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\shoes99.jpeg" alt="Product Image" class="product-image" height="270px">
-      <h2 class="product-title">Jutti</h2>
-      <p class="product-description">Varitey of colorful Juttis are available for laddo gopal</p>
-      <p class="product-price">Rs.70 for pair</p>
-      <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\38jutti.html">
-      <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-      <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-      <div id="notification" class="notification"></div>
-  </div>
-</div> 
-
-
+ 
 
   <h1 id="center2"><b>&#9473;&#9473;Just Arrived&#9473;&#9473;</b></h1>
+
   <div class="product-container">
     <div class="product-card">
-        <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\bisterset1.jpeg" alt="Product Image" class="product-image" height="270px">
-        <h2 class="product-title">Cotton Bister Set</h2>
-        <p class="product-description">Cotton Bister Set For Laddo Gopal Size Available 1,2,3. For more Information Click On view Detail Button</p>
-        <p class="product-price">Rs.30</p>
-        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\bisterset1.html">
-        <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-        <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-        <div id="notification" class="notification"></div>
+        <img src="https://fakeimg.pl/300/" class="product-image">
+        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+        <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.</p>
+        <p class="product-price">Rs.80</p>
+        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage1.html">
+            <button class="view-detail-btn">View Details</button>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('5')">Add to Cart</button>
+        <div class="notification" id="5"></div>
     </div>
-</div>
 
-<div class="product-container">
-  <div class="product-card">
-      <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\nightsuit79.jpeg" alt="Product Image" class="product-image" height="290px">
-      <h2 class="product-title">Night Suit</h2>
-      <p class="product-description">Night Suit For 0 To 6 Number Laddo Gopal.Random Color Will Be Given</p>
-      <p class="product-price">Rs.20</p>
-      <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\nightsuit1.html">
-      <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-      <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-      <div id="notification" class="notification"></div>
-  </div>
-</div>
+    <div class="product-card">
+        <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
+        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+        <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minus!</p>
+        <p class="product-price">Rs.99</p>
+        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage2.html">
+            <button class="view-detail-btn">View Details</button>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('6')">Add to Cart</button>
+        <div class="notification" id="6"></div>
+    </div>
 
-<div class="product-container">
-  <div class="product-card">
-      <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\tilak84.jpeg" alt="Product Image" class="product-image" height="305px">
-      <h2 class="product-title">Laddo Gopal Tilak</h2>
-      <p class="product-description">Big Size Red And White Tilak For Laddo Gopal</p>
-      <p class="product-price">Rs.25 For Each</p>
-    <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\43tilak.html">
-      <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-      <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-      <div id="notification" class="notification"></div>
-  </div>
+    <div class="product-card">
+        <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
+        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+        <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, consequatur.</p>
+        <p class="product-price">Rs.99</p>
+        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage3.html">
+            <button class="view-detail-btn">View Details</button>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('7')">Add to Cart</button>
+        <div class="notification" id="7"></div>
+    </div>
+    <div class="product-card">
+        <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
+        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+        <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, neque.</p>
+        <p class="product-price">Rs.99</p>
+        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage4.html">
+            <button class="view-detail-btn">View Details</button>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('8')">Add to Cart</button>
+        <div class="notification" id="8"></div>
+    </div>
+   
+    <!-- Add more product cards as needed -->
 </div>
-
-<div class="product-container">
-  <div class="product-card">
-      <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\mirror01.jpeg" alt="Product Image" class="product-image" height="270px">
-      <h2 class="product-title">Mirror</h2>
-      <p class="product-description">Mirror With Unique Multi Color And Golden Border</p>
-      <p class="product-price">Rs.40 For Each</p>
-      <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\30mirror.html">
-      <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-      <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-      <div id="notification" class="notification"></div>
-  </div>
-</div>
-
-<div class="product-container">
-  <div class="product-card">
-      <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\earrings92.jpeg" alt="Product Image" class="product-image" height="270px">
-      <h2 class="product-title">Earrings</h2>
-      <p class="product-description">Red Stone Earrings For Laddo Gopal And Radha Rani</p>
-      <p class="product-price">Rs.40 For Each Pair</p>
-      <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\35earrings3.html">
-      <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-      <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-      <div id="notification" class="notification"></div>
-  </div>
-</div>
-
-<div class="product-container">
-  <div class="product-card">
-      <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\fancyposhak10.jpeg" alt="Product Image" class="product-image">
-      <h2 class="product-title">Fancy Poshak</h2>
-      <p class="product-description">Designer Fancy Poshak With Heavy Poshak For Laddo Gopal</p>
-      <p class="product-price">Rs.180</p>
-      <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\fancyposhak10.html">
-      <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-      <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
-      <div id="notification" class="notification"></div>
-  </div>
-</div>
+  
 <script>
-  function addToCart() {
-const notification = document.getElementById('notification');
-notification.textContent = 'Item added to cart!';
+  function addToCart(productId) {
+    // details write cart.json file
+    
+const notification = document.getElementById(productId);
 notification.style.display = 'block';
+notification.textContent = 'Item added to cart!';
 
 setTimeout(() => {
   notification.style.display = 'none';
@@ -439,44 +507,31 @@ alert('Viewing details for this product!');
 }
 
 </script>
+<script src="server.js"></script>
 
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+        <h2>About Us</h2>
+        <p>Kishori Madhav Creations is a dedicated retail store that offers a diverse range of exquisite products related to Laddo Gopal, catering to the spiritual and cultural needs of devotees and enthusiasts. Our extensive collection includes beautifully crafted accessories, elegant poshak (traditional attire) for Laddo Gopal idols, intricately designed jutti (traditional footwear), and stunning pagadi (turban) options, ensuring every aspect of your worship is adorned with grace and beauty.
 
-<!--footer-->
-  <div id="footer-heading">
-  <h2 class="m-0 display-5 font-weight-semi-bold heading2"><span class="text-primary2 font-weight-bold border px-3 mr-1">K</span class="heading2">ishori Madhav</h2>
-  <br>
-  <br>
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod exercitationem quas voluptas blanditiis quisquam. Quaerat aperiam numquam, perferendis autem distinctio molestias porro voluptate ex, repellendus minima ea, magni consectetur eius!</p>
-  <div id="address">
-    <i class="bi bi-geo-alt-fill"></i>
-  <address class="address1">13/7 Jawahar Nagar near Middha Chownk, Ludhiana</address>
-  </div>
-  
-  <div>
-    <i class="bi bi-envelope-at-fill"></i>
-    <span class="mail">&nbsp;&nbsp;Kishorimadhavcreations@gmail.com</span>
-  </div>
-  
-  <div>
-    <i class="bi bi-telephone-inbound-fill"></i>
-    <span class="number">&nbsp;&nbsp;+012 345 67890</span>
-  </div>
-  <span class="time"><i class="bi bi-clock-fill"></i>Timming 10AM To 6PM</span>
-  <div class="col-md-4 mb-5">
-    <h5 class="font-weight-bold text-dark mb-4 quick">Quick Links</h5>
-    <div class="d-flex flex-column justify-content-start">
-        <a class="text-dark mb-2 text" href="index.html"><i class="fa fa-angle-right mr-2"></i>Home</a><br>
-        <a class="text-dark mb-2 text" href="kishori.html"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a><br>
-        <a class="text-dark mb-2 text" href=""><i class="fa fa-angle-right mr-2"></i>About Us</a><br>
-        <a class="text-dark mb-2 text" href=""><i class="fa fa-angle-right mr-2"></i>Contact Us</a><br>
-        <a class="text-dark mb-2 text" href=""><i class="fa fa-angle-right mr-2"></i>Privacy Policy</a><br>
-        
+            In addition to these devotional items, we also feature an exclusive selection of handcrafted furniture, perfect for creating a serene and sacred space in your home. Each piece is thoughtfully designed to complement the spiritual ambiance, making our store a one-stop destination for all your Laddo Gopal-related needs.</p>
+
     </div>
-    <div id="footer-image">
-      <img src="krishna-8882651_1920.png" alt="" width="230px;">
+    <div class="footer-section">
+        <h2>Customer Service</h2>
+        <ul>
+            <li><a href="../landing-page/contact.html">Contact Us</a></li>
+            <li><a href="../landing-page/about us.html">About Us</a></li>
+            <li><a href="../landing-page/privacy.html">Privacy Policy </a></li>
+        </ul>
     </div>
-  </div>
-  </div>
-<!--footer-end-->
+</div>
+<div class="footer-bottom">
+    <p>&copy; 2024 Laddo Gopal Emporium. All rights reserved.</p>
+</div>
+ </footer>
+
+ 
 </body>
 </html>
