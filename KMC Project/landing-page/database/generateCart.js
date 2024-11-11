@@ -1,42 +1,4 @@
-// const fs = require('fs');
 
-// // Helper function to generate a UUID (v4)
-// function generateUUID() {
-//     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-//         const r = Math.random() * 16 | 0;
-//         const v = c === 'x' ? r : (r & 0x3 | 0x8);
-//         return v.toString(16);
-//     });
-// }
-
-// // Function to generate 105 products with unique UUIDs
-// function generateProducts() {
-//     const products = Array.from({ length: 105 }, (_, index) => ({
-//         id: generateUUID(),
-//         name: `Product ${index + 1}`,
-//         price: (10 + index * 1.5).toFixed(2),
-//         quantity: 1,
-//         description: `This is a description for Product ${index + 1}`
-//     }));
-//     return products;
-// }
-
-// // Function to save products to cart.json
-// function saveProductsToFile(products) {
-//     fs.writeFileSync('cart.json', JSON.stringify(products, null, 4));
-//     console.log("cart.json file updated with 105 products.");
-// }
-
-// // Function to auto-generate and save products every few seconds
-// function autoGenerateProducts(intervalSeconds) {
-//     setInterval(() => {
-//         const products = generateProducts();
-//         saveProductsToFile(products);
-//     }, intervalSeconds * 1000);
-// }
-
-// // Start the auto-generation every 10 seconds (can adjust this value)
-// autoGenerateProducts(10);
 
 const fs = require('fs');
 
@@ -52,8 +14,8 @@ function generateUUID() {
 // Function to check if cart.json exists and read its content
 function getCartData() {
     try {
-        if (fs.existsSync('cart.json')) {
-            const data = fs.readFileSync('cart.json', 'utf-8');
+        if (fs.existsSync('./cart.json')) {
+            const data = fs.readFileSync('./cart.json', 'utf-8');
             return JSON.parse(data);
         } else {
             return {}; // Return empty object if file does not exist

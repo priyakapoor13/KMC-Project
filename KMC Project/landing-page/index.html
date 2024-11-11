@@ -104,68 +104,6 @@
       <!-- search bar end -->
        <hr>
 
-       <!-- second nav bar  -
-       <nav class="navbar">
-        <div class="dropdown">
-            <button class="dropdown-button">Categories</button>
-    <div class="dropdown-content">
-      <a href="simple-poshak.html">Laddo Gopal Poshak</a>
-      <a href="fancy-poshak.html">Laddo Gopal Fancy Poshak</a>
-      <a href="nightsuit.html">Night Suit</a>
-      <a href="bister-set.html">Bister Set</a>
-      <a href="Accessories1.html">Accessories</a>
-      <a href="bansuri1.html">Bansuri</a>
-      <a href="simple-mala.html">Mala</a>
-      <a href="fancymala.html">Fancy Mala</a>
-      <!-- <a href="jugaljodi.html">Jugal jodi Set</a>
-      <a href="lehnga patka.html">Lehnga Patka set</a> 
-      <a href="furniture.html">Singhasan</a>
-
-      <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-  const dropdownButton = document.querySelector('.dropdown-button');
-  const dropdownContent = document.querySelector('.dropdown-content');
-
-  dropdownButton.addEventListener('click', () => {
-    dropdownContent.classList.toggle('show');
-  });
-
-  window.addEventListener('click', (event) => {
-    if (!event.target.matches('.dropdown-button')) {
-      if (dropdownContent.classList.contains('show')) {
-        dropdownContent.classList.remove('show');
-      }
-    }
-  });
-});
-      </script>
-    </div>
-        </div>
-
-     
-         <nav class="navbar">
-          <ul class="nav-links">
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./about us.html">About</a></li>
-              <li><a href="./privacy.html">Privacy</a></li>
-              <li><a href="./contact.html">Contact</a></li>
-              <li><a href="/src/cart/index.html"><i class="bi bi-cart"></i><span>20</span></a></li>
-          </ul>
-          <div class="hamburger" onclick="toggleMenu()">
-              <span class="bar"></span>
-              <span class="bar"></span>
-              <span class="bar"></span>
-          </div>
-      </nav> 
-  
-      <script>
-  function toggleMenu() {
-      const navLinks = document.querySelector('.nav-links');
-      navLinks.classList.toggle('active');
-  }
-  
-      </script>
-    -->
 
     <nav>
       <div class="logo">
@@ -185,7 +123,47 @@
         <li>
           <a href="./contact.html">Contact Us</a>
         </li>
+  
+        <div class="cart">
+          <a href="../admin-dashboard/cart.html">
+          <i class="bi bi-cart"></i>
+          <span class="cart-badge" id="cart-badge">0</span></a>
+        </div>
       </ul>
+      <script>
+         let cartCount = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;
+
+// Function to update the badge display
+const updateCartBadge = () => {
+  document.getElementById('cart-badge').innerText = cartCount;
+};
+
+// Call the function to set the initial value
+updateCartBadge();
+
+const addToCart = (productId) => {
+  cartCount++;
+  localStorage.setItem('cartCount', cartCount); // Save count to local storage
+  updateCartBadge(); // Update the badge display
+  showNotification(productId);
+};
+
+const showNotification = (productId) => {
+  const notification = document.getElementById(productId);
+  notification.innerText = 'Added to cart!';
+  setTimeout(() => {
+    notification.innerText = '';
+  }, 2000);
+};
+
+// Attach event listeners to all add-to-cart buttons
+document.querySelectorAll('.add-to-cart-button').forEach(button => {
+  button.addEventListener('click', function() {
+    const productId = this.getAttribute('data-product-id');
+    addToCart(productId);
+  });
+});
+      </script>
       <div class="hamburger">
         <span class="line"></span>
         <span class="line"></span>
@@ -507,31 +485,39 @@ alert('Viewing details for this product!');
 }
 
 </script>
-<script src="server.js"></script>
-
-<footer>
+<script src="./database/generateCart.js"></script>
+ <footer>
   <div class="footer-container">
-    <div class="footer-section">
-        <h2>About Us</h2>
-        <p>Kishori Madhav Creations is a dedicated retail store that offers a diverse range of exquisite products related to Laddo Gopal, catering to the spiritual and cultural needs of devotees and enthusiasts. Our extensive collection includes beautifully crafted accessories, elegant poshak (traditional attire) for Laddo Gopal idols, intricately designed jutti (traditional footwear), and stunning pagadi (turban) options, ensuring every aspect of your worship is adorned with grace and beauty.
+      <div class="footer-section">
+          <h2>About Us</h2>
+           <p>
+            Kishori Madhav Creations is a dedicated retail store that offers a diverse range of exquisite products related to Laddo Gopal, catering to the spiritual and cultural needs of devotees and enthusiasts. Our extensive collection includes beautifully crafted accessories, elegant poshak (traditional attire) for Laddo Gopal idols, intricately designed jutti (traditional footwear), and stunning pagadi (turban) options, ensuring every aspect of your worship is adorned with grace and beauty.
 
-            In addition to these devotional items, we also feature an exclusive selection of handcrafted furniture, perfect for creating a serene and sacred space in your home. Each piece is thoughtfully designed to complement the spiritual ambiance, making our store a one-stop destination for all your Laddo Gopal-related needs.</p>
-
-    </div>
-    <div class="footer-section">
-        <h2>Customer Service</h2>
-        <ul>
-            <li><a href="../landing-page/contact.html">Contact Us</a></li>
-            <li><a href="../landing-page/about us.html">About Us</a></li>
-            <li><a href="../landing-page/privacy.html">Privacy Policy </a></li>
-        </ul>
-    </div>
-</div>
-<div class="footer-bottom">
-    <p>&copy; 2024 Laddo Gopal Emporium. All rights reserved.</p>
-</div>
- </footer>
-
- 
+            In addition to these devotional items, we also feature an exclusive selection of handcrafted furniture, perfect for creating a serene and sacred space in your home. Each piece is thoughtfully designed to complement the spiritual ambiance, making our store a one-stop destination for all your Laddo Gopal-related needs.
+           </p>
+      </div>
+      <div class="footer-section">
+          <h2>Quick Links</h2>
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="privacy.html">Privacy</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about us.html">About</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h2>Follow Us</h2>
+          <ul class="social-links">
+              <li><a href="https://www.facebook.com/share/wtQsjxqFkmzQW2nU/?mibextid=LQQJ4d"><i class="bi bi-facebook"></i></a></li>
+              <li><a href="https://youtube.com/@kishorimadhavcreations?si=-bDllvKi9Z0HrVUs"><i class="bi bi-youtube"></i></a></li>
+              <li><a href="https://www.instagram.com/kishori_madhav_creations?igsh=MTBjYWhuMjd4cnZtYQ%3D%3D&utm_source=qr"><i class="bi bi-instagram"></i></a></li>
+              <li><a href="https://call.whatsapp.com/voice/4dbWqtvRb3XQo3mHpeUrLL center"><i class="bi bi-whatsapp"></i></a></li>
+          </ul>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <p>&copy; 2024 Kishori Madhav Creation. All rights reserved.</p>
+  </div>
+</footer>
 </body>
 </html>

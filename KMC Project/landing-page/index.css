@@ -27,7 +27,7 @@
   i{
       color:black;
   }
-  /* top icons start */
+ 
   
   /* main-heading */
   
@@ -49,7 +49,7 @@
   }
   
   
-  /* search bar start */
+  /* search bar  */
   
   @media only screen and (max-width: 755px) {
     .search-container{
@@ -265,6 +265,31 @@ nav ul li a:hover {
 
   
 
+.cart {
+  position: relative;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.cart i {
+  font-size: 24px;
+  color: #333;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px; /* Adjust this value to position the badge higher */
+  right: -10px; /* Adjust this value for horizontal position */
+  background-color: indianred;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px; /* Padding for a better look */
+  font-size: 12px;
+  font-weight: bold; /* Make the number more prominent */
+  min-width: 20px; /* Ensure badge has a minimum width */
+  text-align: center; /* Center the text */
+}
 /*Responsive */
 @media (max-width: 768px) {
     .nav-links {
@@ -604,106 +629,109 @@ nav ul li a:hover {
 
  
 
-  footer{
-    margin-top: 100px;
-    background-color: #EDF1FF;
-    padding-left: 10px;
-  }
-  @media (max-width: 768px) {
-      footer {
-      background-color: #EDF1FF;
-      color: black;
-      padding: 40px 20px;
-  }
-    
-   .footer-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      background-color: #EDF1FF;
-     
-  }
-  
-  .footer-section {
-      width: 30%;
-      margin-bottom: 20px;
-     
-  
-  .footer-section h2 {
-      margin-top: 0;
-     
-    
-  }
-  
-  .footer-section p {
-      margin: 10px 0;
-    
-  }
-  
-  .footer-section ul {
-      list-style-type: none;
-      padding: 0;
-  }
-  
-  .footer-section ul li {
-      margin: 5px 0;
-  }
-  
-  .footer-section ul li a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s;
-  }
-  
-  .footer-section ul li a:hover {
-      color: #ddd;
-  }
-  
-  .social-links {
-      display: flex;
-      padding: 0;
-  }
-  
-  .social-links li {
-      margin-right: 15px;
-  }
-  
-  .social-links li a {
-      color: white;
-      font-size: 20px;
-      transition: color 0.3s;
-  }
-  
-  .social-links li a:hover {
-      color: #ddd;
-  }
-  
-  .footer-bottom {
-      text-align: center;
-      margin-top: 20px;
-      padding: 10px 0;
-      border-top: 1px solid #444;
-  }
-    }
-  
-  @media (max-width: 768px) {
-      .footer-section {
-          width: 100%;
-          margin-bottom: 20px;
-      }
-  
-      .footer-container {
-          flex-direction: column;
-          align-items: center;
-      }
-  
-      .footer-bottom {
-          margin-top: 20px;
-      }
-  }
-    } 
+
+    /* Footer Styles */
+footer {
+  margin-top: 120px;
+background-color: #EDF1FF;
+padding: 40px 20px;
+}
+
+.footer-container {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+background-color: #EDF1FF;
+}
+
+.footer-section {
+width: 30%;
+margin-bottom: 20px;
+}
+
+.footer-section h2 {
+margin-top: 0;
+}
+
+.footer-section p {
+margin: 10px 0;
+}
+
+.footer-section ul {
+list-style-type: none;
+padding: 0;
+}
+
+.footer-section ul li {
+margin: 5px 0;
+}
+
+.footer-section ul li a {
+color: black;
+text-decoration: none;
+transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+color: #ddd;
+}
+
+.social-links {
+display: flex;
+padding: 0;
+gap: 10px;
+}
+
+.social-links li {
+margin-right: 15px;
+}
+
+.social-links li a {
+color: black;
+font-size: 20px;
+transition: color 0.3s;
+}
+
+.social-links li a:hover {
+color: white;
+}
+
+.footer-bottom {
+text-align: center;
+margin-top: 20px;
+padding: 10px 0;
+border-top: 1px solid #444;
+}
+
+@media (max-width: 768px) {
+.footer-section {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.footer-container {
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+}
+
+
+#content {
+background-color: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+text-align: center;
+max-width: 600px;
+width: 100%;
+}
+
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');

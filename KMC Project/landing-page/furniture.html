@@ -3,12 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Singhasan-Kishori Madhav Creations</title>
-    <link
-      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <title>Furniture-Kishori Madhav Creations</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <style>
-     @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -23,7 +21,7 @@ body {
 }
 
 nav {
-    background-color:  rgb(245, 133, 133);
+  background-color: rgb(245, 133, 133);
   padding: 5px 5%;
   display: flex;
   justify-content: space-between;
@@ -144,8 +142,9 @@ nav ul li a:hover {
 .menubar ul li a:hover {
   background-color: #f5f5f5;
 }
- @media screen and (max-width: 20000px) {
-   .hamburger {
+
+@media screen and (max-width: 20000px) {
+  .hamburger {
     display: block;
   } 
   nav ul {
@@ -153,482 +152,501 @@ nav ul li a:hover {
   }
 }
 
-/*product2*/
+/* Product Styles */
 .product-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 20px;
-    position: relative;
-    top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+  position: relative;
+  top: 20px;
 }
 
 .product-card {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    max-width: 300px;
-    text-align: center;
-    transition: transform 0.2s;
-   
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.2s;
 }
 
 .product-card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .product-image {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .product-title {
-    font-size: 1.5em;
-    margin: 15px 0;
+  font-size: 1.5em;
+  margin: 15px 0;
 }
 
 .product-description {
-    font-size: 1em;
-    margin: 10px 15px;
+  font-size: 1em;
+  margin: 10px 15px;
 }
 
 .product-price {
-    font-size: 1.2em;
-    color: indianred;
-    margin: 10px 0;
+  font-size: 1.2em;
+  color: indianred;
+  margin: 10px 0;
 }
 
 .view-detail-btn, .add-to-cart-btn {
-    background-color: indianred;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
+  background-color: indianred;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .view-detail-btn:hover, .add-to-cart-btn:hover {
-    background-color: indianred;
+  background-color: darkred;
 }
 
 .notification {
-    margin-top: 10px;
-    font-size: 20px;
-    color: white;
-    background-color: indianred;
+  margin-top: 10px;
+  font-size: 20px;
+  color: indianred;
+  /* background-color: indianred; */
 }
 
-
- /* Footer */
- footer{
+/* Footer Styles */
+footer {
+    margin-top: 40px;
   background-color: #EDF1FF;
-  padding-left: 10px;
+  padding: 40px 20px;
 }
-@media (max-width: 768px) {
-    footer {
-    background-color: #EDF1FF;
-    color: black;
-    padding: 40px 20px;
-}
-  
- .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    background-color: #EDF1FF;
-   
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #EDF1FF;
 }
 
 .footer-section {
-    width: 30%;
-    margin-bottom: 20px;
-   
+  width: 30%;
+  margin-bottom: 20px;
+}
 
 .footer-section h2 {
-    margin-top: 0;
+  margin-top: 0;
 }
 
 .footer-section p {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .footer-section ul {
-    list-style-type: none;
-    padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 .footer-section ul li {
-    margin: 5px 0;
+  margin: 5px 0;
 }
 
 .footer-section ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer-section ul li a:hover {
-    color: #ddd;
+  color: #ddd;
 }
 
 .social-links {
-    display: flex;
-    padding: 0;
+  display: flex;
+  padding: 0;
+  gap: 10px;
 }
 
 .social-links li {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .social-links li a {
-    color: white;
-    font-size: 20px;
-    transition: color 0.3s;
+  color: black;
+  font-size: 20px;
+  transition: color 0.3s;
 }
 
 .social-links li a:hover {
-    color: #ddd;
+  color: #ddd;
 }
 
 .footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    padding: 10px 0;
-    border-top: 1px solid #444;
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: 1px solid #444;
 }
-  }
 
 @media (max-width: 768px) {
-    .footer-section {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-bottom {
-        margin-top: 20px;
-    }
-}
+  .footer-section {
+    width: 100%;
+    margin-bottom: 20px;
   }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+  }
+}
+
+/* .pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 90px 0;
+}
+
+.pagination a {
+  margin: 0 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: rgb(216, 107, 107);
+  color: white;
+}
+
+.pagination a.active {
+  background-color: indianred;
+  color: white;
+} */
+
+#content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* @media (max-width: 480px) {
+  .pagination a {
+    width: 35px;
+    height: 35px;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+}
+.pagination i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
     </style>
 </head>
 <body>
-    <header>
-      <nav>
+    <!-- Navbar -->
+    <nav>
         <div class="logo">
-          <img src="assets/Logo64x64.png" alt="logo" >
-          <h1>Furniture Collection</h1>
+            <img src="kishori-madhav-logo.png" alt="Logo" />
+            <h1>Kishori Madhav Creation</h1>
         </div>
-      
+        
         <div class="hamburger">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
         </div>
-      </nav>
-      <div class="menubar">
+    </nav>
+    <div class="menubar">
         <ul>
           <li>
-            <a href="./simple-poshak.html">Laddo Gopal Poshak</a>
+            <a href="simple-poshak.html">Laddo Gopal Poshak</a>
           </li>
           <li>
-            <a href="./fancy-poshak.html">Fancy Poshak</a>
+            <a href="fancy-poshak.html">Fancy Poshak</a>
           </li>
           <li>
-            <a href="./nightsuit.html">Night suit</a>
+            <a href="nightsuit.html">Night suit</a>
           </li>
           <li>
-            <a href="./Accessories1.html">Accessories</a>
+            <a href="Accessories1.html">Accessories</a>
           </li>
           <li>
-            <a href="./bansuri1.html">Bansuri</a>
+            <a href="bansuri1.html">Bansuri</a>
           </li>
           <li>
-            <a href="./simple-mala.html">Simple Mala</a>
+            <a href="simple-mala.html">Simple Mala</a>
           </li>
           <li>
-            <a href="./fancymala.html">Fancy Mala</a>
+            <a href="fancymala.html">Fancy Mala</a>
           </li>
           <li>
-            <a href="./furniture.html">Furniture</a>
+            <a href="furniture.html">Furniture</a>
+          </li>
+          <li>
+            <a href="bister-set.html">Bister-Set</a>
           </li>
         </ul>
-      </div>
-  
-      <script>
-          const mobileNav = document.querySelector(".hamburger");
-  const navbar = document.querySelector(".menubar");
-  
-  const toggleNav = () => {
-    navbar.classList.toggle("active");
-    mobileNav.classList.toggle("hamburger-active");
-  };
-  mobileNav.addEventListener("click", () => toggleNav());
-  
-      </script>
-      
-   
-      </header>
-  <!--nav bar end  -->
-   <main>
-    <div class="product-container">
-      <div class="product-card">
-        <img src="../src/furniture1.jpeg" alt="Product Image" class="product-image">
-        <h2 class="product-title">Fool Bangla Cum shahi Asan</h2>
-        <p class="product-description">Fool bangla cum shahi asan for laddo gopal and radha rani</p>
-        <p class="product-price">Rs.250</p>
-        <a href="../product-pages/productpage94.html">
-        <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-        <button class="add-to-cart-btn" onclick="addToCart('94')">Add to Cart</button>
-        <div id="94" class="notification"></div>
     </div>
-     
 
-     
-
+    <!-- Product Section -->
+    <div class="product-container">
+        <div class="product-card">
+            <img src="../src/furniture1.jpeg" alt="Product Image" class="product-image">
+            <h2 class="product-title">Fool Bangla Cum shahi Asan</h2>
+            <p class="product-description">Fool bangla cum shahi asan for laddo gopal and radha rani</p>
+            <p class="product-price">Rs.250</p>
+            <a href="../product-pages/productpage94.html">
+            <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
+            <button class="add-to-cart-btn" onclick="addToCart('94')">Add to Cart</button>
+            <div id="94" class="notification"></div>
+        </div>
+         
+    
+         
+    
+        <div class="product-card">
+          <img src="../src/furniture2.jpeg" alt="Product Image" class="product-image">
+          <h2 class="product-title">comfortable Jhula for laddo gopal</h2>
+          <p class="product-description">Jhula for 0 to 2 number laddo gopal and radha rani</p>
+          <p class="product-price">Rs.370</p>
+          <a href="../product-pages/productpage95.html">
+          <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
+          <button class="add-to-cart-btn" onclick="addToCart('95')">Add to Cart</button>
+          <div id="95" class="notification"></div>
+      </div>
+    
+    
+    
+        
+      <div class="product-card">
+        <img src="../src/furniture3.jpeg" alt="Product Image" class="product-image">
+        <h2 class="product-title">comfortable Jhula for laddo gopal</h2>
+        <p class="product-description">Jhula for 0 to 4 number laddo gopal and radha rani</p>
+        <p class="product-price">Rs.420</p>
+        <a href="../product-pages/productpage96.html">
+        <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
+        <button class="add-to-cart-btn" onclick="addToCart('96')">Add to Cart</button>
+        <div id="96" class="notification"></div>
+    </div>
+    
+    
     <div class="product-card">
-      <img src="../src/furniture2.jpeg" alt="Product Image" class="product-image">
+      <img src="../src/furniture4.jpeg" alt="Product Image" class="product-image">
       <h2 class="product-title">comfortable Jhula for laddo gopal</h2>
       <p class="product-description">Jhula for 0 to 2 number laddo gopal and radha rani</p>
       <p class="product-price">Rs.370</p>
-      <a href="../product-pages/productpage95.html">
+      <a href="../product-pages/productpage97.html">
       <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-      <button class="add-to-cart-btn" onclick="addToCart('95')">Add to Cart</button>
-      <div id="95" class="notification"></div>
-  </div>
-
-
-
+      <button class="add-to-cart-btn" onclick="addToCart('97')">Add to Cart</button>
+      <div id="97" class="notification"></div>
+    </div>
     
-  <div class="product-card">
-    <img src="../src/furniture3.jpeg" alt="Product Image" class="product-image">
-    <h2 class="product-title">comfortable Jhula for laddo gopal</h2>
-    <p class="product-description">Jhula for 0 to 4 number laddo gopal and radha rani</p>
-    <p class="product-price">Rs.420</p>
-    <a href="../product-pages/productpage96.html">
-    <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-    <button class="add-to-cart-btn" onclick="addToCart('96')">Add to Cart</button>
-    <div id="96" class="notification"></div>
-</div>
-
-
-<div class="product-card">
-  <img src="../src/furniture4.jpeg" alt="Product Image" class="product-image">
-  <h2 class="product-title">comfortable Jhula for laddo gopal</h2>
-  <p class="product-description">Jhula for 0 to 2 number laddo gopal and radha rani</p>
-  <p class="product-price">Rs.370</p>
-  <a href="../product-pages/productpage97.html">
-  <button class="view-detail-btn" onclick="viewDetails()">View Details</button></a>
-  <button class="add-to-cart-btn" onclick="addToCart('97')">Add to Cart</button>
-  <div id="97" class="notification"></div>
-</div>
-
-
+    
+        <div class="product-card">
+          <img src="../src/furniture6.jpeg" alt="img" class="product-image">
+          <h2 class="product-title">jhula for laddo gopal</h2>
+          <p class="product-description">Purple color jhula with soft asan for 0 to 2 number laddo gopal and radha rani</p>
+          <p class="product-price">Rs.370</p>
+          <a href="../product-pages/productpage98.html">
+              <button class="view-detail-btn">View Details</button>
+          </a>
+          <button class="add-to-cart-btn" onclick="addToCart('98')">Add to Cart</button>
+          <div class="notification" id="98"></div>
+      </div>
+    
+    
+      <div class="product-card">
+        <img src="../src/furniture7.jpeg" alt="img" class="product-image">
+        <h2 class="product-title">Jhula for laddo gopal</h2>
+        <p class="product-description">Garden jhula with flowers and soft red color asan for0 to 2 number laddo gopal</p>
+        <p class="product-price">Rs.300</p>
+        <a href="../product-pages/productpage99.html">
+            <button class="view-detail-btn">View Details</button>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('99')">Add to Cart</button>
+        <div class="notification" id="99"></div>
+    </div>
+    
+    
+        
+      <div class="product-card">
+        <img src="../src/furniture8.jpeg" alt="img" class="product-image">
+        <h2 class="product-title">Jhula for laddo gopal</h2>
+        <p class="product-description">Mor design meenakshi jhula for 0 to 2 number laddo gopal and radha rani</p>
+        <p class="product-price">Rs.250</p>
+        <a href="../product-pages/productpage100.html">
+            <button class="view-detail-btn">View Details</button>
+        </a>
+        <button class="add-to-cart-btn" onclick="addToCart('100')">Add to Cart</button>
+        <div class="notification" id="100"></div>
+    </div>
+    
     <div class="product-card">
-      <img src="../src/furniture6.jpeg" alt="img" class="product-image">
-      <h2 class="product-title">jhula for laddo gopal</h2>
-      <p class="product-description">Purple color jhula with soft asan for 0 to 2 number laddo gopal and radha rani</p>
-      <p class="product-price">Rs.370</p>
-      <a href="../product-pages/productpage98.html">
+      <img src="../src/furniture9.jpeg" alt="img" class="product-image">
+      <h2 class="product-title">Radha Krishan Jhula</h2>
+      <p class="product-description">jhula with unique flower design and asan for 0 to 2 no laddo gopal and radha rani</p>
+      <p class="product-price">Rs.350</p>
+      <a href="../product-pages/productpage101.html">
           <button class="view-detail-btn">View Details</button>
       </a>
-      <button class="add-to-cart-btn" onclick="addToCart('98')">Add to Cart</button>
-      <div class="notification" id="98"></div>
-  </div>
-
-
-  <div class="product-card">
-    <img src="../src/furniture7.jpeg" alt="img" class="product-image">
-    <h2 class="product-title">Jhula for laddo gopal</h2>
-    <p class="product-description">Garden jhula with flowers and soft red color asan for0 to 2 number laddo gopal</p>
-    <p class="product-price">Rs.300</p>
-    <a href="../product-pages/productpage99.html">
-        <button class="view-detail-btn">View Details</button>
-    </a>
-    <button class="add-to-cart-btn" onclick="addToCart('99')">Add to Cart</button>
-    <div class="notification" id="99"></div>
-</div>
-
-
+      <button class="add-to-cart-btn" onclick="addToCart('101')">Add to Cart</button>
+      <div class="notification" id="101"></div>
+    </div>
     
-  <div class="product-card">
-    <img src="../src/furniture8.jpeg" alt="img" class="product-image">
-    <h2 class="product-title">Jhula for laddo gopal</h2>
-    <p class="product-description">Mor design meenakshi jhula for 0 to 2 number laddo gopal and radha rani</p>
-    <p class="product-price">Rs.250</p>
-    <a href="../product-pages/productpage100.html">
-        <button class="view-detail-btn">View Details</button>
-    </a>
-    <button class="add-to-cart-btn" onclick="addToCart('100')">Add to Cart</button>
-    <div class="notification" id="100"></div>
-</div>
+    <div class="product-card">
+      <img src="../src/furniture10.jpeg" alt="Radha Rani Chandrika" class="product-image">
+      <h2 class="product-title">Traditional Jhula for laddo gopal</h2>
+      <p class="product-description">Traditional design jhula for 0 to 2 number laddo gopal and radha rani</p>
+      <p class="product-price">Rs.450</p>
+      <a href="../product-pages/productpage102.html">
+          <button class="view-detail-btn">View Details</button>
+      </a>
+      <button class="add-to-cart-btn" onclick="addToCart('102')">Add to Cart</button>
+      <div class="notification" id="102"></div>
+    </div>
+    
+    <div class="product-card">
+      <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
+      <h2 class="product-title">Furniture</h2>
+      <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, architecto?</p>
+      <p class="product-price">Rs.99</p>
+      <a href="../product-pages/productpage103.html">
+          <button class="view-detail-btn">View Details</button>
+      </a>
+      <button class="add-to-cart-btn" onclick="addToCart('103')">Add to Cart</button>
+      <div class="notification" id="103"></div>
+    </div>
+    
+    <div class="product-card">
+      <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
+      <h2 class="product-title">Radha Rani Chandrika</h2>
+      <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, architecto?</p>
+      <p class="product-price">Rs.99</p>
+      <a href="../product-pages/productpage104.html">
+          <button class="view-detail-btn">View Details</button>
+      </a>
+      <button class="add-to-cart-btn" onclick="addToCart('104')">Add to Cart</button>
+      <div class="notification" id="104"></div>
+    </div>
+    
+    <div class="product-card">
+      <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
+      <h2 class="product-title">Lorem, ipsum dolor.</h2>
+      <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, architecto?</p>
+      <p class="product-price">Rs.99</p>
+      <a href="../product-pages/productpage105.html">
+          <button class="view-detail-btn">View Details</button>
+      </a>
+      <button class="add-to-cart-btn" onclick="addToCart('105')">Add to Cart</button>
+      <div class="notification" id="105"></div>
+    </div>
+    </div>
 
-<div class="product-card">
-  <img src="../src/furniture9.jpeg" alt="img" class="product-image">
-  <h2 class="product-title">Radha Krishan Jhula</h2>
-  <p class="product-description">jhula with unique flower design and asan for 0 to 2 no laddo gopal and radha rani</p>
-  <p class="product-price">Rs.350</p>
-  <a href="../product-pages/productpage101.html">
-      <button class="view-detail-btn">View Details</button>
-  </a>
-  <button class="add-to-cart-btn" onclick="addToCart('101')">Add to Cart</button>
-  <div class="notification" id="101"></div>
-</div>
+    <!-- Pagination 
+    <div class="pagination">
+        <a href="" class="prev"><i class="bi bi-chevron-left"></i></a>
+        <a href="">1</a>
+        <a href="" class="active">2</a>
+        <a href="#">3</a> 
+        <a href="" class="next"><i class="bi bi-chevron-right"></i></a>
+    </div>-->
 
-<div class="product-card">
-  <img src="../src/furniture10.jpeg" alt="Radha Rani Chandrika" class="product-image">
-  <h2 class="product-title">Traditional Jhula for laddo gopal</h2>
-  <p class="product-description">Traditional design jhula for 0 to 2 number laddo gopal and radha rani</p>
-  <p class="product-price">Rs.450</p>
-  <a href="../product-pages/productpage102.html">
-      <button class="view-detail-btn">View Details</button>
-  </a>
-  <button class="add-to-cart-btn" onclick="addToCart('102')">Add to Cart</button>
-  <div class="notification" id="102"></div>
-</div>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>About Us</h2>
+                <p>Kishori Madhav Creation is dedicated to providing high-quality, stylish accessories that complement your unique fashion sense.</p>
+            </div>
+            <div class="footer-section">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about us.html">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h2>Follow Us</h2>
+                <ul class="social-links">
+                    <li><a href="https://www.facebook.com/share/wtQsjxqFkmzQW2nU/?mibextid=LQQJ4d"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="https://youtube.com/@kishorimadhavcreations?si=-bDllvKi9Z0HrVUs"><i class="bi bi-youtube"></i></a></li>
+                    <li><a href="https://www.instagram.com/kishori_madhav_creations?igsh=MTBjYWhuMjd4cnZtYQ%3D%3D&utm_source=qr"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="https://call.whatsapp.com/voice/4dbWqtvRb3XQo3mHpeUrLL center"><i class="bi bi-whatsapp"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Kishori Madhav Creation. All rights reserved.</p>
+        </div>
+    </footer>
 
-<div class="product-card">
-  <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
-  <h2 class="product-title">Furniture</h2>
-  <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, architecto?</p>
-  <p class="product-price">Rs.99</p>
-  <a href="../product-pages/productpage103.html">
-      <button class="view-detail-btn">View Details</button>
-  </a>
-  <button class="add-to-cart-btn" onclick="addToCart('103')">Add to Cart</button>
-  <div class="notification" id="103"></div>
-</div>
-
-<div class="product-card">
-  <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
-  <h2 class="product-title">Radha Rani Chandrika</h2>
-  <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, architecto?</p>
-  <p class="product-price">Rs.99</p>
-  <a href="../product-pages/productpage104.html">
-      <button class="view-detail-btn">View Details</button>
-  </a>
-  <button class="add-to-cart-btn" onclick="addToCart('104')">Add to Cart</button>
-  <div class="notification" id="104"></div>
-</div>
-
-<div class="product-card">
-  <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
-  <h2 class="product-title">Lorem, ipsum dolor.</h2>
-  <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, architecto?</p>
-  <p class="product-price">Rs.99</p>
-  <a href="../product-pages/productpage105.html">
-      <button class="view-detail-btn">View Details</button>
-  </a>
-  <button class="add-to-cart-btn" onclick="addToCart('105')">Add to Cart</button>
-  <div class="notification" id="105"></div>
-</div>
-</main>
-   
     <script>
-       function addToCart(productId) {
+        const hamburger = document.querySelector(".hamburger");
+        const menubar = document.querySelector(".menubar");
+
+        hamburger.addEventListener("click", () => {
+          hamburger.classList.toggle("hamburger-active");
+          menubar.classList.toggle("active");
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!e.target.closest("nav")) {
+            hamburger.classList.remove("hamburger-active");
+            menubar.classList.remove("active");
+          }
+        });
+             
+
+        function addToCart(productId) {
   document.getElementById(productId).innerText = "Added to cart!";
 }
-</script>
-    
-    <!-- <div class="pagination">
-      <a href="#" class="prev" onclick="changePage(-1)">&#10094;</a>
-      <span id="page-numbers"></span>--
-      <a href="C:\Users\ADMIN\New folder (3)\KMC Project\landing-page\furniture2.html" class="next" onclick="changePage(1)">&#10095;</a>
-    </div>
-     
-     -<div id="content"></div> -->
 
-    <script>
-      let currentPage = 1;
-const itemsPerPage = 12;
-const totalItems = 20; // 2 pages of content
-
-function displayContent() {
-  const contentDiv = document.getElementById('content');
-  contentDiv.innerHTML = '';
-
-  const startItem = (currentPage - 1) * itemsPerPage + 1;
-  const endItem = Math.min(startItem + itemsPerPage - 1, totalItems);
-
-  contentDiv.innerHTML = `Showing items ${startItem} to ${endItem} of ${totalItems}`;
-}
-
-function updatePagination() {
-  const pageNumbers = document.getElementById('page-numbers');
-  pageNumbers.innerHTML = '';
-
-  const totalPages = 2; // Fixed to 2 pages
-  for (let i = 1; i <= totalPages; i++) {
-    const pageLink = document.createElement('a');
-    pageLink.href = '#';
-    pageLink.innerText = i;
-    pageLink.onclick = () => goToPage(i);
-
-    if (i === currentPage) {
-      pageLink.classList.add('active');
+function addToCart(productId) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    if (!cart.includes(productId)) {
+        cart.push(productId);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        document.getElementById(productId).innerHTML = "Added to cart!";
+    } else {
+        document.getElementById(productId).innerHTML = "Already in cart!";
     }
-
-    pageNumbers.appendChild(pageLink);
-  }
 }
 
-function changePage(delta) {
-  const totalPages = 2;
-  currentPage = Math.max(1, Math.min(totalPages, currentPage + delta));
-  updatePagination();
-  displayContent();
-}
-
-function goToPage(pageNumber) {
-  currentPage = pageNumber;
-  updatePagination();
-  displayContent();
-}
-
-// Initialize
-updatePagination();
-displayContent();
-
+fetch("./database/product.json").then((response) => response.json())
+    .then((json) => console.log(json)
+ );
     </script>
-   <script>
-    fetch("./database/product.json").then((response) => response.json())
-      .then((json) => console.log(json)
-  );
-  </script>
-   </main>
-
-   <footer>
-    <div class="footer-container">
-      <div class="footer-section">
-          <h2>About Us</h2>
-          <p>Kishori Madhav Creations is a dedicated retail store that offers a diverse range of exquisite products related to Laddo Gopal, catering to the spiritual and cultural needs of devotees and enthusiasts. Our extensive collection includes beautifully crafted accessories, elegant poshak (traditional attire) for Laddo Gopal idols, intricately designed jutti (traditional footwear), and stunning pagadi (turban) options, ensuring every aspect of your worship is adorned with grace and beauty.
-
-              In addition to these devotional items, we also feature an exclusive selection of handcrafted furniture, perfect for creating a serene and sacred space in your home. Each piece is thoughtfully designed to complement the spiritual ambiance, making our store a one-stop destination for all your Laddo Gopal-related needs.</p>
-  
-      </div>
-      <div class="footer-section">
-          <h2>Customer Service</h2>
-          <ul>
-              <li><a href="../landing-page/contact.html">Contact Us</a></li>
-              <li><a href="../landing-page/about us.html">About Us</a></li>
-              <li><a href="../landing-page/privacy.html">Privacy Policy </a></li>
-          </ul>
-      </div>
-  </div>
-  <div class="footer-bottom">
-      <p>&copy; 2024 Laddo Gopal Emporium. All rights reserved.</p>
-  </div>
-   </footer>
 </body>
 </html>
