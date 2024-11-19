@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 *{
     /* font-family: poppins,sans-serif;  */
       margin:0;
@@ -134,7 +137,7 @@
   
   
     nav {
-  padding: 5px 5%;
+  padding: 12px 12%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -165,6 +168,7 @@ nav ul {
 }
 nav ul li {
   margin-left: 1.5rem;
+  
 }
 nav ul li a {
   text-decoration: none;
@@ -173,6 +177,8 @@ nav ul li a {
   font-weight: 400;
   padding: 4px 8px;
   border-radius: 5px;
+  position: relative;
+  left: 90px;
 }
 
 nav ul li a:hover {
@@ -267,7 +273,7 @@ nav ul li a:hover {
 
 .cart {
   position: relative;
-  margin-left: 20px;
+  margin-left: 10px;
   display: flex;
   align-items: center;
 }
@@ -318,9 +324,9 @@ nav ul li a:hover {
   position: relative;
    width: 100%;
    height: 500px;
- /* max-width: 1000px; Adjust based on your preference */
+   /* max-width: 1000px;   Adjust based on your preference  */
  margin: auto; 
-  overflow: hidden; /* Hide overflowing items */
+  overflow: hidden;        /*Hide overflowing items  */
 }
 
 .carousel {
@@ -329,14 +335,14 @@ nav ul li a:hover {
 }
 
 .carousel-item {
-  min-width: 100%; /* Each item takes full width */
+   min-width: 100%;    /*Each item takes full width  */
   box-sizing: border-box;
 }
 
 .carousel-item img {
-  width: 100%; /* Images are responsive */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Remove any gap below the image */
+  width: 100%;  /*Images are responsive*/ 
+  height: auto;  /*Maintain aspect ratio */
+  display: block;  /*Remove any gap below the image */
 }
 
 .carousel-controls {
@@ -360,7 +366,6 @@ nav ul li a:hover {
 .carousel-controls button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-
 
 
   
@@ -732,6 +737,3 @@ max-width: 600px;
 width: 100%;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
