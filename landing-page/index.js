@@ -1,8 +1,13 @@
+import { manageSessionId, getCookie } from "./common.js"
+import { appendToCart } from "./database/cart.js";
+import { getProductDetails } from "./product.js";
+manageSessionId();
+
 // Search functionality
-document.getElementById('search-button').addEventListener('click', function() {
+document.getElementById('search-button').addEventListener('click', function () {
   const searchBar = document.getElementById('search-bar');
   const query = searchBar.value.toLowerCase();
-  
+
   let pageUrl;
   switch (query) {
     case 'laddo gopal poshak':
@@ -36,9 +41,38 @@ document.getElementById('search-button').addEventListener('click', function() {
       alert('Page not found');
       return;
   }
-  
+
   window.location.href = pageUrl;
 });
+
+const addToCart = (event) => {
+  const productId = event.target.value;
+  const sessionId = getCookie('sessionId');
+  console.log("your session id is " + " -- " + sessionId);
+  console.log("your product id is " + " -- " + productId);
+
+  getProductDetails(productId).then((product) => {
+    if (product) {
+      console.log("Product Details:", product);
+      const productDetails = { id: productId, ...product };
+      appendToCart(sessionId, productDetails);
+    } else {
+      console.log("Product not found or error occurred.");
+    }
+  });
+
+
+
+  // cartCount++;
+  // localStorage.setItem('cartCount', cartCount);
+  // updateCartBadge();
+  // showNotification(productId);
+};
+
+const addToCartButtons = document.getElementsByClassName("add-to-cart-btn");
+for (const addToCartButton of addToCartButtons) {
+  addToCartButton.addEventListener("click", addToCart)
+}
 
 // Cart functionality
 let cartCount = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;
@@ -49,12 +83,7 @@ const updateCartBadge = () => {
 
 updateCartBadge();
 
-const addToCart = (productId) => {
-  cartCount++;
-  localStorage.setItem('cartCount', cartCount);
-  updateCartBadge();
-  showNotification(productId);
-};
+
 
 const showNotification = (productId) => {
   const notification = document.getElementById(productId);
@@ -120,3 +149,6 @@ window.addEventListener('resize', () => {
     carousel.style.transition = 'transform 0.5s ease-in-out';
   }, 0);
 });
+
+
+
