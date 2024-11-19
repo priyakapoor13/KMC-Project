@@ -4,365 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-  <style>
-  /* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Body styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4; /* Light gray background */
-    color: #333; /* Dark text */
-}
+        /* Body styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4; /* Light gray background */
+            color: #333; /* Dark text */
+        }
 
-/* Container styles */
-.container {
-    display: flex;
-    height: 100vh;
-}
+        /* Container styles */
+        .container {
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
+        }
 
-/* Sidebar styles */
-.sidebar {
-    width: 250px;
-    background: #343a40; /* Dark sidebar */
-    color: white;
-    padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-}
+        /* Sidebar styles */
+        .sidebar {
+            width: 100%;
+            background: #343a40; /* Dark sidebar */
+            color: white;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
 
-.sidebar h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-.sidebar nav ul {
-    list-style: none;
-}
+        .sidebar nav ul {
+            list-style: none;
+        }
 
-.sidebar nav ul li {
-    margin: 15px 0;
-}
+        .sidebar nav ul li {
+            margin: 15px 0;
+        }
 
-.sidebar nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
+        .sidebar nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            display: block;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
 
-.sidebar nav ul li a:hover {
-    background: #495057; /* Lighter on hover */
-}
+        .sidebar nav ul li a:hover {
+            background: #495057; /* Lighter on hover */
+        }
 
-/* Main content styles */
-.main-content {
-    flex-grow: 1;
-    padding: 20px;
-    background: #fff; /* White background for content */
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-left: 20px;
-}
+        /* Main content styles */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            background: #fff; /* White background for content */
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
 
-/* Header styles */
-.header {
-    margin-bottom: 20px;
-}
+        /* Header styles */
+        .header {
+            margin-bottom: 20px;
+        }
 
-.header h1 {
-    font-size: 24px;
-}
+        .header h1 {
+            font-size: 24px;
+        }
 
-/* Form styles */
-.add-product {
-    margin-bottom: 30px;
-}
+        /* Form styles */
+        .add-product {
+            margin-bottom: 30px;
+        }
 
-.add-product form {
-    display: flex;
-    flex-direction: column;
-}
+        .add-product form {
+            display: flex;
+            flex-direction: column;
+        }
 
-.add-product input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+        .add-product input, .add-product textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
-.add-product button {
-    padding: 10px;
-    background: #007bff; /* Primary button color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
+        .add-product button {
+            padding: 10px;
+            background: #007bff; /* Primary button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
 
-.add-product button:hover {
-    background: #0056b3; /* Darker on hover */
-}
+        .add-product button:hover {
+            background: #0056b3; /* Darker on hover */
+        }
 
-/* Product list styles */
-.product-list h3 {
-    margin-bottom: 10px;
-}
+        /* Product list styles */
+        .product-list h3 {
+            margin-bottom: 10px;
+        }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #dee2e6;
-}
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
 
-th {
-    background-color: #f8f9fa;
-}
+        th {
+            background-color: #f8f9fa;
+        }
 
-tr:hover {
-    background-color: #f1f1f1; /* Highlight row on hover */
-}
+        tr:hover {
+            background-color: #f1f1f1; /* Highlight row on hover */
+        }
 
-/* Button styles in the table */
-button {
-    background-color: #28a745; /* Success button */
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+        /* Button styles in the table */
+        button {
+            background-color: #28a745; /* Success button */
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
 
-button:hover {
-    background-color: #218838; /* Darker on hover */
-}
+        button:hover {
+            background-color: #218838; /* Darker on hover */
+        }
 
-button + button {
-    background-color: #dc3545; /* Danger button */
-}
+        button + button {
+            background-color: #dc3545; /* Danger button */
+        }
 
-button + button:hover {
-    background-color: #c82333; /* Darker on hover */
-}
+        button + button:hover {
+            background-color: #c82333; /* Darker on hover */
+        }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
+        /* Responsive styles */
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+            }
 
-    .sidebar {
-        width: 100%;
-        height: auto;
-    }
+            .sidebar {
+                width: 250px;
+                height: 100vh;
+                margin-top: 0;
+            }
 
-    .main-content {
-        margin-left: 0;
-    }
-}
-/* Additional styles for the order list */
-.order-list h3 {
-    margin-bottom: 10px;
-}
-
-#order-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-#order-table th, #order-table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #dee2e6;
-}
-
-#order-table th {
-    background-color: #f8f9fa;
-}
-
-#order-table tr:hover {
-    background-color: #f1f1f1; /* Highlight row on hover */
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-}
-
-.container {
-    display: flex;
-}
-
-.sidebar {
-    width: 250px;
-    background-color: #2c3e50;
-    padding: 20px;
-    color: #ecf0f1;
-    height: 100vh;
-}
-
-.sidebar h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.sidebar nav ul {
-    list-style: none;
-}
-
-.sidebar nav ul li {
-    margin: 15px 0;
-}
-
-.sidebar nav ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    padding: 10px;
-    display: block;
-    transition: background 0.3s;
-}
-
-.sidebar nav ul li a:hover,
-.sidebar nav ul li a.active {
-    background-color: #34495e;
-    border-radius: 5px;
-}
-
-.main-content {
-    flex: 1;
-    padding: 20px;
-    overflow: auto;
-}
-
-.header {
-    background-color: #2980b9;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-.add-product, .product-list, .order-list {
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-h3 {
-    margin-bottom: 15px;
-    color: #34495e;
-}
-
-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #bdc3c7;
-    border-radius: 5px;
-}
-
-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #2980b9;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-form button:hover {
-    background-color: #1f6391;
-}
-
-#product-table, #order-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-#product-table th, #order-table th,
-#product-table td, #order-table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #dee2e6;
-}
-
-#product-table th, #order-table th {
-    background-color: #f8f9fa;
-}
-
-#product-table tr:hover, #order-table tr:hover {
-    background-color: #f1f1f1; /* Highlight row on hover */
-}
-
-#product-table td img {
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-}
-
-button {
-    padding: 5px 10px;
-    background-color: #e67e22;
-    border: none;
-    color: white;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-right: 10px; /* Space between buttons */
-}
-
-button:hover {
-    background-color: #d35400;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar {
-        width: 100%;
-        height: auto;
-    }
-
-    .main-content {
-        padding: 10px;
-    }
-
-    form input, form button {
-        width: 100%;
-    }
-}
-
-  </style>
-   
+            .main-content {
+                margin-left: 20px;
+                margin-top: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -387,8 +200,10 @@ button:hover {
                 <h3>Add New Product</h3>
                 <form id="add-product-form">
                     <input type="text" id="product-name" placeholder="Product Name" required>
+                    <input type="text" id="product-title" placeholder="Product Title" required>
+                    <textarea id="product-description" placeholder="Product Description" required></textarea>
                     <input type="number" id="product-price" placeholder="Product Price" required>
-                    <input type="text" id="product-image" placeholder="Product Image URL" required>
+                    <input type="file" id="product-image" accept="image/*" required>
                     <button type="submit">Add Product</button>
                 </form>
             </section>
@@ -399,6 +214,8 @@ button:hover {
                     <thead>
                         <tr>
                             <th>Name</th>
+                            <th>Title</th>
+                            <th>Description</th>
                             <th>Price</th>
                             <th>Image</th>
                             <th>Actions</th>
@@ -429,181 +246,92 @@ button:hover {
         </main>
     </div>
     <script>
-        // script.js
+        // Handle form submission
+        document.getElementById('add-product-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
 
-// Handle form submission
-document.getElementById('add-product-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
+            const productName = document.getElementById('product-name').value;
+            const productTitle = document.getElementById('product-title').value;
+            const productDescription = document.getElementById('product-description').value;
+            const productPrice = document.getElementById('product-price').value;
+            const productImageInput = document.getElementById('product-image');
+            const productImageFile = productImageInput.files[0];
 
-    const productName = document.getElementById('product-name').value;
-    const productPrice = document.getElementById('product-price').value;
-    const productImage = document.getElementById('product-image').value;
+            if (productImageFile) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const productImage = e.target.result;
+                    addProductToTable(productName, productTitle, productDescription, productPrice, productImage);
+                };
+                reader.readAsDataURL(productImageFile);
+            }
 
-    // Add new product to the table
-    addProductToTable(productName, productPrice, productImage);
-
-    // Clear the form inputs
-    this.reset();
-});
-
-// Function to add a new product to the table
-function addProductToTable(name, price, image) {
-    const tableBody = document.querySelector('#product-table tbody');
-    
-    const newRow = document.createElement('tr');
-    newRow.innerHTML = `
-        <td>${name}</td>
-        <td>$${parseFloat(price).toFixed(2)}</td>
-        <td><img src="${image}" alt="${name}" style="width: 50px; height: 50px;"></td>
-        <td>
-            <button onclick="editProduct(this)">Edit</button>
-            <button onclick="deleteProduct(this)">Delete</button>
-        </td>
-    `;
-    tableBody.appendChild(newRow);
-}
-
-// Function to edit a product
-function editProduct(button) {
-    const row = button.parentElement.parentElement;
-    const name = row.cells[0].innerText;
-    const price = row.cells[1].innerText.replace('$', '');
-    const image = row.cells[2].querySelector('img').src;
-
-    document.getElementById('product-name').value = name;
-    document.getElementById('product-price').value = price;
-    document.getElementById('product-image').value = image;
-
-    deleteProduct(button); // Remove the row after editing
-}
-
-// Function to delete a product
-function deleteProduct(button) {
-    const row = button.parentElement.parentElement;
-    row.parentNode.removeChild(row); // Remove the row from the table
-}
-
-
-// script.js
-
-// Sample order data (in a real application, this would come from a server)
-const orders = [
-    { id: 1, customerName: 'Alice Johnson', totalPrice: 49.99, status: 'Completed' },
-    { id: 2, customerName: 'Bob Smith', totalPrice: 89.99, status: 'Pending' },
-    { id: 3, customerName: 'Charlie Brown', totalPrice: 25.50, status: 'Shipped' },
-];
-
-// Function to load the dashboard (if you have this functionality)
-function loadDashboard() {
-    // Implement loading dashboard logic if needed
-}
-
-// Handle form submission for adding products
-document.getElementById('add-product-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent default form submission
-
-    const productName = document.getElementById('product-name').value;
-    const productPrice = document.getElementById('product-price').value;
-    const productImage = document.getElementById('product-image').value;
-
-    // Add new product to the table
-    addProductToTable(productName, productPrice, productImage);
-
-    // Clear the form inputs
-    this.reset();
-});
-
-// Function to add a new product to the product table
-function addProductToTable(name, price, image) {
-    const tableBody = document.querySelector('#product-table tbody');
-    
-    const newRow = document.createElement('tr');
-    newRow.innerHTML = `
-        <td>${name}</td>
-        <td>$${parseFloat(price).toFixed(2)}</td>
-        <td><img src="${image}" alt="${name}" style="width: 50px; height: 50px;"></td>
-        <td>
-            <button onclick="editProduct(this)">Edit</button>
-            <button onclick="deleteProduct(this)">Delete</button>
-        </td>
-    `;
-    tableBody.appendChild(newRow);
-}
-
-// Function to edit a product
-function editProduct(button) {
-    const row = button.parentElement.parentElement;
-    const name = row.cells[0].innerText;
-    const price = row.cells[1].innerText.replace('$', '');
-    const image = row.cells[2].querySelector('img').src;
-
-    document.getElementById('product-name').value = name;
-    document.getElementById('product-price').value = price;
-    document.getElementById('product-image').value = image;
-
-    deleteProduct(button); // Remove the row after editing
-}
-
-// Function to delete a product
-function deleteProduct(button) {
-    const row = button.parentElement.parentElement;
-    row.parentNode.removeChild(row); // Remove the row from the table
-}
-
-// Function to load orders into the order table
-function loadOrders() {
-    const tableBody = document.querySelector('#order-table tbody');
-    tableBody.innerHTML = ''; // Clear existing rows
-
-    orders.forEach(order => {
-        const newRow = document.createElement('tr');
-        newRow.innerHTML = `
-            <td>${order.id}</td>
-            <td>${order.customerName}</td>
-            <td>$${parseFloat(order.totalPrice).toFixed(2)}</td>
-            <td>${order.status}</td>
-        `;
-        tableBody.appendChild(newRow);
-    });
-}
-
-// Switch to the product management view
-function showProducts() {
-    document.getElementById('add-product-section').style.display = 'block';
-    document.getElementById('product-list-section').style.display = 'block';
-    document.getElementById('order-list-section').style.display = 'none';
-    document.getElementById('dashboard-link').classList.add('active');
-    document.getElementById('view-orders-link').classList.remove('active');
-}
-
-// Switch to the order view
-function showOrders() {
-    document.getElementById('add-product-section').style.display = 'none';
-    document.getElementById('product-list-section').style.display = 'none';
-    document.getElementById('order-list-section').style.display = 'block';
-    loadOrders(); // Load orders data into the table
-    document.getElementById('dashboard-link').classList.remove('active');
-    document.getElementById('view-orders-link').classList.add('active');
-}
-
-// Event listeners for navigation links
-document.getElementById('manage-products-link').addEventListener('click', showProducts);
-document.getElementById('view-orders-link').addEventListener('click', showOrders);
-document.getElementById('dashboard-link').addEventListener('click', showProducts); // Default to products on load
-
-// Show products by default on page load
-showProducts();
-
-
-document.getElementById('logout-button').addEventListener('click', function() {
-            sessionStorage.removeItem('isLoggedIn');
-            window.location.href = 'index.html';
+            // Clear the form inputs
+            this.reset();
         });
 
-        // Check if the user is logged in
-        if (!sessionStorage.getItem('isLoggedIn')) {
-            window.location.href = 'index.html';
+        // Function to add a new product to the table
+        function addProductToTable(name, title, description, price, image) {
+            const tableBody = document.querySelector('#product-table tbody');
+
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${name}</td>
+                <td>${title}</td>
+                <td>${description}</td>
+                <td>₹${parseFloat(price).toFixed(2)}</td>
+                <td><img src="${image}" alt="${name}" style="width: 50px; height: 50px;"></td>
+                <td>
+                    <button onclick="editProduct(this)">Edit</button>
+                    <button onclick="deleteProduct(this)">Delete</button>
+                </td>
+            `;
+            tableBody.appendChild(newRow);
         }
+
+        // Function to edit a product
+        function editProduct(button) {
+            const row = button.parentElement.parentElement;
+            const name = row.cells[0].innerText;
+            const title = row.cells[1].innerText;
+            const description = row.cells[2].innerText;
+            const price = row.cells[3].innerText.slice(1); // Remove the $ sign
+            // Handle editing logic here (e.g., pre-fill the form for editing)
+            alert(`Edit product: ${name}`);
+        }
+
+        // Function to delete a product
+        function deleteProduct(button) {
+            const row = button.parentElement.parentElement;
+            row.remove();
+        }
+
+        // Handle navigation
+        document.getElementById('dashboard-link').addEventListener('click', function() {
+            document.getElementById('main-content').querySelector('h1').innerText = 'Dashboard Overview';
+            document.getElementById('add-product-section').style.display = 'block';
+            document.getElementById('product-list-section').style.display = 'block';
+            document.getElementById('order-list-section').style.display = 'none';
+        });
+
+        document.getElementById('manage-products-link').addEventListener('click', function() {
+            document.getElementById('main-content').querySelector('h1').innerText = 'Manage Products';
+            document.getElementById('add-product-section').style.display = 'block';
+            document.getElementById('product-list-section').style.display = 'block';
+            document.getElementById('order-list-section').style.display = 'none';
+        });
+
+        document.getElementById('view-orders-link').addEventListener('click', function() {
+            document.getElementById('main-content').querySelector('h1').innerText = 'View Orders';
+            document.getElementById('add-product-section').style.display = 'none';
+            document.getElementById('product-list-section').style.display = 'none';
+            document.getElementById('order-list-section').style.display = 'block';
+        });
+
+        document.getElementById('logout-button').addEventListener('click', function() {
+            alert('Logging out...');
+            // Perform logout operations
+        });
     </script>
 </body>
 </html>

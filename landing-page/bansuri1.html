@@ -369,15 +369,46 @@ footer {
   justify-content: center;
 }
 
+
+.cart {
+  position: relative;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.cart i {
+  font-size: 24px;
+  color: #2b1e1e;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px; /* Adjust this value to position the badge higher */
+  right: -10px; /* Adjust this value for horizontal position */
+  background-color: white;
+  color: indianred;
+  border-radius: 50%;
+  padding: 4px 8px; /* Padding for a better look */
+  font-size: 12px;
+  font-weight: bold; /* Make the number more prominent */
+  min-width: 20px; /* Ensure badge has a minimum width */
+  text-align: center; /* Center the text */
+}
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav>
-        <div class="logo">
-            <img src="kishori-madhav-logo.png" alt="Logo" />
-            <h1>Kishori Madhav Creation</h1>
-        </div>
+      <div class="logo">
+        <div class="cart">
+          <a href="../admin-dashboard/cart.html">
+          <i class="bi bi-cart"></i>
+          <span class="cart-badge" id="cart-badge">0</span></a>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- <img src="../src/images (3).jpg" alt="logo"  > -->
+        <h1>Kishori Madhav Creations</h1>
+      </div>
         
         <div class="hamburger">
             <div class="line"></div>
@@ -609,41 +640,6 @@ footer {
         </div>
     </footer>
 
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const menubar = document.querySelector(".menubar");
-
-        hamburger.addEventListener("click", () => {
-          hamburger.classList.toggle("hamburger-active");
-          menubar.classList.toggle("active");
-        });
-
-        document.addEventListener("click", (e) => {
-          if (!e.target.closest("nav")) {
-            hamburger.classList.remove("hamburger-active");
-            menubar.classList.remove("active");
-          }
-        });
-             
-
-        function addToCart(productId) {
-  document.getElementById(productId).innerText = "Added to cart!";
-}
-
-function addToCart(productId) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    if (!cart.includes(productId)) {
-        cart.push(productId);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        document.getElementById(productId).innerHTML = "Added to cart!";
-    } else {
-        document.getElementById(productId).innerHTML = "Already in cart!";
-    }
-}
-
-fetch("./database/product.json").then((response) => response.json())
-    .then((json) => console.log(json)
- );
-    </script>
+    <script src="./product.js"></script>
 </body>
 </html>

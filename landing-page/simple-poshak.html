@@ -370,20 +370,48 @@ footer {
   justify-content: center;
 } */
 
+
+
+.cart {
+  position: relative;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.cart i {
+  font-size: 24px;
+  color: #2b1e1e;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px; /* Adjust this value to position the badge higher */
+  right: -10px; /* Adjust this value for horizontal position */
+  background-color: white;
+  color: indianred;
+  border-radius: 50%;
+  padding: 4px 8px; /* Padding for a better look */
+  font-size: 12px;
+  font-weight: bold; /* Make the number more prominent */
+  min-width: 20px; /* Ensure badge has a minimum width */
+  text-align: center; /* Center the text */
+}
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav>
       <div class="logo">
-        <img src="kishori-madhav-logo.png" alt="Logo" />
-        <h1>Kishori Madhav Creation</h1>
-    </div>
         <div class="cart">
           <a href="../admin-dashboard/cart.html">
           <i class="bi bi-cart"></i>
           <span class="cart-badge" id="cart-badge">0</span></a>
-        </div>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- <img src="../src/images (3).jpg" alt="logo"  > -->
+        <h1>Kishori Madhav Creations</h1>
+      </div>
+      
         <div class="hamburger">
             <div class="line"></div>
             <div class="line"></div>
@@ -422,40 +450,7 @@ footer {
              
         </ul>
     </div>
-    <!-- <script>
-      let cartCount = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;
-    
-      // Function to update the badge display
-      const updateCartBadge = () => {
-        document.getElementById('cart-badge').innerText = cartCount;
-      };
-    
-      // Call the function to set the initial value
-      updateCartBadge();
-    
-      const addToCart = (productId) => {
-        cartCount++;
-        localStorage.setItem('cartCount', cartCount); // Save count to local storage
-        updateCartBadge(); // Update the badge display
-        showNotification(productId);
-      };
-    
-      const showNotification = (productId) => {
-        const notification = document.getElementById(productId);
-        notification.innerText = 'Added to cart!';
-        setTimeout(() => {
-          notification.innerText = '';
-        }, 2000);
-      };
-    
-      // Attach event listeners to all add-to-cart buttons
-      document.querySelectorAll('.add-to-cart-button').forEach(button => {
-        button.addEventListener('click', function() {
-          const productId = this.getAttribute('data-product-id');
-          addToCart(productId);
-        });
-      });
-    </script> -->
+   
     <!-- Product Section -->
     <div class="product-container">
         <div class="product-card">
@@ -463,7 +458,7 @@ footer {
             <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
             <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.</p>
             <p class="product-price">Rs.80</p>
-            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage1.html">
+            <a href="../product-pages/productpage1.html">
                 <button class="view-detail-btn">View Details</button>
             </a>
             <button class="add-to-cart-btn" onclick="addToCart('1')">Add to Cart</button>
@@ -475,7 +470,7 @@ footer {
             <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
             <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minus!</p>
             <p class="product-price">Rs.99</p>
-            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage2.html">
+            <a href="../product-pages/productpage2.html">
                 <button class="view-detail-btn">View Details</button>
             </a>
             <button class="add-to-cart-btn" onclick="addToCart('2')">Add to Cart</button>
@@ -487,7 +482,7 @@ footer {
             <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
             <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, consequatur.</p>
             <p class="product-price">Rs.99</p>
-            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage3.html">
+            <a href="../product-pages/productpage3.html">
                 <button class="view-detail-btn">View Details</button>
             </a>
             <button class="add-to-cart-btn" onclick="addToCart('3')">Add to Cart</button>
@@ -498,7 +493,7 @@ footer {
             <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
             <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, neque.</p>
             <p class="product-price">Rs.99</p>
-            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage4.html">
+            <a href="../product-pages/productpage4.html">
                 <button class="view-detail-btn">View Details</button>
             </a>
             <button class="add-to-cart-btn" onclick="addToCart('4')">Add to Cart</button>
@@ -511,7 +506,7 @@ footer {
             <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
             <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, fugiat!</p>
             <p class="product-price">Rs.99</p>
-            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage5.html">
+            <a href="../product-pages/productpage5.html">
                 <button class="view-detail-btn">View Details</button>
             </a>
             <button class="add-to-cart-btn" onclick="addToCart('5')">Add to Cart</button>
@@ -523,7 +518,7 @@ footer {
             <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
             <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, qui.</p>
             <p class="product-price">Rs.99</p>
-            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage6.html">
+            <a href="../product-pages/productpage6.html">
                 <button class="view-detail-btn">View Details</button>
             </a>
             <button class="add-to-cart-btn" onclick="addToCart('6')">Add to Cart</button>
@@ -535,7 +530,7 @@ footer {
             <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
             <p class="product-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero, quidem?</p>
             <p class="product-price">Rs.99</p>
-            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage7.html">
+            <a href="../product-pages/productpage7.html">
                 <button class="view-detail-btn">View Details</button>
             </a>
             <button class="add-to-cart-btn" onclick="addToCart('7')">Add to Cart</button>
@@ -548,7 +543,7 @@ footer {
             <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
             <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, quas.</p>
             <p class="product-price">Rs.99</p>
-            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage8.html">
+            <a href="../product-pages/productpage8.html">
                 <button class="view-detail-btn">View Details</button>
             </a>
             <button class="add-to-cart-btn" onclick="addToCart('8')">Add to Cart</button>
@@ -595,44 +590,6 @@ footer {
             <p>&copy; 2024 Kishori Madhav Creation. All rights reserved.</p>
         </div>
     </footer>
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const menubar = document.querySelector(".menubar");
-
-        hamburger.addEventListener("click", () => {
-          hamburger.classList.toggle("hamburger-active");
-          menubar.classList.toggle("active");
-        });
-
-        document.addEventListener("click", (e) => {
-          if (!e.target.closest("nav")) {
-            hamburger.classList.remove("hamburger-active");
-            menubar.classList.remove("active");
-          }
-        });
-             
-
-        function addToCart(productId) {
-  document.getElementById(productId).innerText = "Added to cart!";
-}
-
-function addToCart(productId) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    if (!cart.includes(productId)) {
-        cart.push(productId);
-        localStorage.setItem('cart', JSON.stringify(cart));
-        document.getElementById(productId).innerHTML = "Added to cart!";
-    } else {
-        document.getElementById(productId).innerHTML = "Already in cart!";
-    }
-}
-
-
-
-
-fetch("./database/product.json").then((response) => response.json())
-    .then((json) => console.log(json)
- );
-    </script>
+    <script src="./product.js"></script>
 </body>
 </html>

@@ -235,17 +235,14 @@ nav ul li a:hover {
     transition: background-color 0.3s;
 }
 
-#addToCartBtn {
+.add-to-cart-btn {
     background-color: rgb(233, 118, 118);
     color: white;
 }
 
-#addToCartBtn:hover {
+.add-to-cart-btn:hover {
     background-color: indianred;
 }
-
-
-
 
 
 /* Responsive Design */
@@ -359,14 +356,44 @@ footer {
 }
 
 
+.cart {
+  position: relative;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.cart i {
+  font-size: 24px;
+  color: #2b1e1e;
+}
+
+.cart-badge {
+  position: absolute;
+  top: -8px; /* Adjust this value to position the badge higher */
+  right: -10px; /* Adjust this value for horizontal position */
+  background-color: white;
+  color: indianred;
+  border-radius: 50%;
+  padding: 4px 8px; /* Padding for a better look */
+  font-size: 12px;
+  font-weight: bold; /* Make the number more prominent */
+  min-width: 20px; /* Ensure badge has a minimum width */
+  text-align: center; /* Center the text */
+}
     </style>
 </head>
 <body>
     <nav>
-        <div class="logo">
-            <img src="assets/Logo64x64.png" alt="logo" />
-            <h1>Kishori Madhav Creations</h1>
-          </div>
+      <div class="logo">
+        <div class="cart">
+          <a href="../admin-dashboard/cart.html">
+          <i class="bi bi-cart"></i>
+          <span class="cart-badge" id="cart-badge">0</span></a>
+        </div>&nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- <img src="../src/images (3).jpg" alt="logo"  > -->
+        <h1>Kishori Madhav Creations</h1>
+      </div>
           <ul>
             <li>
               <a href="../landing-page/index.html">Home</a>
@@ -406,18 +433,6 @@ footer {
             </li>
           </ul>
         </div>
-      <script>
-          const mobileNav = document.querySelector(".hamburger");
-  const navbar = document.querySelector(".menubar");
-  
-  const toggleNav = () => {
-    navbar.classList.toggle("active");
-    mobileNav.classList.toggle("hamburger-active");
-  };
-  mobileNav.addEventListener("click", () => toggleNav());
-  
-      </script>
-
     <main class="product-container">
         <div class="product-gallery">
             <img id="mainImage" src="https://fakeimg.pl/300/" alt="Product Image">
@@ -438,16 +453,12 @@ footer {
                     <button class="color-btn" style="background-color: green;" onclick="selectColor('Green')"></button>
                 </div>
                 <div class="action-buttons">
-                    <button id="addToCartBtn">Add to Cart</button>
+                  <button class="add-to-cart-btn" onclick="addToCart('6')">Add to Cart</button>
+                  <div class="notification" id="6"></div>
                 </div>
             </div>
         </div>
-    </main>
-
-  
-      
-
-          
+    </main>      
   <footer>
     <div class="footer-container">
         <div class="footer-section">
@@ -477,44 +488,6 @@ footer {
         <p>&copy; 2024 Kishori Madhav Creation. All rights reserved.</p>
     </div>
 </footer>
-        
-
- 
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    // Change the main product image to the selected thumbnail image
-    function changeImage(event) {
-        const mainImage = document.getElementById('mainImage');
-        mainImage.src = event.target.src;
-    }
-
-    // Display an alert with the selected color
-    function selectColor(color) {
-        alert('Color selected: ' + color);
-    }
-
-    // Add event listener to 'Add to Cart' button
-    document.getElementById('addToCartBtn').addEventListener('click', function() {
-        // Display an alert indicating the product has been added to the cart
-        alert('Product added to cart!');
-        // Additional functionality to handle adding the product to the cart can be added here
-    });
-
-    // Add event listener to 'View Details' button
-    document.getElementById('viewDetailBtn').addEventListener('click', function() {
-        // Display an alert indicating viewing product details
-        alert('Viewing product details!');
-        // Additional functionality to handle viewing more details about the product can be added here
-    });
-
-    // Add event listeners to thumbnail images
-    const thumbnails = document.querySelectorAll('.thumbnail');
-    thumbnails.forEach(thumbnail => {
-        thumbnail.addEventListener('click', changeImage);
-    });
-});
-
-    </script>
+<script src="./page.js"></script>
 </body>
 </html>

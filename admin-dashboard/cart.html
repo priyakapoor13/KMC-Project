@@ -201,6 +201,25 @@
     </div>
 
     <script>
+
+function displayCart() {
+    const cartData = readCartData();
+    const sessionId = manageSessionId();
+    const sessionCart = cartData.find(cart => cart.sessionId === sessionId);
+    
+    if (sessionCart && sessionCart.products.length > 0) {
+        sessionCart.products.forEach(product => {
+            // Create and append HTML elements to display each product
+            console.log(`Product: ${product.productName}, Quantity: ${product.quantity}, Price: ${product.price}`);
+        });
+    } else {
+        console.log('Your cart is empty.');
+    }
+}
+
+// Call displayCart to show cart contents (e.g., on the cart page)
+displayCart();
+
         const cartItemsContainer = document.getElementById('cartItems');
         const checkoutButton = document.getElementById('checkoutButton');
         const subtotalElement = document.getElementById('subtotal');
@@ -214,7 +233,7 @@
                 cartItemsContainer.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
             } else {
                 cartItemsContainer.innerHTML = ''; // Clear the container
-                fetch('product.json')
+                fetch('../landing-page/database/product.json')
                     .then(response => response.json())
                     .then(products => {
                         cartItems.forEach(item => {

@@ -4,46 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kishori Madhav Creations</title>
-    <link
-      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
 
-
 <body>
-  
     <!--top icons start-->
     <div class="flex-container">
-      <div> <a href="https://www.facebook.com/share/wtQsjxqFkmzQW2nU/?mibextid=LQQJ4d"><i class="bi bi-facebook"></i
-      ></a></div>
-
-      <div><a href="https://www.instagram.com/kishori_madhav_creations?igsh=MTBjYWhuMjd4cnZtYQ%3D%3D&utm_source=qr" ><i class="bi bi-instagram"></i></a></div>
-
-      <div> <a href="https://call.whatsapp.com/voice/4dbWqtvRb3XQo3mHpeUrLL center"><i class="bi bi-whatsapp"></i
-      ></a></div> 
-
-        <div> <a href="mailto:"><i class="bi bi-envelope-fill"></i></a>
-      </div>
-      <div>
-        <a
-        href="https://youtube.com/@kishorimadhavcreations?si=-bDllvKi9Z0HrVUs"><i class="bi bi-youtube"></i
-      ></a>
-      </div>
+      <div><a href="https://www.facebook.com/share/wtQsjxqFkmzQW2nU/?mibextid=LQQJ4d"><i class="bi bi-facebook"></i></a></div>
+      <div><a href="https://www.instagram.com/kishori_madhav_creations?igsh=MTBjYWhuMjd4cnZtYQ%3D%3D&utm_source=qr"><i class="bi bi-instagram"></i></a></div>
+      <div><a href="https://call.whatsapp.com/voice/4dbWqtvRb3XQo3mHpeUrLL"><i class="bi bi-whatsapp"></i></a></div>
+      <div><a href="mailto:"><i class="bi bi-envelope-fill"></i></a></div>
+      <div><a href="https://youtube.com/@kishorimadhavcreations?si=-bDllvKi9Z0HrVUs"><i class="bi bi-youtube"></i></a></div>
     </div>
     <!-- top icons end -->
 
-     <!--main-heading--> 
-     <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">K</span>ishori Madhav</h1>
-      <!--main-heading  end-->
+    <!--main-heading--> 
+    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">K</span>ishori Madhav</h1>
+    <!--main-heading end-->
 
-     
-      
-      <div class="search-container">
+    <!-- search bar start -->
+    <div class="search-container">
         <input list="pages" id="search-bar" class="search-bar" placeholder="Search...">
         <datalist id="pages">
-          <option value="Laddo Gopal Poshak"></option>
+         <option value="Laddo Gopal Poshak"></option>
           <option value="Fancy Poshak"></option>
           <option value="night-suit"></option>
           <option value="bister-Set"></option>
@@ -54,116 +39,37 @@
           <option value="Furniture"></option>
         </datalist>
         <button id="search-button" class="search-button">🔍</button>
-      </div>
-      <script>
-        document.getElementById('search-button').addEventListener('click', function() {
-          const searchBar = document.getElementById('search-bar');
-          const query = searchBar.value.toLowerCase();
-          
-          let pageUrl;
-          switch (query) {
-            case 'laddo gopal poshak':
-              pageUrl = 'simple-poshak.html';
-              break;
-            case 'fancy poshak':
-              pageUrl = 'fancy-poshak.html';
-              break;
-              case 'night-suit':
-              pageUrl = 'nightsuit.html';
-              break;
-            
-            case 'bister-set':
-              pageUrl = 'bister-set.html';
-              break;
-            case 'accessories':
-              pageUrl = 'accessories1.html';
-              break;
-              case 'accessories':
-              pageUrl = 'accessories1.html';
-              break;
-              case 'bansuri':
-              pageUrl = 'bansuri1.html';
-              break;
-              case 'simple-mala':
-              pageUrl = 'simple-mala.html';
-              break;
-              case 'fancy-mala':
-              pageUrl = 'fancymala.html';
-              break;
-              case 'furniture':
-              pageUrl = 'furniture.html';
-              break;
-            default:
-              alert('Page not found');
-              return;
-          }
-          
-          window.location.href = pageUrl;
-        });
-      </script>
-      <!-- search bar end -->
-       <hr>
-
+    </div>
+    <!-- search bar end -->
+    <hr>
 
     <nav>
       <div class="logo">
-        <img src="../src/images (3).jpg" alt="logo"  >
-        <h1>LOGO</h1>
-      </div>
-      <ul>
-        <li>
-          <a href="./index.html">Home</a>
-        </li>
-        <li>
-          <a href="./about us.html">About Us</a>
-        </li>
-        <li>
-          <a href="./privacy.html">Privacy Policy</a>
-        </li>
-        <li>
-          <a href="./contact.html">Contact Us</a>
-        </li>
-  
         <div class="cart">
           <a href="../admin-dashboard/cart.html">
           <i class="bi bi-cart"></i>
           <span class="cart-badge" id="cart-badge">0</span></a>
         </div>
+        <!-- <img src="../src/images (3).jpg" alt="logo"  > -->
+        <!-- <h1>Kishori Madhav Creations</h1> -->
+      </div>
+      <!-- <div class="logo">
+        <img src="../src/images (3).jpg" alt="logo">
+        <h1>LOGO</h1>
+      </div> -->
+      <ul>
+       
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about us.html">About Us</a></li>
+        <li><a href="./privacy.html">Privacy Policy</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+        <!-- <div class="cart">
+          <a href="../admin-dashboard/cart.html">
+            <i class="bi bi-cart"></i>
+            <span class="cart-badge" id="cart-badge">0</span>
+          </a>
+        </div> -->
       </ul>
-      <script>
-         let cartCount = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;
-
-// Function to update the badge display
-const updateCartBadge = () => {
-  document.getElementById('cart-badge').innerText = cartCount;
-};
-
-// Call the function to set the initial value
-updateCartBadge();
-
-const addToCart = (productId) => {
-  cartCount++;
-  localStorage.setItem('cartCount', cartCount); // Save count to local storage
-  updateCartBadge(); // Update the badge display
-  showNotification(productId);
-};
-
-const showNotification = (productId) => {
-  const notification = document.getElementById(productId);
-  notification.innerText = 'Added to cart!';
-  setTimeout(() => {
-    notification.innerText = '';
-  }, 2000);
-};
-
-// Attach event listeners to all add-to-cart buttons
-document.querySelectorAll('.add-to-cart-button').forEach(button => {
-  button.addEventListener('click', function() {
-    const productId = this.getAttribute('data-product-id');
-    addToCart(productId);
-  });
-});
-      </script>
       <div class="hamburger">
         <span class="line"></span>
         <span class="line"></span>
@@ -172,35 +78,14 @@ document.querySelectorAll('.add-to-cart-button').forEach(button => {
     </nav>
     <div class="menubar">
       <ul>
-        <li>
-          <a href="./index.html">Home</a>
-        </li>
-        <li>
-          <a href="./about us.html">About Us</a>
-        </li>
-        <li>
-          <a href="./privacy.html">Privacy Policy</a>
-        </li>
-        <li>
-          <a href="./contact.html">Contact Us</a>
-        </li>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about us.html">About Us</a></li>
+        <li><a href="./privacy.html">Privacy Policy</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
       </ul>
     </div>
 
-    <script>
-        const mobileNav = document.querySelector(".hamburger");
-const navbar = document.querySelector(".menubar");
-
-const toggleNav = () => {
-  navbar.classList.toggle("active");
-  mobileNav.classList.toggle("hamburger-active");
-};
-mobileNav.addEventListener("click", () => toggleNav());
-
-    </script>
-
-
-
+    
 <div class="carousel-container">
   <div class="carousel">
       <div class="carousel-item"><img src="../src/photo.jpg" alt="Image 1"></div>
@@ -213,311 +98,163 @@ mobileNav.addEventListener("click", () => toggleNav());
       <button class="next">&#10095;</button>
   </div>
 </div>
-<script>
-const carousel = document.querySelector('.carousel');
-const carouselItems = document.querySelectorAll('.carousel-item');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-
-let currentIndex = 0;
-
-function showSlide(index) {
-if (index >= carouselItems.length) {
-  currentIndex = 0;
-} else if (index < 0) {
-  currentIndex = carouselItems.length - 1;
-} else {
-  currentIndex = index;
-}
-carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-nextButton.addEventListener('click', () => {
-showSlide(currentIndex + 1);
-});
-
-prevButton.addEventListener('click', () => {
-showSlide(currentIndex - 1);
-});
-
-// Auto-slide
-setInterval(() => {
-showSlide(currentIndex + 1);
-}, 3000); // Change slide every 3 seconds
-
-// Make carousel responsive
-window.addEventListener('resize', () => {
-carousel.style.transition = 'none';
-showSlide(currentIndex);
-setTimeout(() => {
-  carousel.style.transition = 'transform 0.5s ease-in-out';
-}, 0);
-});
-
-</script>
-      
-
-
-<!-- feature -->
-<div class="feature-container">
-  <div class="feature-box">
-    <div class="icon">
-      <i class="bi bi-diamond-fill"></i>
-    </div>
-    <h3 class="title">Quality Product</h3>
-  </div>
-  <div class="feature-box">
-    <div class="icon">
-      <i class="bi bi-check-circle-fill"></i>
-    </div>
-    <h3 class="title">Discounts</h3>
-  </div>
-  <div class="feature-box">
-    <div class="icon">
-      <i class="bi bi-diamond-fill"></i>
-    </div>
-    <h3 class="title">Feature 3</h3>
-  </div>
-</div>
-<!-- feature end -->
-
-
-<!--main-content-->
- <!-- <section id="product1" class="feature-text">
-    <div class="pro-container">
-
-      <div class="pro">
-       
-         <a href="C:\Users\ADMIN\New folder (3)\KMC Project\landing-page\bansuri1.html">
-        <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\bansuri1.jpeg" alt="image"></a>
-        <div class="description">
-        Bansuri
-        </div>
-      </div>
-      <div class="pro">
-        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\landing-page\fancymala.html">
-        <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\mala32.jpeg"  alt="image"  id="image"></a>
-        <div class="description">
-        Laddo Gopal Fancy Mala
-        </div>
-      </div>
-
-      <div class="pro">
-        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\landing-page\nightsuit.html">
-        <img src="C:\Users\ADMIN\New folder (3)\KMC Project\src\nightsuit79.jpeg" alt="image"></a>
-        <div class="description">
-        Laddo Gopal Bloomers
-        </div>
-      </div>
-
-       <div class="pro">
-        <img src="photo.jpg" alt="image">
-        <div class="description">
-        Laddo Gopal Accessories
-        </div>
-      </div>
-
-      <div class="pro">
-        <img src="photo.jpg" alt="image">
-        <div class="description">
-         Laddo Gopal Bister Set
-        </div>
-      </div>
-
-      <div class="pro">
-        <img src="photo.jpg" alt="image">
-        <div class="description">
-        Jugal Jodi Set 
-        </div>
-      </div> 
-    </div>
-  </section>
-       
- feature container
-  <div class="feature-container1">
-    <div class="feature-box1">
-        <div class="feature-image">
-            <img src="C:\Users\ADMIN\New folder (3)\madhav photos\fancyposhak1.jpeg" alt="Feature 1" height="250px">
-        </div>
-        <div class="feature-content1">
-            <h2> Fancy Poshak Collection</h2>
-            <button class="cta-button">Shop Now</button>
-        </div>
-    </div>
-    <div class="feature-box1">
-        <div class="feature-image">
-            <img src="https://via.placeholder.com/400x250" alt="Feature 2">
-        </div>
-        <div class="feature-content1">
-            <h2>Accessories Collection</h2>
-            <button class="cta-button">Shop Now</button>
-        </div>
-    </div>
-</div>
-  feature container end -->
-
-
- <div>
- <h1 id="center"><b>&#9473;&#9473;Trandy products&#9473;&#9473;</b></h1> 
-
-
-  <div class="product-container">
-
-    <div class="product-card">
-        <img src="https://fakeimg.pl/300/" class="product-image">
-        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
-        <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.</p>
-        <p class="product-price">Rs.80</p>
-        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage1.html">
-            <button class="view-detail-btn">View Details</button>
-        </a>
-        <button class="add-to-cart-btn" onclick="addToCart('1')">Add to Cart</button>
-        <div class="notification" id="1"></div>
-    </div>
-
-    <div class="product-card">
-        <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
-        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
-        <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minus!</p>
-        <p class="product-price">Rs.99</p>
-        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage2.html">
-            <button class="view-detail-btn">View Details</button>
-        </a>
-        <button class="add-to-cart-btn" onclick="addToCart('2')">Add to Cart</button>
-        <div class="notification" id="2"></div>
-    </div>
-
-    <div class="product-card">
-        <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
-        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
-        <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, consequatur.</p>
-        <p class="product-price">Rs.99</p>
-        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage3.html">
-            <button class="view-detail-btn">View Details</button>
-        </a>
-        <button class="add-to-cart-btn" onclick="addToCart('3')">Add to Cart</button>
-        <div class="notification" id="3"></div>
-    </div>
-    <div class="product-card">
-        <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
-        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
-        <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, neque.</p>
-        <p class="product-price">Rs.99</p>
-        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage4.html">
-            <button class="view-detail-btn">View Details</button>
-        </a>
-        <button class="add-to-cart-btn" onclick="addToCart('4')">Add to Cart</button>
-        <div class="notification" id="4"></div>
-    </div>
    
-    <!-- Add more product cards as needed -->
-</div>
- 
-
-  <h1 id="center2"><b>&#9473;&#9473;Just Arrived&#9473;&#9473;</b></h1>
-
-  <div class="product-container">
-    <div class="product-card">
-        <img src="https://fakeimg.pl/300/" class="product-image">
-        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
-        <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.</p>
-        <p class="product-price">Rs.80</p>
-        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage1.html">
-            <button class="view-detail-btn">View Details</button>
-        </a>
-        <button class="add-to-cart-btn" onclick="addToCart('5')">Add to Cart</button>
-        <div class="notification" id="5"></div>
+    <!-- feature -->
+    <div class="feature-container">
+      <div class="feature-box">
+        <div class="icon">
+          <i class="bi bi-diamond-fill"></i>
+        </div>
+        <h3 class="title">Quality Product</h3>
+      </div>
+      <div class="feature-box">
+        <div class="icon">
+          <i class="bi bi-check-circle-fill"></i>
+        </div>
+        <h3 class="title">Discounts</h3>
+      </div>
+      <div class="feature-box">
+        <div class="icon">
+          <i class="bi bi-diamond-fill"></i>
+        </div>
+        <h3 class="title">Feature 3</h3>
+      </div>
     </div>
+    <!-- feature end -->
 
-    <div class="product-card">
-        <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
-        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
-        <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minus!</p>
-        <p class="product-price">Rs.99</p>
-        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage2.html">
-            <button class="view-detail-btn">View Details</button>
-        </a>
-        <button class="add-to-cart-btn" onclick="addToCart('6')">Add to Cart</button>
-        <div class="notification" id="6"></div>
+    <!--main-content-->
+    <div>
+      <h1 id="center"><b>&#9473;&#9473;Trandy products&#9473;&#9473;</b></h1> 
+      <div class="product-container">
+        <div class="product-card">
+            <img src="https://fakeimg.pl/300/" class="product-image">
+            <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.</p>
+            <p class="product-price">Rs.80</p>
+            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage1.html">
+                <button class="view-detail-btn">View Details</button>
+            </a>
+            <button class="add-to-cart-btn" onclick="addToCart('1')">Add to Cart</button>
+            <div class="notification" id="1"></div>
+        </div>
+        <div class="product-card">
+            <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
+            <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minus!</p>
+            <p class="product-price">Rs.99</p>
+            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage2.html">
+                <button class="view-detail-btn">View Details</button>
+            </a>
+            <button class="add-to-cart-btn" onclick="addToCart('2')">Add to Cart</button>
+            <div class="notification" id="2"></div>
+        </div>
+        <div class="product-card">
+            <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
+            <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, consequatur.</p>
+            <p class="product-price">Rs.99</p>
+            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage3.html">
+                <button class="view-detail-btn">View Details</button>
+            </a>
+            <button class="add-to-cart-btn" onclick="addToCart('3')">Add to Cart</button>
+            <div class="notification" id="3"></div>
+        </div>
+        <div class="product-card">
+            <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
+            <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, neque.</p>
+            <p class="product-price">Rs.99</p>
+            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage4.html">
+                <button class="view-detail-btn">View Details</button>
+            </a>
+            <button class="add-to-cart-btn" onclick="addToCart('4')">Add to Cart</button>
+            <div class="notification" id="4"></div>
+        </div>
+      </div>
+      <h1 id="center2"><b>&#9473;&#9473;Just Arrived&#9473;&#9473;</b></h1> 
+      <div class="product-container">
+        <div class="product-card">
+            <img src="https://fakeimg.pl/300/" class="product-image">
+            <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos, laudantium.</p>
+            <p class="product-price">Rs.80</p>
+            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage5.html">
+                <button class="view-detail-btn">View Details</button>
+            </a>
+            <button class="add-to-cart-btn" onclick="addToCart('5')">Add to Cart</button>
+            <div class="notification" id="5"></div>
+        </div>
+        <div class="product-card">
+            <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
+            <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, minus!</p>
+            <p class="product-price">Rs.99</p>
+            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage6.html">
+                <button class="view-detail-btn">View Details</button>
+            </a>
+            <button class="add-to-cart-btn" onclick="addToCart('6')">Add to Cart</button>
+            <div class="notification" id="6"></div>
+        </div>
+        <div class="product-card">
+            <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
+            <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, consequatur.</p>
+            <p class="product-price">Rs.99</p>
+            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage7.html">
+                <button class="view-detail-btn">View Details</button>
+            </a>
+            <button class="add-to-cart-btn" onclick="addToCart('7')">Add to Cart</button>
+            <div class="notification" id="7"></div>
+        </div>
+        <div class="product-card">
+            <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
+            <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
+            <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, neque.</p>
+            <p class="product-price">Rs.99</p>
+            <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage8.html">
+                <button class="view-detail-btn">View Details</button>
+            </a>
+            <button class="add-to-cart-btn" onclick="addToCart('8')">Add to Cart</button>
+            <div class="notification" id="8"></div>
+        </div>
+      </div>
     </div>
+    <!--main-content end-->
 
-    <div class="product-card">
-        <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
-        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
-        <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, consequatur.</p>
-        <p class="product-price">Rs.99</p>
-        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage3.html">
-            <button class="view-detail-btn">View Details</button>
-        </a>
-        <button class="add-to-cart-btn" onclick="addToCart('7')">Add to Cart</button>
-        <div class="notification" id="7"></div>
-    </div>
-    <div class="product-card">
-        <img src="https://fakeimg.pl/300/" alt="img" class="product-image">
-        <h2 class="product-title">Lorem ipsum dolor sit amet.</h2>
-        <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, neque.</p>
-        <p class="product-price">Rs.99</p>
-        <a href="C:\Users\ADMIN\New folder (3)\KMC Project\product-pages\productpage4.html">
-            <button class="view-detail-btn">View Details</button>
-        </a>
-        <button class="add-to-cart-btn" onclick="addToCart('8')">Add to Cart</button>
-        <div class="notification" id="8"></div>
-    </div>
-   
-    <!-- Add more product cards as needed -->
-</div>
-  
-<script>
-  function addToCart(productId) {
-    // details write cart.json file
+    <footer>
+      <div class="footer-container">
+          <div class="footer-section">
+              <h2>About Us</h2>
+               <p>
+                Kishori Madhav Creations is a dedicated retail store that offers a diverse range of exquisite products related to Laddo Gopal, catering to the spiritual and cultural needs of devotees and enthusiasts. Our extensive collection includes beautifully crafted accessories, elegant poshak (traditional attire) for Laddo Gopal idols, intricately designed jutti (traditional footwear), and stunning pagadi (turban) options, ensuring every aspect of your worship is adorned with grace and beauty.
     
-const notification = document.getElementById(productId);
-notification.style.display = 'block';
-notification.textContent = 'Item added to cart!';
-
-setTimeout(() => {
-  notification.style.display = 'none';
-}, 3000);
-}
-
-function viewDetails() {
-alert('Viewing details for this product!');
-}
-
-</script>
-<script src="./database/generateCart.js"></script>
- <footer>
-  <div class="footer-container">
-      <div class="footer-section">
-          <h2>About Us</h2>
-           <p>
-            Kishori Madhav Creations is a dedicated retail store that offers a diverse range of exquisite products related to Laddo Gopal, catering to the spiritual and cultural needs of devotees and enthusiasts. Our extensive collection includes beautifully crafted accessories, elegant poshak (traditional attire) for Laddo Gopal idols, intricately designed jutti (traditional footwear), and stunning pagadi (turban) options, ensuring every aspect of your worship is adorned with grace and beauty.
-
-            In addition to these devotional items, we also feature an exclusive selection of handcrafted furniture, perfect for creating a serene and sacred space in your home. Each piece is thoughtfully designed to complement the spiritual ambiance, making our store a one-stop destination for all your Laddo Gopal-related needs.
-           </p>
+                In addition to these devotional items, we also feature an exclusive selection of handcrafted furniture, perfect for creating a serene and sacred space in your home. Each piece is thoughtfully designed to complement the spiritual ambiance, making our store a one-stop destination for all your Laddo Gopal-related needs.
+               </p>
+          </div>
+          <div class="footer-section">
+              <h2>Quick Links</h2>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="privacy.html">Privacy</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="about us.html">About</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h2>Follow Us</h2>
+              <ul class="social-links">
+                  <li><a href="https://www.facebook.com/share/wtQsjxqFkmzQW2nU/?mibextid=LQQJ4d"><i class="bi bi-facebook"></i></a></li>
+                  <li><a href="https://youtube.com/@kishorimadhavcreations?si=-bDllvKi9Z0HrVUs"><i class="bi bi-youtube"></i></a></li>
+                  <li><a href="https://www.instagram.com/kishori_madhav_creations?igsh=MTBjYWhuMjd4cnZtYQ%3D%3D&utm_source=qr"><i class="bi bi-instagram"></i></a></li>
+                  <li><a href="https://call.whatsapp.com/voice/4dbWqtvRb3XQo3mHpeUrLL center"><i class="bi bi-whatsapp"></i></a></li>
+              </ul>
+          </div>
       </div>
-      <div class="footer-section">
-          <h2>Quick Links</h2>
-          <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="privacy.html">Privacy</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li><a href="about us.html">About</a></li>
-          </ul>
+      <div class="footer-bottom">
+          <p>&copy; 2024 Kishori Madhav Creation. All rights reserved.</p>
       </div>
-      <div class="footer-section">
-          <h2>Follow Us</h2>
-          <ul class="social-links">
-              <li><a href="https://www.facebook.com/share/wtQsjxqFkmzQW2nU/?mibextid=LQQJ4d"><i class="bi bi-facebook"></i></a></li>
-              <li><a href="https://youtube.com/@kishorimadhavcreations?si=-bDllvKi9Z0HrVUs"><i class="bi bi-youtube"></i></a></li>
-              <li><a href="https://www.instagram.com/kishori_madhav_creations?igsh=MTBjYWhuMjd4cnZtYQ%3D%3D&utm_source=qr"><i class="bi bi-instagram"></i></a></li>
-              <li><a href="https://call.whatsapp.com/voice/4dbWqtvRb3XQo3mHpeUrLL center"><i class="bi bi-whatsapp"></i></a></li>
-          </ul>
-      </div>
-  </div>
-  <div class="footer-bottom">
-      <p>&copy; 2024 Kishori Madhav Creation. All rights reserved.</p>
-  </div>
-</footer>
+    </footer>
+    <!-- Link to external JS file -->
+    <script src="./index.js"></script>
 </body>
 </html>
