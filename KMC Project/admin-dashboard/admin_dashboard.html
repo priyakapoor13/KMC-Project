@@ -256,6 +256,8 @@
             const productPrice = document.getElementById('product-price').value;
             const productImageInput = document.getElementById('product-image');
             const productImageFile = productImageInput.files[0];
+            console.log(productImageFile)
+            // store that file with same name in product-images folder, and use that file path.
 
             if (productImageFile) {
                 const reader = new FileReader();

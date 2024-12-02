@@ -50,7 +50,7 @@ if (searchButton && searchBar) {
 }
 
 let cartCount = localStorage.getItem('cartCount') ? parseInt(localStorage.getItem('cartCount')) : 0;
-let cartData = localStorage.getItem('cartData') ? JSON.parse(localStorage.getItem('cartData')) : [];
+let cartData = localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
 
 // Update cart badge
 const updateCartBadge = () => {
@@ -78,6 +78,10 @@ const showNotification = (productId) => {
 const loadCartItems = () => {
   const cartItems = document.getElementById('cart-items');
   const cartTotal = document.getElementById('cart-total');
+  const sessionId = getCookie('sessionId');
+  if (cartData.constructor !== Array) {
+    cartData = cartData[sessionId];
+  }
   if (cartItems) {
     cartItems.innerHTML = '';
     let total = 0;
@@ -111,8 +115,6 @@ const loadCartItems = () => {
 const addToCart = (event) => {
   const productId = event.target.value;
   const sessionId = getCookie('sessionId');
-  console.log("Session ID: ", sessionId);
-  console.log("Product ID: ", productId);
 
   getProductDetails(productId).then((product) => {
     if (product) {
@@ -152,7 +154,7 @@ const removeFromCart = (productId, cartItemElement, productPrice) => {
   cartCount--;
   localStorage.setItem('cartCount', cartCount);
   updateCartBadge();
-  
+
 };
 
 // Add event listeners to 'Add to Cart' buttons if they exist
