@@ -1,0 +1,20 @@
+[
+    {
+        "orderId": "001",
+        "customerName": "John Doe",
+        "totalPrice": "$100",
+        "status": "pending"
+    },
+    {
+        "orderId": "002",
+        "customerName": "Jane Smith",
+        "totalPrice": "$150",
+        "status": "completed"
+    },
+    {
+        "orderId": "003",
+        "customerName": "Sam Wilson",
+        "totalPrice": "$200",
+        "status": "pending"
+    }
+]
