@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', function () {
     const manageProductsLink = document.getElementById('manage-products-link');
     const productListSection = document.getElementById('product-list-section');
@@ -157,3 +158,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+=======
+const addProduct = () => {
+    // product details
+    // 2. append in the file of refactored_product.json, having same object structure
+    // 3. send user the information that product is added!
+    // 4. Error declare, user, to try again.
+}
+
+const uploadImageToDatabase = () => {
+    // fileObject
+}
+
+console.log(document.getElementById("product-image"));
+>>>>>>> 0f917c844665c8581afeee04c46d8bacd191bc2e
