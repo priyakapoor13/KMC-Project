@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Details</title>
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
@@ -15,10 +15,10 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-  min-height: 100vh; /* Ensures the body takes up at least the full viewport height */
-  display: flex;
-  /* display: flex; */
-    flex-direction: column;
+        min-height: 100vh; /* Ensures the body takes up at least the full viewport height */
+        display: flex;
+        /* display: flex; */
+        flex-direction: column;
       }
 
       * {
@@ -634,10 +634,9 @@
         transition: all 0.3s ease-in-out;
       }
       footer {
-  position: relative;
-  margin-top: auto; /* Ensures the footer stays at the bottom */
-}
-
+        position: relative;
+        margin-top: auto; /* Ensures the footer stays at the bottom */
+      }
     </style>
   </head>
   <body>
@@ -723,8 +722,6 @@
       <!-- Thumbnails will be inserted here -->
     </div>
 
-  
-
     <script>
       // Function to get query parameter by name
       function getQueryParam(name) {
@@ -733,57 +730,57 @@
       }
 
       const productId = getQueryParam("id");
+      let product = null;
 
-      fetch("/landing-page/database/product.json")
-        .then((response) => response.json())
-        .then((products) => {
-          const product = products[productId];
-          if (product) {
-            const productTitle = document.querySelector(".product-title");
-            const productDescription = document.querySelector(
-              ".product-description"
-            );
-            const productPrice = document.querySelector(".product-price");
-            const productImage = document.querySelector(".product-image");
-            const thumbnailsContainer = document.querySelector(".thumbnails");
-
-            productTitle.textContent = product.name;
-            productDescription.textContent = product.description;
-            productPrice.textContent = `₹${product.price}`;
-            productImage.src = product.imageSource;
-
-            // Check if the product has a thumbnail
-            if (product.thumbnail) {
-              const thumbnail = document.createElement("img");
-              thumbnail.src = product.thumbnail;
-              thumbnail.alt = `${product.name} Thumbnail`;
-              thumbnail.classList.add("thumbnail-img");
-              thumbnail.style.cursor = "pointer";
-
-              // Append thumbnail image to the thumbnails container
-              thumbnailsContainer.appendChild(thumbnail);
-
-              // Show the thumbnail container if there's a thumbnail
-              thumbnailsContainer.style.display = "flex"; // Ensure it's visible
-
-              // Add event listener for thumbnail click
-              thumbnail.addEventListener("click", () => {
-                productImage.src = product.imageSource; // Update main image when //thumbnail is clicked
-              });
-            } else {
-              // If there's no thumbnail, hide the thumbnail container and remove space
-              thumbnailsContainer.style.display = "none";
-            }
-
-            // Attach event listener to the "Add to Cart" button
-            const addToCartButton = document.querySelector(".add-to-cart-btn");
-            addToCartButton.addEventListener("click", addToCart);
-          } else {
+      fetch("./database/product.json")
+    .then((response) => {
+        if (!response.ok) throw new Error("Network response was not ok");
+        return response.json();
+    })
+    .then((products) => {
+        const product = products[productId];
+        if (product) {
+            renderProduct(product);
+        } else {
             document.querySelector(".product-container").innerHTML =
-              "<p>Product not found.</p>";
-          }
-        })
-        .catch((error) => console.error("Error fetching product:", error));
+                "<p>Product not found. Please check back later.</p>";
+        }
+    })
+    .catch((error) => {
+        console.error("Error fetching product:", error);
+        document.querySelector(".product-container").innerHTML =
+            "<p>Unable to load product. Please try again later.</p>";
+    });
+
+function renderProduct(product) {
+    const productTitle = document.querySelector(".product-title");
+    const productDescription = document.querySelector(".product-description");
+    const productPrice = document.querySelector(".product-price");
+    const productImage = document.querySelector(".product-image");
+    const thumbnailsContainer = document.querySelector(".thumbnails");
+
+    productTitle.textContent = product.name;
+    productDescription.textContent = product.description;
+    productPrice.textContent = `₹${product.price}`;
+    productImage.src = product.imageSource;
+
+    if (product.thumbnail) {
+        const thumbnail = document.createElement("img");
+        thumbnail.src = product.thumbnail;
+        thumbnail.alt = `${product.name} Thumbnail`;
+        thumbnail.classList.add("thumbnail-img");
+        thumbnailsContainer.appendChild(thumbnail);
+        thumbnailsContainer.style.display = "flex";
+
+        thumbnail.addEventListener("click", () => {
+            productImage.src = thumbnail.src;
+        });
+    } else {
+        thumbnailsContainer.style.display = "none";
+    }
+
+    document.querySelector(".add-to-cart-btn").addEventListener("click", addToCart);
+}
 
       // Define the addToCart function
       function addToCart() {
@@ -794,16 +791,7 @@
           notification.style.display = "none";
         }, 3000);
       }
-
-      const product = products.find(p => p.id === productId);
-if (product) {
-  // Continue with your product display logic
-} else {
-  console.error("Product not found");
-  document.querySelector(".product-container").innerHTML = "<p>Product not found.</p>";
-}
-
-    </script> 
+    </script>
     <!-- Side Cart -->
     <div id="side-cart" class="side-cart">
       <button id="close-cart" class="close-cart">&times;</button>
