@@ -711,7 +711,9 @@
         </div>
 
         <div class="action-buttons">
-          <button class="add-to-cart-btn">Add to Cart</button>
+          <button class="add-to-cart-btn" id="add-to-cart-btn">
+            Add to Cart
+          </button>
           <!-- Notification will appear below this button -->
           <div class="notification" style="display: none"></div>
         </div>
@@ -730,57 +732,66 @@
       }
 
       const productId = getQueryParam("id");
+      if (productId) {
+        const buttonDOM = document.getElementById("add-to-cart-btn");
+        buttonDOM.value = productId;
+        console.log("you are here");
+      }
       let product = null;
 
       fetch("./database/product.json")
-    .then((response) => {
-        if (!response.ok) throw new Error("Network response was not ok");
-        return response.json();
-    })
-    .then((products) => {
-        const product = products[productId];
-        if (product) {
+        .then((response) => {
+          if (!response.ok) throw new Error("Network response was not ok");
+          return response.json();
+        })
+        .then((products) => {
+          const product = products[productId];
+          if (product) {
             renderProduct(product);
-        } else {
+          } else {
             document.querySelector(".product-container").innerHTML =
-                "<p>Product not found. Please check back later.</p>";
-        }
-    })
-    .catch((error) => {
-        console.error("Error fetching product:", error);
-        document.querySelector(".product-container").innerHTML =
+              "<p>Product not found. Please check back later.</p>";
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching product:", error);
+          document.querySelector(".product-container").innerHTML =
             "<p>Unable to load product. Please try again later.</p>";
-    });
-
-function renderProduct(product) {
-    const productTitle = document.querySelector(".product-title");
-    const productDescription = document.querySelector(".product-description");
-    const productPrice = document.querySelector(".product-price");
-    const productImage = document.querySelector(".product-image");
-    const thumbnailsContainer = document.querySelector(".thumbnails");
-
-    productTitle.textContent = product.name;
-    productDescription.textContent = product.description;
-    productPrice.textContent = `₹${product.price}`;
-    productImage.src = product.imageSource;
-
-    if (product.thumbnail) {
-        const thumbnail = document.createElement("img");
-        thumbnail.src = product.thumbnail;
-        thumbnail.alt = `${product.name} Thumbnail`;
-        thumbnail.classList.add("thumbnail-img");
-        thumbnailsContainer.appendChild(thumbnail);
-        thumbnailsContainer.style.display = "flex";
-
-        thumbnail.addEventListener("click", () => {
-            productImage.src = thumbnail.src;
         });
-    } else {
-        thumbnailsContainer.style.display = "none";
-    }
 
-    document.querySelector(".add-to-cart-btn").addEventListener("click", addToCart);
-}
+      function renderProduct(product) {
+        const productTitle = document.querySelector(".product-title");
+        const productDescription = document.querySelector(
+          ".product-description"
+        );
+        const productPrice = document.querySelector(".product-price");
+        const productImage = document.querySelector(".product-image");
+        const thumbnailsContainer = document.querySelector(".thumbnails");
+
+        productTitle.textContent = product.name;
+        productDescription.textContent = product.description;
+        productPrice.textContent = `₹${product.price}`;
+        productImage.src = product.imageSource;
+
+        if (product.thumbnail) {
+          const thumbnail = document.createElement("img");
+          thumbnail.src = product.thumbnail;
+          thumbnail.alt = `${product.name} Thumbnail`;
+          thumbnail.classList.add("thumbnail-img");
+          thumbnailsContainer.appendChild(thumbnail);
+          thumbnailsContainer.style.display = "flex";
+
+          thumbnail.addEventListener("click", () => {
+            productImage.src = thumbnail.src;
+          });
+        } else {
+          thumbnailsContainer.style.display = "none";
+        }
+
+        document
+          .querySelector(".add-to-cart-btn")
+          .addEventListener("click", addToCart);
+      }
 
       // Define the addToCart function
       function addToCart() {

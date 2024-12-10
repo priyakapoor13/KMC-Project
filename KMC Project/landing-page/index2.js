@@ -12,23 +12,37 @@ if (searchButton && searchBar) {
     const query = searchBar.value.toLowerCase();
 
     let pageUrl;
-    const searchMap = {
-        'laddo gopal poshak': 'simple-poshak.html',
-        'fancy poshak': 'fancy-poshak.html',
-        'night-suit': 'nightsuit.html',
-        'bister-set': 'bister-set.html',
-        'accessories': 'accessories1.html',
-        'bansuri': 'bansuri1.html',
-        'simple-mala': 'simple-mala.html',
-        'fancy-mala': 'fancymala.html',
-        'furniture': 'furniture.html',
-    };
-
-    pageUrl = searchMap[query];
-    if (pageUrl) {
-        window.location.href = pageUrl;
-    } else {
+    switch (query) {
+      case 'laddo gopal poshak':
+        pageUrl = 'simple-poshak.html';
+        break;
+      case 'fancy poshak':
+        pageUrl = 'fancy-poshak.html';
+        break;
+      case 'night-suit':
+        pageUrl = 'nightsuit.html';
+        break;
+      case 'bister-set':
+        pageUrl = 'bister-set.html';
+        break;
+      case 'accessories':
+        pageUrl = 'accessories1.html';
+        break;
+      case 'bansuri':
+        pageUrl = 'bansuri1.html';
+        break;
+      case 'simple-mala':
+        pageUrl = 'simple-mala.html';
+        break;
+      case 'fancy-mala':
+        pageUrl = 'fancymala.html';
+        break;
+      case 'furniture':
+        pageUrl = 'furniture.html';
+        break;
+      default:
         alert('Page not found');
+        return;
     }
 
     window.location.href = pageUrl;
@@ -71,9 +85,6 @@ const loadCartItems = () => {
   if (cartItems) {
     cartItems.innerHTML = '';
     let total = 0;
-    if (!cartData) {
-      return;
-    } 
     cartData.forEach((item) => {
       const cartItem = document.createElement('div');
       cartItem.classList.add('cart-item');
@@ -119,17 +130,14 @@ const addToCart = (event) => {
       appendToCart(sessionId, productDetails);
 
       // Add product to cartData
-      if (!cartData.some(item => item.id === productId)) {
-        cartData.push(productDetails);
-        localStorage.setItem('cart', JSON.stringify(cartData));
-    } else {
-        console.log("Product already in cart");
-    }
+      cartData.push(productDetails);
+      localStorage.setItem('cart', JSON.stringify(cartData));
 
       // Update cart count and cart badge
       cartCount++;
       localStorage.setItem('cartCount', cartCount);
       updateCartBadge();
+      console.log("hello")
 
       // Show notification
       showNotification(productId);
@@ -195,7 +203,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetch('./database/product.json')
   .then(response => response.json())
   .then(products => {
-    const productContainer = document.getElementsByClassName('product-container');
+    const productContainer = document.getElementById('product-container');
     productContainer.innerHTML = ''; // Clear the container before adding new products
 
     for (let productId in products) {
@@ -223,11 +231,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Attach event listeners to dynamically created "Add to Cart" buttons
-    document.addEventListener('click', (event) => {
-        if (event.target.classList.contains('add-to-cart-btn')) {
-            addToCart(event);
-        }
-    });
+    const addToCartButtons = document.getElementsByClassName('add-to-cart-btn');
+    for (const addToCartButton of addToCartButtons) {
+      addToCartButton.addEventListener('click', addToCart);
+    }
   })
   .catch(error => console.error('Error fetching products:', error));
 
